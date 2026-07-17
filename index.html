@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Investors Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SUPER INVESTORS RADAR
+   Design tokens: change everything from here.
+   ============================================================ */
+:root{
+  --bg:#F4F7F6;
+  --surface:#FFFFFF;
+  --surface-2:#EDF2F0;
+  --ink:#15211D;
+  --muted:#5C6B66;
+  --line:#DCE5E1;
+  --accent:#0E7C66;          /* radar teal */
+  --accent-soft:#0E7C6614;
+  --accent-ink:#0A5C4C;
+  --buy:#15803D;
+  --buy-soft:#15803D16;
+  --sell:#B4232A;
+  --sell-soft:#B4232A14;
+  --warn:#B45309;
+  --warn-soft:#B4530916;
+  --shadow:0 1px 2px rgba(21,33,29,.05), 0 6px 20px -8px rgba(21,33,29,.10);
+  --radius:14px;
+  --radius-sm:9px;
+  /* spacing scale */
+  --s1:6px; --s2:10px; --s3:16px; --s4:24px; --s5:40px;
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+html[data-theme="dark"]{
+  --bg:#0D1412;
+  --surface:#151F1C;
+  --surface-2:#1B2724;
+  --ink:#E6EFEB;
+  --muted:#8FA39C;
+  --line:#26332F;
+  --accent:#2FBF9B;
+  --accent-soft:#2FBF9B1C;
+  --accent-ink:#5CD9B9;
+  --buy:#3DCB72;
+  --buy-soft:#3DCB721E;
+  --sell:#F06A6A;
+  --sell-soft:#F06A6A1C;
+  --warn:#E5A04C;
+  --warn-soft:#E5A04C1E;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -10px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:15px;
+  line-height:1.55;
+  transition:background .25s ease,color .25s ease;
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- Header ---------- */
+.hdr{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;gap:var(--s3);
+  padding:var(--s2) var(--s4);
+  background:color-mix(in srgb,var(--surface) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:var(--s2);min-width:0}
+.brand svg{flex:none}
+.brand-name{
+  font-family:var(--font-display);font-weight:700;font-size:16px;letter-spacing:-.01em;white-space:nowrap;
+}
+.brand-name span{color:var(--accent)}
+.hdr-spacer{flex:1}
+.hdr select{
+  appearance:none;
+  background:var(--surface-2);color:var(--ink);
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:8px 34px 8px 12px;font-size:14px;font-weight:500;font-family:var(--font-body);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center;
+  max-width:210px;
+}
+.theme-btn{
+  display:grid;place-items:center;width:38px;height:38px;
+  border-radius:var(--radius-sm);border:1px solid var(--line);
+  background:var(--surface-2);color:var(--ink);
+  transition:background .2s ease;
+}
+.theme-btn:hover{background:var(--accent-soft)}
+.data-badge{
+  font-family:var(--font-mono);font-size:11px;color:var(--muted);
+  border:1px dashed var(--line);border-radius:999px;padding:4px 11px;white-space:nowrap;
+}
+@media (max-width:640px){.data-badge{display:none}}
+
+/* radar sweep in logo */
+.radar-dot{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+
+/* ---------- Layout ---------- */
+.shell{
+  display:grid;grid-template-columns:250px 1fr;gap:var(--s4);
+  max-width:1220px;margin:0 auto;
+  padding:calc(58px + var(--s4)) var(--s4) var(--s5);
+}
+@media (max-width:860px){
+  .shell{grid-template-columns:1fr;padding-top:calc(58px + var(--s3))}
+}
+
+/* ---------- Sidebar ---------- */
+.side h2{
+  font-family:var(--font-mono);font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--muted);
+  margin:0 0 var(--s2) 4px;
+}
+.inv-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--s1)}
+.inv-btn{
+  width:100%;text-align:left;
+  display:flex;flex-direction:column;gap:2px;
+  padding:10px 14px;border-radius:var(--radius-sm);
+  border:1px solid transparent;background:transparent;color:var(--ink);
+  transition:background .18s ease,border-color .18s ease;
+}
+.inv-btn:hover{background:var(--surface)}
+.inv-btn.active{background:var(--surface);border-color:var(--accent);box-shadow:var(--shadow)}
+.inv-btn .n{font-weight:600;font-size:14px}
+.inv-btn .s{font-size:12px;color:var(--muted)}
+.inv-btn.active .s{color:var(--accent-ink)}
+@media (max-width:860px){
+  .side{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .inv-list{flex-direction:row}
+  .inv-btn{white-space:nowrap;min-width:max-content}
+}
+
+/* ---------- Tabs ---------- */
+.tabs{
+  display:flex;gap:4px;background:var(--surface-2);
+  padding:4px;border-radius:var(--radius-sm);border:1px solid var(--line);
+  margin-bottom:var(--s4);width:max-content;max-width:100%;overflow-x:auto;
+}
+.tab{
+  border:none;background:transparent;color:var(--muted);
+  padding:8px 16px;border-radius:7px;font-size:14px;font-weight:500;white-space:nowrap;
+  transition:background .18s ease,color .18s ease;
+}
+.tab:hover{color:var(--ink)}
+.tab.active{background:var(--surface);color:var(--ink);box-shadow:var(--shadow);font-weight:600}
+@media (max-width:600px){.tabs{width:100%;justify-content:space-between}.tab{flex:1;padding:8px 6px;font-size:13px}}
+
+/* ---------- Cards ---------- */
+.card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:var(--s4);box-shadow:var(--shadow);
+  transition:border-color .18s ease;
+}
+.card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.card h3{
+  font-family:var(--font-display);font-size:16px;font-weight:600;
+  margin:0 0 var(--s3);letter-spacing:-.01em;
+}
+.section{display:none;flex-direction:column;gap:var(--s4)}
+.section.active{display:flex}
+
+/* ---------- Overview ---------- */
+.ov-top{display:flex;gap:var(--s4);align-items:flex-start}
+@media (max-width:700px){.ov-top{flex-direction:column}}
+.avatar{
+  flex:none;width:72px;height:72px;border-radius:50%;
+  display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:700;font-size:24px;
+  background:var(--accent-soft);color:var(--accent-ink);
+  border:2px solid var(--accent);
+}
+.ov-name{font-family:var(--font-display);font-size:22px;font-weight:700;margin:0;letter-spacing:-.02em}
+.ov-style{
+  display:inline-block;margin-top:4px;
+  font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent-ink);background:var(--accent-soft);
+  padding:3px 10px;border-radius:999px;
+}
+.ov-bio{color:var(--muted);margin:var(--s2) 0 0;max-width:62ch}
+.ov-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);
+  margin-top:var(--s3);padding-top:var(--s3);border-top:1px dashed var(--line);
+}
+@media (max-width:600px){.ov-stats{grid-template-columns:1fr}}
+.stat .k{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.stat .v{font-weight:600;margin-top:2px}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.kpis{grid-template-columns:1fr}}
+.kpi{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:var(--s3);box-shadow:var(--shadow);
+}
+.kpi .k{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.kpi .v{font-family:var(--font-display);font-size:20px;font-weight:700;margin-top:4px;letter-spacing:-.01em}
+.kpi .sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* ---------- Holdings table ---------- */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+thead th{
+  text-align:left;font-family:var(--font-mono);font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+  padding:8px 12px;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+thead th.sortable{cursor:pointer;user-select:none}
+thead th.sortable:hover{color:var(--ink)}
+thead th .arrow{font-size:10px;margin-left:3px}
+tbody td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr{transition:background .15s ease}
+tbody tr:hover{background:var(--accent-soft)}
+tbody tr:last-child td{border-bottom:none}
+.ticker{font-family:var(--font-mono);font-weight:600}
+.top5 .ticker::after{content:"★";color:var(--warn);margin-left:5px;font-size:11px}
+.top5 td:nth-child(2){font-weight:600}
+.sector-badge{
+  display:inline-block;font-size:11px;font-weight:600;
+  padding:2px 9px;border-radius:999px;white-space:nowrap;
+}
+.weight-cell{min-width:130px}
+.wbar{
+  height:5px;border-radius:3px;background:var(--surface-2);
+  margin-top:4px;overflow:hidden;
+}
+.wbar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.num{font-family:var(--font-mono);font-size:13px}
+.dim{color:var(--muted)}
+
+/* ---------- Trades ---------- */
+.qchart{display:flex;gap:var(--s3);align-items:flex-end;height:120px;padding:var(--s2) 0 0}
+.qcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%}
+.qcol .bars{flex:1;display:flex;align-items:flex-end;gap:5px;width:100%;justify-content:center}
+.qcol .bar{width:22px;border-radius:4px 4px 0 0;min-height:3px}
+.qcol .bar.b{background:var(--buy)}
+.qcol .bar.s{background:var(--sell)}
+.qcol .ql{font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.legend{display:flex;gap:var(--s3);font-size:12px;color:var(--muted);margin-top:var(--s2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.trade{
+  display:flex;gap:var(--s3);padding:var(--s3) var(--s2);
+  border-left:3px solid var(--line);position:relative;
+  transition:background .15s ease;
+}
+.trade:hover{background:var(--surface-2)}
+.trade.buy{border-left-color:var(--buy)}
+.trade.sell{border-left-color:var(--sell)}
+.trade .q{font-family:var(--font-mono);font-size:12px;color:var(--muted);flex:none;width:70px;padding-top:2px}
+.action-badge{
+  display:inline-block;font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.05em;
+}
+.action-badge.buy{background:var(--buy-soft);color:var(--buy)}
+.action-badge.sell{background:var(--sell-soft);color:var(--sell)}
+.trade .body{flex:1}
+.trade .co{font-weight:600;margin:4px 0 2px}
+.trade .co .ticker{color:var(--accent-ink);margin-right:6px}
+.trade .note{font-size:13px;color:var(--muted)}
+
+/* ---------- Insights & notes ---------- */
+.ins-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+@media (max-width:800px){.ins-grid{grid-template-columns:1fr}}
+.signal-item{display:flex;justify-content:space-between;gap:var(--s2);padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.signal-item:last-child{border-bottom:none}
+.signal-item .why{color:var(--muted);font-size:13px;text-align:right}
+
+textarea{
+  width:100%;min-height:90px;resize:vertical;
+  background:var(--surface-2);color:var(--ink);
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:var(--s2) var(--s3);font-family:var(--font-body);font-size:14px;line-height:1.5;
+}
+textarea::placeholder{color:var(--muted)}
+.note-controls{display:flex;gap:var(--s2);margin-top:var(--s2);flex-wrap:wrap;align-items:center}
+.btn{
+  border:1px solid var(--line);background:var(--surface-2);color:var(--ink);
+  padding:8px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;
+  transition:background .18s ease;
+}
+.btn:hover{background:var(--accent-soft)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+html[data-theme="dark"] .btn.primary{color:#0D1412}
+.btn.primary:hover{filter:brightness(1.08)}
+.tag-pick{display:flex;gap:6px}
+.tag-pick label{
+  font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted);cursor:pointer;user-select:none;
+}
+.tag-pick input{position:absolute;opacity:0;pointer-events:none}
+.tag-pick input:checked + span{color:inherit}
+.tag-pick label:has(input:checked){border-color:currentColor}
+.tag-pick label.idea:has(input:checked){color:var(--accent-ink);background:var(--accent-soft)}
+.tag-pick label.warning:has(input:checked){color:var(--warn);background:var(--warn-soft)}
+.tag-pick input:focus-visible + span{outline:2px solid var(--accent);outline-offset:6px;border-radius:4px}
+
+.notes-list{list-style:none;margin:var(--s3) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--s2)}
+.note-item{
+  background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:var(--s2) var(--s3);font-size:14px;display:flex;gap:var(--s2);align-items:flex-start;
+}
+.note-item .txt{flex:1;white-space:pre-wrap}
+.note-badge{flex:none;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:999px;margin-top:2px}
+.note-badge.idea{background:var(--accent-soft);color:var(--accent-ink)}
+.note-badge.warning{background:var(--warn-soft);color:var(--warn)}
+.del{
+  flex:none;border:none;background:transparent;color:var(--muted);
+  font-size:16px;line-height:1;padding:2px 6px;border-radius:4px;
+}
+.del:hover{color:var(--sell);background:var(--sell-soft)}
+.empty{color:var(--muted);font-size:13px;font-style:italic}
+
+.watch-form{display:flex;gap:var(--s2)}
+.watch-form input{
+  flex:1;background:var(--surface-2);color:var(--ink);
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:8px 12px;font-family:var(--font-mono);font-size:14px;text-transform:uppercase;
+}
+.watch-list{list-style:none;margin:var(--s3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s2)}
+.watch-chip{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:999px;
+  padding:5px 6px 5px 14px;font-family:var(--font-mono);font-weight:600;font-size:13px;
+}
+
+/* ---------- Radar Picks ---------- */
+.picks-side-btn{
+  border-style:dashed!important;border-color:var(--accent)!important;
+  background:var(--accent-soft)!important;margin-bottom:var(--s2);
+}
+.picks-side-btn .n{color:var(--accent-ink)}
+.picks-side-btn.active{border-style:solid!important;background:var(--surface)!important}
+.picks-intro{color:var(--muted);margin:0 0 var(--s3);max-width:70ch}
+.pick-card{
+  display:grid;grid-template-columns:56px 1fr;gap:var(--s3);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:var(--s4);box-shadow:var(--shadow);margin-bottom:var(--s3);
+  transition:border-color .18s ease;
+}
+.pick-card:hover{border-color:var(--accent)}
+.pick-rank{
+  font-family:var(--font-mono);font-weight:600;font-size:26px;color:var(--accent);
+  border-right:1px dashed var(--line);padding-right:var(--s3);align-self:start;
+}
+.pick-head{display:flex;align-items:baseline;gap:var(--s2);flex-wrap:wrap}
+.pick-head .ticker{font-family:var(--font-display);font-size:20px;font-weight:700;letter-spacing:-.01em}
+.pick-head .co{color:var(--muted)}
+.pick-thesis{margin:var(--s2) 0 var(--s3);max-width:68ch}
+.pick-meta{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+@media (max-width:700px){.pick-meta{grid-template-columns:1fr}.pick-card{grid-template-columns:1fr}.pick-rank{border-right:none;border-bottom:1px dashed var(--line);padding:0 0 var(--s1)}}
+.pick-meta h4{
+  font-family:var(--font-mono);font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--muted);margin:0 0 6px;
+}
+.pick-meta ul{list-style:none;margin:0;padding:0;font-size:13px;display:flex;flex-direction:column;gap:4px}
+.pick-meta .num{color:var(--muted)}
+.disclaimer{
+  font-size:12px;color:var(--muted);font-style:italic;
+  border-top:1px dashed var(--line);padding-top:var(--s2);margin-top:var(--s1);
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="brand">
+    <!-- Radar logo: rings + sweeping blip -->
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+      <circle cx="17" cy="17" r="15" stroke="var(--accent)" stroke-width="1.5" opacity=".35"/>
+      <circle cx="17" cy="17" r="9.5" stroke="var(--accent)" stroke-width="1.5" opacity=".55"/>
+      <circle cx="17" cy="17" r="4" stroke="var(--accent)" stroke-width="1.5"/>
+      <line x1="17" y1="17" x2="28" y2="8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+      <circle class="radar-dot" cx="24" cy="23" r="2.4" fill="var(--accent)"/>
+    </svg>
+    <span class="brand-name">Super Investors <span>Radar</span></span>
+  </div>
+  <div class="hdr-spacer"></div>
+  <span class="data-badge" id="data-status">Loading…</span>
+  <label for="inv-select" class="sr-only" style="position:absolute;left:-9999px">Select investor</label>
+  <select id="inv-select" aria-label="Select investor"></select>
+  <button class="theme-btn" id="theme-toggle" aria-label="Toggle light or dark mode">
+    <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+    <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+<!-- ============ SHELL ============ -->
+<div class="shell">
+
+  <!-- Sidebar -->
+  <aside class="side">
+    <h2>Investors</h2>
+    <ul class="inv-list" id="inv-list"></ul>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" data-tab="overview">Overview</button>
+      <button class="tab" role="tab" data-tab="holdings">Holdings</button>
+      <button class="tab" role="tab" data-tab="moves">Recent Moves</button>
+      <button class="tab" role="tab" data-tab="insights">Insights &amp; Notes</button>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="section" id="sec-overview">
+      <div class="card">
+        <div class="ov-top">
+          <div class="avatar" id="ov-avatar">WB</div>
+          <div>
+            <h3 class="ov-name" id="ov-name"></h3>
+            <span class="ov-style" id="ov-styletag"></span>
+            <p class="ov-bio" id="ov-bio"></p>
+            <div class="ov-stats">
+              <div class="stat"><div class="k">Holdings</div><div class="v" id="ov-numholdings"></div></div>
+              <div class="stat"><div class="k">Top 3 sectors</div><div class="v" id="ov-topsectors"></div></div>
+              <div class="stat"><div class="k">Avg holding duration</div><div class="v" id="ov-duration"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kpis" id="ov-kpis"></div>
+    </section>
+
+    <!-- HOLDINGS -->
+    <section class="section" id="sec-holdings">
+      <div class="card">
+        <h3 id="hold-title">Current holdings</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead>
+              <tr id="hold-head">
+                <th class="sortable" data-key="ticker">Ticker<span class="arrow"></span></th>
+                <th class="sortable" data-key="company">Company<span class="arrow"></span></th>
+                <th data-key="sector">Sector</th>
+                <th class="sortable" data-key="weight">% Portfolio<span class="arrow"></span></th>
+                <th class="sortable" data-key="value">Mkt value<span class="arrow"></span></th>
+                <th class="sortable" data-key="since">Holding since<span class="arrow"></span></th>
+                <th>Last price</th>
+              </tr>
+            </thead>
+            <tbody id="hold-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT MOVES -->
+    <section class="section" id="sec-moves">
+      <div class="card">
+        <h3>Buys vs sells by quarter</h3>
+        <div class="qchart" id="qchart"></div>
+        <div class="legend">
+          <span><i style="background:var(--buy)"></i>Buy-side actions</span>
+          <span><i style="background:var(--sell)"></i>Sell-side actions</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Trade timeline</h3>
+        <ul class="timeline" id="timeline"></ul>
+      </div>
+    </section>
+
+    <!-- INSIGHTS & NOTES -->
+    <section class="section" id="sec-insights">
+      <div class="ins-grid">
+        <div class="card">
+          <h3>Top conviction holdings</h3>
+          <div id="sig-conviction"></div>
+        </div>
+        <div class="card">
+          <h3>Recently added sectors</h3>
+          <div id="sig-sectors"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>My notes</h3>
+        <textarea id="note-input" placeholder="Write a reflection about this investor's moves... (not persisted - resets on reload)"></textarea>
+        <div class="note-controls">
+          <div class="tag-pick" role="radiogroup" aria-label="Note type">
+            <label class="idea"><input type="radio" name="note-tag" value="idea" checked><span>💡 Idea</span></label>
+            <label class="warning"><input type="radio" name="note-tag" value="warning"><span>⚠ Warning</span></label>
+          </div>
+          <button class="btn primary" id="note-add">Add note</button>
+        </div>
+        <ul class="notes-list" id="notes-list"></ul>
+      </div>
+      <div class="card">
+        <h3>My watchlist</h3>
+        <div class="watch-form">
+          <input id="watch-input" placeholder="TICKER" maxlength="8" aria-label="Add ticker to watchlist">
+          <button class="btn primary" id="watch-add">Add</button>
+        </div>
+        <ul class="watch-list" id="watch-list"></ul>
+      </div>
+    </section>
+
+    <!-- RADAR PICKS (special dropdown entry, not an investor) -->
+    <section class="section" id="sec-picks">
+      <div class="card">
+        <h3>Radar Picks - Top 3 to buy</h3>
+        <p class="picks-intro">
+          Ranked automatically from the data above: how many of the 10 tracked investors hold the
+          stock, how much they added in the last 4 quarters, and average conviction (portfolio weight).
+          Recomputes every time you edit the data. ETFs and commodity funds excluded.
+        </p>
+        <div id="picks-list"></div>
+        <p class="disclaimer">
+          Heuristic ranking on dummy 13F data - a research starting point, not financial advice.
+          Verify with live filings before acting.
+        </p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   DATA MODEL
+   Replace this array with real data later. Every widget reads
+   from it, so keeping the shape intact is all you need.
+   Actions: "New Position" | "Increase" | "Buy"  -> buy-side
+            "Decrease" | "Exit" | "Sell"         -> sell-side
+   ============================================================ */
+const investors = [
+  {
+    id: "buffett",
+    name: "Warren Buffett",
+    style: "Value, long-term",
+    bio: "Chairman of Berkshire Hathaway. Buys durable businesses with wide moats and holds them for decades. Famously concentrated: the top five positions usually dominate the book.",
+    stats: { numHoldings: 41, topSectors: ["Technology", "Financials", "Energy"], avgDuration: "8.2 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "AAPL", company: "Apple Inc.", sector: "Technology", weight: 28.4, value: 92_500_000_000, since: "2016-05-16" },
+      { ticker: "AXP",  company: "American Express", sector: "Financials", weight: 12.1, value: 39_300_000_000, since: "1994-03-01" },
+      { ticker: "BAC",  company: "Bank of America", sector: "Financials", weight: 9.6, value: 31_200_000_000, since: "2017-08-29" },
+      { ticker: "KO",   company: "Coca-Cola Co.", sector: "Consumer Staples", weight: 8.8, value: 28_700_000_000, since: "1988-11-01" },
+      { ticker: "CVX",  company: "Chevron Corp.", sector: "Energy", weight: 6.4, value: 20_900_000_000, since: "2020-11-16" },
+      { ticker: "OXY",  company: "Occidental Petroleum", sector: "Energy", weight: 4.9, value: 15_900_000_000, since: "2022-02-28" },
+      { ticker: "KHC",  company: "Kraft Heinz", sector: "Consumer Staples", weight: 3.3, value: 10_800_000_000, since: "2015-07-06" },
+      { ticker: "MCO",  company: "Moody's Corp.", sector: "Financials", weight: 2.9, value: 9_500_000_000, since: "2000-09-01" },
+      { ticker: "CB",   company: "Chubb Ltd.", sector: "Financials", weight: 2.6, value: 8_400_000_000, since: "2023-11-14" },
+      { ticker: "DPZ",  company: "Domino's Pizza", sector: "Consumer Discretionary", weight: 1.1, value: 3_600_000_000, since: "2024-11-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "OXY", company: "Occidental Petroleum", note: "Increased position by +12% on weakness." },
+      { quarter: "2026 Q1", action: "Decrease", ticker: "AAPL", company: "Apple Inc.", note: "Trimmed roughly -8%, second consecutive quarterly trim." },
+      { quarter: "2025 Q4", action: "New Position", ticker: "DPZ", company: "Domino's Pizza", note: "Fresh stake, ~1% of the book." },
+      { quarter: "2025 Q4", action: "Exit", ticker: "PARA", company: "Paramount Global", note: "Fully exited after multi-quarter reduction." },
+      { quarter: "2025 Q3", action: "Increase", ticker: "CB", company: "Chubb Ltd.", note: "Added +18% to insurance stake." },
+      { quarter: "2025 Q3", action: "Decrease", ticker: "BAC", company: "Bank of America", note: "Continued reduction, -10% of shares held." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "CVX", company: "Chevron Corp.", note: "Added +6% as energy weights drifted down." },
+      { quarter: "2025 Q2", action: "Decrease", ticker: "KHC", company: "Kraft Heinz", note: "Small trim, -4%." }
+    ]
+  },
+  {
+    id: "dalio",
+    name: "Ray Dalio",
+    style: "Macro, diversified",
+    bio: "Founder of Bridgewater Associates. Thinks in economic machines and regimes: diversification across asset classes, geographies and inflation environments over single-stock conviction.",
+    stats: { numHoldings: 350, topSectors: ["ETFs / Broad Index", "Consumer Staples", "Healthcare"], avgDuration: "2.1 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "IVV",  company: "iShares Core S&P 500", sector: "ETFs / Broad Index", weight: 21.7, value: 4_300_000_000, since: "2019-02-14" },
+      { ticker: "IEMG", company: "iShares Core MSCI EM", sector: "ETFs / Broad Index", weight: 10.2, value: 2_020_000_000, since: "2018-08-10" },
+      { ticker: "PG",   company: "Procter & Gamble", sector: "Consumer Staples", weight: 4.8, value: 950_000_000, since: "2020-05-15" },
+      { ticker: "JNJ",  company: "Johnson & Johnson", sector: "Healthcare", weight: 4.1, value: 812_000_000, since: "2020-05-15" },
+      { ticker: "KO",   company: "Coca-Cola Co.", sector: "Consumer Staples", weight: 3.7, value: 733_000_000, since: "2019-11-13" },
+      { ticker: "GLD",  company: "SPDR Gold Shares", sector: "Commodities", weight: 3.5, value: 693_000_000, since: "2017-02-14" },
+      { ticker: "COST", company: "Costco Wholesale", sector: "Consumer Staples", weight: 2.9, value: 574_000_000, since: "2021-08-16" },
+      { ticker: "MDT",  company: "Medtronic plc", sector: "Healthcare", weight: 2.2, value: 436_000_000, since: "2022-02-14" },
+      { ticker: "BABA", company: "Alibaba Group ADR", sector: "Consumer Discretionary", weight: 1.9, value: 376_000_000, since: "2023-05-15" },
+      { ticker: "NVDA", company: "NVIDIA Corp.", sector: "Technology", weight: 1.6, value: 317_000_000, since: "2024-08-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "GLD", company: "SPDR Gold Shares", note: "Added +25%, inflation-hedge sleeve growing." },
+      { quarter: "2026 Q1", action: "Buy", ticker: "IEMG", company: "iShares Core MSCI EM", note: "EM allocation up +9%." },
+      { quarter: "2025 Q4", action: "New Position", ticker: "NVDA", company: "NVIDIA Corp.", note: "First direct semis exposure in two years." },
+      { quarter: "2025 Q4", action: "Decrease", ticker: "IVV", company: "iShares Core S&P 500", note: "Trimmed -7% of US large-cap sleeve." },
+      { quarter: "2025 Q3", action: "Increase", ticker: "BABA", company: "Alibaba Group ADR", note: "China re-risk trade, +30%." },
+      { quarter: "2025 Q3", action: "Exit", ticker: "WMT", company: "Walmart Inc.", note: "Rotated out of a long-held staples position." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "JNJ", company: "Johnson & Johnson", note: "Defensive add, +11%." },
+      { quarter: "2025 Q2", action: "Decrease", ticker: "PG", company: "Procter & Gamble", note: "Rebalancing trim, -5%." }
+    ]
+  },
+  {
+    id: "ackman",
+    name: "Bill Ackman",
+    style: "Concentrated, activist",
+    bio: "CEO of Pershing Square. Runs an ultra-concentrated book of 8-12 large-cap names, often with an activist angle. High conviction, public theses, multi-year horizons.",
+    stats: { numHoldings: 10, topSectors: ["Consumer Discretionary", "Real Estate", "Technology"], avgDuration: "4.6 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "UMG",  company: "Universal Music Group", sector: "Communication Services", weight: 19.8, value: 2_900_000_000, since: "2021-08-10" },
+      { ticker: "CMG",  company: "Chipotle Mexican Grill", sector: "Consumer Discretionary", weight: 16.5, value: 2_420_000_000, since: "2016-09-06" },
+      { ticker: "HLT",  company: "Hilton Worldwide", sector: "Consumer Discretionary", weight: 14.2, value: 2_080_000_000, since: "2018-10-08" },
+      { ticker: "QSR",  company: "Restaurant Brands Intl", sector: "Consumer Discretionary", weight: 12.7, value: 1_860_000_000, since: "2014-12-15" },
+      { ticker: "HHH",  company: "Howard Hughes Holdings", sector: "Real Estate", weight: 10.9, value: 1_600_000_000, since: "2010-11-01" },
+      { ticker: "GOOG", company: "Alphabet Inc. Class C", sector: "Technology", weight: 9.8, value: 1_440_000_000, since: "2023-05-15" },
+      { ticker: "CP",   company: "Canadian Pacific KC", sector: "Industrials", weight: 7.4, value: 1_080_000_000, since: "2021-11-15" },
+      { ticker: "NKE",  company: "Nike Inc.", sector: "Consumer Discretionary", weight: 5.1, value: 748_000_000, since: "2024-08-14" },
+      { ticker: "BN",   company: "Brookfield Corp.", sector: "Financials", weight: 3.6, value: 528_000_000, since: "2024-08-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "NKE", company: "Nike Inc.", note: "Doubled down, +40% on turnaround thesis." },
+      { quarter: "2026 Q1", action: "Decrease", ticker: "CMG", company: "Chipotle Mexican Grill", note: "Trimmed -6% after strong run." },
+      { quarter: "2025 Q4", action: "New Position", ticker: "BN", company: "Brookfield Corp.", note: "New stake in alternative asset manager." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "GOOG", company: "Alphabet Inc. Class C", note: "Added +15% on AI monetization view." },
+      { quarter: "2025 Q3", action: "Decrease", ticker: "HLT", company: "Hilton Worldwide", note: "Position management trim, -8%." },
+      { quarter: "2025 Q3", action: "Exit", ticker: "LOW", company: "Lowe's Companies", note: "Closed a long-held housing-linked position." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "HHH", company: "Howard Hughes Holdings", note: "Tender offer added +12% to stake." },
+      { quarter: "2025 Q2", action: "Buy", ticker: "UMG", company: "Universal Music Group", note: "Opportunistic add, +5%." }
+    ]
+  },
+  {
+    id: "smith",
+    name: "Terry Smith",
+    style: "Quality growth, buy & hold",
+    bio: "Founder of Fundsmith. \"Buy good companies, don't overpay, do nothing.\" Focuses on high-ROCE compounders with repeatable revenues, mostly consumer, healthcare and software.",
+    stats: { numHoldings: 27, topSectors: ["Technology", "Consumer Staples", "Healthcare"], avgDuration: "6.4 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "MSFT", company: "Microsoft Corp.", sector: "Technology", weight: 9.4, value: 2_350_000_000, since: "2011-11-01" },
+      { ticker: "META", company: "Meta Platforms", sector: "Communication Services", weight: 8.7, value: 2_170_000_000, since: "2018-05-15" },
+      { ticker: "NVO",  company: "Novo Nordisk ADR", sector: "Healthcare", weight: 7.2, value: 1_800_000_000, since: "2014-02-10" },
+      { ticker: "LIN",  company: "Linde plc", sector: "Materials", weight: 6.1, value: 1_520_000_000, since: "2019-05-15" },
+      { ticker: "SBUX", company: "Starbucks Corp.", sector: "Consumer Discretionary", weight: 5.4, value: 1_350_000_000, since: "2020-08-14" },
+      { ticker: "PM",   company: "Philip Morris Intl", sector: "Consumer Staples", weight: 5.0, value: 1_250_000_000, since: "2012-03-01" },
+      { ticker: "ADP",  company: "Automatic Data Processing", sector: "Technology", weight: 4.6, value: 1_150_000_000, since: "2017-02-14" },
+      { ticker: "IDXX", company: "IDEXX Laboratories", sector: "Healthcare", weight: 4.2, value: 1_050_000_000, since: "2015-08-14" },
+      { ticker: "MC.PA", company: "LVMH (Paris)", sector: "Consumer Discretionary", weight: 3.9, value: 975_000_000, since: "2021-02-12" },
+      { ticker: "V",    company: "Visa Inc.", sector: "Financials", weight: 3.5, value: 875_000_000, since: "2022-11-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "NVO", company: "Novo Nordisk ADR", note: "Added +14% after drawdown, thesis intact." },
+      { quarter: "2026 Q1", action: "Exit", ticker: "DGE.L", company: "Diageo plc", note: "Sold out after years of underperformance." },
+      { quarter: "2025 Q4", action: "New Position", ticker: "V", company: "Visa Inc.", note: "Payments compounder, starter position built up." },
+      { quarter: "2025 Q4", action: "Decrease", ticker: "META", company: "Meta Platforms", note: "Valuation-driven trim, -7%." },
+      { quarter: "2025 Q3", action: "Increase", ticker: "SBUX", company: "Starbucks Corp.", note: "Averaged down, +10%." },
+      { quarter: "2025 Q3", action: "Decrease", ticker: "PM", company: "Philip Morris Intl", note: "Small trim, -3%." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "IDXX", company: "IDEXX Laboratories", note: "Added +8% to vet diagnostics leader." },
+      { quarter: "2025 Q2", action: "Buy", ticker: "LIN", company: "Linde plc", note: "Topped up +4%." }
+    ]
+  },
+  {
+    id: "burry",
+    name: "Michael Burry",
+    style: "Contrarian, deep value",
+    bio: "Founder of Scion Asset Management, of Big Short fame. Small, fast-turning, deeply contrarian book: buys what the market hates, sizes aggressively, exits without sentiment.",
+    stats: { numHoldings: 12, topSectors: ["Consumer Discretionary", "Healthcare", "Technology"], avgDuration: "0.9 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "BABA", company: "Alibaba Group ADR", sector: "Consumer Discretionary", weight: 14.8, value: 155_000_000, since: "2023-02-14" },
+      { ticker: "JD",   company: "JD.com ADR", sector: "Consumer Discretionary", weight: 12.3, value: 129_000_000, since: "2022-11-14" },
+      { ticker: "GOOG", company: "Alphabet Inc. Class C", sector: "Technology", weight: 10.5, value: 110_000_000, since: "2025-02-14" },
+      { ticker: "HCA",  company: "HCA Healthcare", sector: "Healthcare", weight: 9.7, value: 101_000_000, since: "2024-05-15" },
+      { ticker: "CI",   company: "The Cigna Group", sector: "Healthcare", weight: 8.9, value: 93_000_000, since: "2024-08-14" },
+      { ticker: "MOH",  company: "Molina Healthcare", sector: "Healthcare", weight: 7.6, value: 79_000_000, since: "2025-08-14" },
+      { ticker: "EL",   company: "Estee Lauder", sector: "Consumer Staples", weight: 6.8, value: 71_000_000, since: "2025-11-14" },
+      { ticker: "PDD",  company: "PDD Holdings ADR", sector: "Consumer Discretionary", weight: 6.1, value: 64_000_000, since: "2024-11-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "GOOG", company: "Alphabet Inc. Class C", note: "Added +22%, now a top-3 position." },
+      { quarter: "2026 Q1", action: "Exit", ticker: "SB", company: "Safe Bulkers", note: "Closed shipping position entirely." },
+      { quarter: "2025 Q4", action: "New Position", ticker: "EL", company: "Estee Lauder", note: "Contrarian entry after -60% drawdown." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "BABA", company: "Alibaba Group ADR", note: "China consumer basket up +15%." },
+      { quarter: "2025 Q3", action: "New Position", ticker: "MOH", company: "Molina Healthcare", note: "Managed care fear trade." },
+      { quarter: "2025 Q3", action: "Decrease", ticker: "JD", company: "JD.com ADR", note: "Trimmed -10%." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "HCA", company: "HCA Healthcare", note: "Added +12%." },
+      { quarter: "2025 Q2", action: "Exit", ticker: "BKNG", company: "Booking Holdings", note: "Quick trade closed for a profit." }
+    ]
+  },
+  {
+    id: "klarman",
+    name: "Seth Klarman",
+    style: "Deep value, special situations",
+    bio: "CEO of Baupost Group, author of Margin of Safety. Hunts mispriced, complex or unloved assets - spin-offs, post-bankruptcy equities, broken growth - with a heavy cash cushion.",
+    stats: { numHoldings: 24, topSectors: ["Communication Services", "Technology", "Financials"], avgDuration: "3.4 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "LBTYK", company: "Liberty Global C", sector: "Communication Services", weight: 11.2, value: 610_000_000, since: "2018-05-15" },
+      { ticker: "WBD",  company: "Warner Bros. Discovery", sector: "Communication Services", weight: 9.8, value: 534_000_000, since: "2022-05-16" },
+      { ticker: "GOOG", company: "Alphabet Inc. Class C", sector: "Technology", weight: 8.9, value: 485_000_000, since: "2023-08-14" },
+      { ticker: "FIS",  company: "Fidelity National Info", sector: "Financials", weight: 8.1, value: 441_000_000, since: "2023-05-15" },
+      { ticker: "CRH",  company: "CRH plc", sector: "Materials", weight: 6.7, value: 365_000_000, since: "2024-02-14" },
+      { ticker: "VSAT", company: "Viasat Inc.", sector: "Technology", weight: 5.4, value: 294_000_000, since: "2021-11-15" },
+      { ticker: "SOLV", company: "Solventum Corp.", sector: "Healthcare", weight: 4.8, value: 262_000_000, since: "2024-05-15" },
+      { ticker: "HUM",  company: "Humana Inc.", sector: "Healthcare", weight: 4.2, value: 229_000_000, since: "2025-02-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "HUM", company: "Humana Inc.", note: "Contrarian managed-care add, +20%." },
+      { quarter: "2026 Q1", action: "Decrease", ticker: "WBD", company: "Warner Bros. Discovery", note: "Trimmed -12% into strength." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "GOOG", company: "Alphabet Inc. Class C", note: "Added +10%." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "SOLV", company: "Solventum Corp.", note: "Spin-off stake up +14%." },
+      { quarter: "2025 Q3", action: "Exit", ticker: "LQDA", company: "Liquidia Corp.", note: "Closed biotech special situation." },
+      { quarter: "2025 Q3", action: "Increase", ticker: "FIS", company: "Fidelity National Info", note: "Added +8%." },
+      { quarter: "2025 Q2", action: "Decrease", ticker: "VSAT", company: "Viasat Inc.", note: "Cut -15% after satellite setback." },
+      { quarter: "2025 Q2", action: "Buy", ticker: "CRH", company: "CRH plc", note: "Topped up +5%." }
+    ]
+  },
+  {
+    id: "tepper",
+    name: "David Tepper",
+    style: "Opportunistic, macro equities",
+    bio: "Founder of Appaloosa Management. Trades big macro dislocations through concentrated equity bets - famous for buying panic. Currently heavy in AI infrastructure and China platforms.",
+    stats: { numHoldings: 35, topSectors: ["Consumer Discretionary", "Technology", "Communication Services"], avgDuration: "1.6 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "BABA", company: "Alibaba Group ADR", sector: "Consumer Discretionary", weight: 12.6, value: 940_000_000, since: "2022-08-15" },
+      { ticker: "META", company: "Meta Platforms", sector: "Communication Services", weight: 9.4, value: 700_000_000, since: "2016-02-16" },
+      { ticker: "NVDA", company: "NVIDIA Corp.", sector: "Technology", weight: 8.7, value: 649_000_000, since: "2023-05-15" },
+      { ticker: "MSFT", company: "Microsoft Corp.", sector: "Technology", weight: 7.9, value: 589_000_000, since: "2020-05-15" },
+      { ticker: "AMZN", company: "Amazon.com", sector: "Consumer Discretionary", weight: 7.2, value: 537_000_000, since: "2019-05-15" },
+      { ticker: "PDD",  company: "PDD Holdings ADR", sector: "Consumer Discretionary", weight: 6.4, value: 477_000_000, since: "2023-08-14" },
+      { ticker: "GOOG", company: "Alphabet Inc. Class C", sector: "Technology", weight: 5.8, value: 433_000_000, since: "2021-05-17" },
+      { ticker: "ASML", company: "ASML Holding ADR", sector: "Technology", weight: 4.6, value: 343_000_000, since: "2025-11-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "NVDA", company: "NVIDIA Corp.", note: "Added +18% into the AI capex cycle." },
+      { quarter: "2026 Q1", action: "Decrease", ticker: "AMZN", company: "Amazon.com", note: "Trimmed -9%." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "BABA", company: "Alibaba Group ADR", note: "China stimulus trade, +14%." },
+      { quarter: "2025 Q4", action: "New Position", ticker: "ASML", company: "ASML Holding ADR", note: "New semis-equipment stake." },
+      { quarter: "2025 Q3", action: "Increase", ticker: "META", company: "Meta Platforms", note: "Added +7%." },
+      { quarter: "2025 Q3", action: "Exit", ticker: "UBER", company: "Uber Technologies", note: "Took profits, full exit." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "PDD", company: "PDD Holdings ADR", note: "Added +12%." },
+      { quarter: "2025 Q2", action: "Decrease", ticker: "MSFT", company: "Microsoft Corp.", note: "Small trim, -5%." }
+    ]
+  },
+  {
+    id: "marks",
+    name: "Howard Marks",
+    style: "Credit, distressed value",
+    bio: "Co-founder of Oaktree Capital. Cycle-aware distressed and credit investor - the equity book skews to hard assets, shipping, energy infrastructure and post-restructuring names.",
+    stats: { numHoldings: 60, topSectors: ["Energy", "Materials", "Communication Services"], avgDuration: "2.8 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "TRMD", company: "TORM plc", sector: "Energy", weight: 13.5, value: 480_000_000, since: "2022-05-16" },
+      { ticker: "VALE", company: "Vale S.A. ADR", sector: "Materials", weight: 9.2, value: 327_000_000, since: "2021-08-16" },
+      { ticker: "CQP",  company: "Cheniere Energy Partners", sector: "Energy", weight: 8.4, value: 299_000_000, since: "2019-05-15" },
+      { ticker: "STR",  company: "Sitio Royalties", sector: "Energy", weight: 6.8, value: 242_000_000, since: "2022-11-14" },
+      { ticker: "IHS",  company: "IHS Holding", sector: "Communication Services", weight: 5.9, value: 210_000_000, since: "2021-11-15" },
+      { ticker: "GDS",  company: "GDS Holdings ADR", sector: "Technology", weight: 5.1, value: 181_000_000, since: "2023-11-14" },
+      { ticker: "FYBR", company: "Frontier Communications", sector: "Communication Services", weight: 4.6, value: 164_000_000, since: "2021-05-17" },
+      { ticker: "AY",   company: "Atlantica Sustainable", sector: "Utilities", weight: 3.8, value: 135_000_000, since: "2020-08-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "GDS", company: "GDS Holdings ADR", note: "Asia data centers, +16%." },
+      { quarter: "2026 Q1", action: "Decrease", ticker: "TRMD", company: "TORM plc", note: "Trimmed -8% as tanker rates normalize." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "VALE", company: "Vale S.A. ADR", note: "Added +11%." },
+      { quarter: "2025 Q4", action: "Exit", ticker: "SBLK", company: "Star Bulk Carriers", note: "Closed dry bulk position." },
+      { quarter: "2025 Q3", action: "Buy", ticker: "CQP", company: "Cheniere Energy Partners", note: "LNG income add, +6%." },
+      { quarter: "2025 Q3", action: "Decrease", ticker: "FYBR", company: "Frontier Communications", note: "Cut -10% into the deal spread." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "STR", company: "Sitio Royalties", note: "Added +9%." },
+      { quarter: "2025 Q2", action: "Decrease", ticker: "IHS", company: "IHS Holding", note: "Small trim, -5%." }
+    ]
+  },
+  {
+    id: "lilu",
+    name: "Li Lu",
+    style: "Focused value, Munger school",
+    bio: "Founder of Himalaya Capital, the man Charlie Munger trusted with his money. Ultra-concentrated (5-6 names), decade-long horizons, deep-moat businesses bought at fair prices.",
+    stats: { numHoldings: 6, topSectors: ["Financials", "Technology", "Consumer Discretionary"], avgDuration: "7.1 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "BAC",  company: "Bank of America", sector: "Financials", weight: 24.6, value: 1_120_000_000, since: "2020-05-15" },
+      { ticker: "GOOG", company: "Alphabet Inc. Class C", sector: "Technology", weight: 22.8, value: 1_040_000_000, since: "2020-08-14" },
+      { ticker: "BRK.B", company: "Berkshire Hathaway B", sector: "Financials", weight: 19.4, value: 884_000_000, since: "2021-02-16" },
+      { ticker: "EWBC", company: "East West Bancorp", sector: "Financials", weight: 16.2, value: 738_000_000, since: "2010-02-16" },
+      { ticker: "AAPL", company: "Apple Inc.", sector: "Technology", weight: 9.8, value: 447_000_000, since: "2022-11-14" },
+      { ticker: "PDD",  company: "PDD Holdings ADR", sector: "Consumer Discretionary", weight: 7.2, value: 328_000_000, since: "2023-05-15" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "GOOG", company: "Alphabet Inc. Class C", note: "Added +9%, largest add in a year." },
+      { quarter: "2025 Q4", action: "Decrease", ticker: "AAPL", company: "Apple Inc.", note: "Trimmed -6%." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "EWBC", company: "East West Bancorp", note: "Added +4% to 15-year holding." },
+      { quarter: "2025 Q3", action: "Buy", ticker: "BRK.B", company: "Berkshire Hathaway B", note: "Steady add, +3%." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "BAC", company: "Bank of America", note: "Added +7% on bank weakness." },
+      { quarter: "2025 Q2", action: "Decrease", ticker: "PDD", company: "PDD Holdings ADR", note: "Trimmed -8%." }
+    ]
+  },
+  {
+    id: "icahn",
+    name: "Carl Icahn",
+    style: "Activist, event-driven",
+    bio: "Chairman of Icahn Enterprises. The original corporate raider: takes large stakes, forces board changes, spin-offs or sales. Book is dominated by IEP itself plus energy and event names.",
+    stats: { numHoldings: 15, topSectors: ["Industrials", "Energy", "Healthcare"], avgDuration: "5.3 years", last13F: "2026-05-15" },
+    holdings: [
+      { ticker: "IEP",  company: "Icahn Enterprises", sector: "Industrials", weight: 52.4, value: 7_800_000_000, since: "2000-01-03" },
+      { ticker: "CVI",  company: "CVR Energy", sector: "Energy", weight: 14.8, value: 2_200_000_000, since: "2012-05-15" },
+      { ticker: "UAN",  company: "CVR Partners", sector: "Materials", weight: 6.2, value: 923_000_000, since: "2016-05-16" },
+      { ticker: "SWX",  company: "Southwest Gas Holdings", sector: "Utilities", weight: 5.7, value: 848_000_000, since: "2021-11-15" },
+      { ticker: "BHC",  company: "Bausch Health", sector: "Healthcare", weight: 4.9, value: 729_000_000, since: "2021-02-16" },
+      { ticker: "ILMN", company: "Illumina Inc.", sector: "Healthcare", weight: 4.1, value: 610_000_000, since: "2023-05-15" },
+      { ticker: "CZR",  company: "Caesars Entertainment", sector: "Consumer Discretionary", weight: 3.6, value: 536_000_000, since: "2025-02-14" },
+      { ticker: "JBLU", company: "JetBlue Airways", sector: "Industrials", weight: 2.8, value: 417_000_000, since: "2024-02-14" }
+    ],
+    trades: [
+      { quarter: "2026 Q1", action: "Increase", ticker: "CZR", company: "Caesars Entertainment", note: "Pressing casino stake, +21%." },
+      { quarter: "2026 Q1", action: "Decrease", ticker: "ILMN", company: "Illumina Inc.", note: "Trimmed -10% after board changes." },
+      { quarter: "2025 Q4", action: "Increase", ticker: "JBLU", company: "JetBlue Airways", note: "Added +15%." },
+      { quarter: "2025 Q4", action: "Exit", ticker: "XRX", company: "Xerox Holdings", note: "Exited after long activist campaign." },
+      { quarter: "2025 Q3", action: "Increase", ticker: "SWX", company: "Southwest Gas Holdings", note: "Added +8%." },
+      { quarter: "2025 Q3", action: "Decrease", ticker: "BHC", company: "Bausch Health", note: "Trimmed -7%." },
+      { quarter: "2025 Q2", action: "Increase", ticker: "CZR", company: "Caesars Entertainment", note: "Built position up +30%." },
+      { quarter: "2025 Q2", action: "Buy", ticker: "CVI", company: "CVR Energy", note: "Topped up +5%." }
+    ]
+  }
+];
+
+/* ============================================================
+   STATE + HELPERS
+   ============================================================ */
+const PICKS_ID = "__picks";   // reserved id for the Radar Picks view
+
+const state = {
+  view: "investor",           // "investor" | "picks"
+  investorId: investors[0].id,
+  tab: "overview",
+  sort: { key: "weight", dir: -1 },   // holdings table sort
+  notes: [],                          // { text, tag } - session only
+  watchlist: ["ASML", "MELI"]         // starter examples, edit freely
+};
+
+const $ = sel => document.querySelector(sel);
+const currentInvestor = () => investors.find(i => i.id === state.investorId);
+
+/* ============================================================
+   LIVE QUOTES (optional)
+   Paste a free Finnhub key (finnhub.io) to fill the
+   "Last price" column. Leave empty to skip - everything else
+   works without it. Quotes are cached per session.
+   ============================================================ */
+const CONFIG = { finnhubKey: "" };
+const quoteCache = {};
+
+async function loadQuotes(){
+  if (!CONFIG.finnhubKey || state.view === "picks") return;
+  const inv = currentInvestor();
+  if (!inv) return;
+  for (const h of inv.holdings){
+    if (quoteCache[h.ticker] === undefined){
+      try {
+        const r = await fetch(`https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(h.ticker)}&token=${CONFIG.finnhubKey}`);
+        const d = await r.json();
+        quoteCache[h.ticker] = d.c || null;   // d.c = current price
+      } catch (e){ quoteCache[h.ticker] = null; }
+    }
+    const cell = document.querySelector(`[data-price="${CSS.escape(h.ticker)}"]`);
+    if (cell && quoteCache[h.ticker]) cell.textContent = "$" + quoteCache[h.ticker].toFixed(2);
+  }
+}
+
+const BUY_ACTIONS = ["Buy", "Increase", "New Position"];
+const isBuy = action => BUY_ACTIONS.includes(action);
+
+/* Compact money formatting: 92_500_000_000 -> $92.5B */
+function fmtMoney(v){
+  if (v >= 1e9) return "$" + (v / 1e9).toFixed(1) + "B";
+  if (v >= 1e6) return "$" + (v / 1e6).toFixed(0) + "M";
+  return "$" + v.toLocaleString();
+}
+
+/* Deterministic pastel badge color per sector name */
+function sectorColor(name){
+  let h = 0;
+  for (const c of name) h = (h * 31 + c.charCodeAt(0)) % 360;
+  return { bg: `hsla(${h},55%,50%,.14)`, fg: `hsl(${h},45%,${document.documentElement.dataset.theme === "dark" ? "70%" : "32%"})` };
+}
+
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g, m => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[m]));
+}
+
+/* ============================================================
+   RENDERERS - each reads state + data and repaints its section
+   ============================================================ */
+function renderSidebar(){
+  const picksActive = state.view === "picks";
+  $("#inv-list").innerHTML = `
+    <li>
+      <button class="inv-btn picks-side-btn ${picksActive ? "active" : ""}" data-id="${PICKS_ID}">
+        <span class="n">★ Radar Picks</span>
+        <span class="s">Top 3 stocks to buy</span>
+      </button>
+    </li>` +
+    investors.map(inv => `
+    <li>
+      <button class="inv-btn ${!picksActive && inv.id === state.investorId ? "active" : ""}" data-id="${inv.id}">
+        <span class="n">${inv.name}</span>
+        <span class="s">${inv.style}</span>
+      </button>
+    </li>`).join("");
+  $("#inv-select").value = picksActive ? PICKS_ID : state.investorId;
+}
+
+function renderTabs(){
+  const picks = state.view === "picks";
+  $("#tabs").style.display = picks ? "none" : "flex";
+  document.querySelectorAll(".tab").forEach(t => {
+    const active = t.dataset.tab === state.tab;
+    t.classList.toggle("active", active);
+    t.setAttribute("aria-selected", active);
+  });
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+  $(picks ? "#sec-picks" : "#sec-" + state.tab).classList.add("active");
+}
+
+function renderOverview(){
+  const inv = currentInvestor();
+  const initials = inv.name.split(" ").map(w => w[0]).join("").slice(0, 2);
+  $("#ov-avatar").textContent = initials;
+  $("#ov-name").textContent = inv.name;
+  $("#ov-styletag").textContent = inv.style;
+  $("#ov-bio").textContent = inv.bio;
+  $("#ov-numholdings").textContent = inv.stats.numHoldings;
+  $("#ov-topsectors").textContent = inv.stats.topSectors.join(" · ");
+  $("#ov-duration").textContent = inv.stats.avgDuration;
+
+  const top = [...inv.holdings].sort((a, b) => b.weight - a.weight)[0];
+  const bySector = {};
+  inv.holdings.forEach(h => bySector[h.sector] = (bySector[h.sector] || 0) + h.weight);
+  const topSector = Object.entries(bySector).sort((a, b) => b[1] - a[1])[0];
+
+  $("#ov-kpis").innerHTML = `
+    <div class="kpi"><div class="k">Stocks in portfolio</div><div class="v">${inv.stats.numHoldings}</div><div class="sub">${inv.holdings.length} shown below</div></div>
+    <div class="kpi"><div class="k">Top holding</div><div class="v">${top.ticker}</div><div class="sub">${top.company} · ${top.weight.toFixed(1)}%</div></div>
+    <div class="kpi"><div class="k">Highest sector allocation</div><div class="v">${topSector[1].toFixed(1)}%</div><div class="sub">${topSector[0]}</div></div>
+    <div class="kpi"><div class="k">Last 13F filing</div><div class="v">${inv.stats.last13F}</div><div class="sub">dummy date</div></div>`;
+}
+
+function renderHoldings(){
+  const inv = currentInvestor();
+  $("#hold-title").textContent = `Current holdings - ${inv.name}`;
+
+  const top5 = new Set([...inv.holdings].sort((a, b) => b.weight - a.weight).slice(0, 5).map(h => h.ticker));
+  const { key, dir } = state.sort;
+  const rows = [...inv.holdings].sort((a, b) => {
+    const va = a[key], vb = b[key];
+    return (typeof va === "number" ? va - vb : String(va).localeCompare(String(vb))) * dir;
+  });
+  const maxW = Math.max(...inv.holdings.map(h => h.weight));
+
+  $("#hold-body").innerHTML = rows.map(h => {
+    const c = sectorColor(h.sector);
+    return `
+    <tr class="${top5.has(h.ticker) ? "top5" : ""}">
+      <td class="ticker">${h.ticker}</td>
+      <td>${h.company}</td>
+      <td><span class="sector-badge" style="background:${c.bg};color:${c.fg}">${h.sector}</span></td>
+      <td class="weight-cell"><span class="num">${h.weight.toFixed(1)}%</span>
+        <div class="wbar"><i style="width:${(h.weight / maxW * 100).toFixed(0)}%"></i></div></td>
+      <td class="num">${fmtMoney(h.value)}</td>
+      <td class="num dim">${h.since || "—"}</td>
+      <td class="num" data-price="${h.ticker}">${quoteCache[h.ticker] ? "$" + quoteCache[h.ticker].toFixed(2) : "—"}</td>
+    </tr>`;
+  }).join("");
+
+  document.querySelectorAll("#hold-head .sortable").forEach(th => {
+    th.querySelector(".arrow").textContent = th.dataset.key === key ? (dir === 1 ? "▲" : "▼") : "";
+  });
+}
+
+function renderTrades(){
+  const inv = currentInvestor();
+
+  /* mini buys-vs-sells chart per quarter (pure CSS bars) */
+  const quarters = [...new Set(inv.trades.map(t => t.quarter))].sort();
+  const counts = quarters.map(q => ({
+    q,
+    b: inv.trades.filter(t => t.quarter === q && isBuy(t.action)).length,
+    s: inv.trades.filter(t => t.quarter === q && !isBuy(t.action)).length
+  }));
+  const maxC = Math.max(1, ...counts.flatMap(c => [c.b, c.s]));
+  $("#qchart").innerHTML = counts.map(c => `
+    <div class="qcol">
+      <div class="bars">
+        <div class="bar b" style="height:${c.b / maxC * 100}%" title="${c.b} buy-side"></div>
+        <div class="bar s" style="height:${c.s / maxC * 100}%" title="${c.s} sell-side"></div>
+      </div>
+      <span class="ql">${c.q.replace("20", "'")}</span>
+    </div>`).join("");
+
+  /* timeline, newest first */
+  const ordered = [...inv.trades].sort((a, b) => b.quarter.localeCompare(a.quarter));
+  $("#timeline").innerHTML = ordered.map(t => {
+    const side = isBuy(t.action) ? "buy" : "sell";
+    return `
+    <li class="trade ${side}">
+      <span class="q">${t.quarter}</span>
+      <div class="body">
+        <span class="action-badge ${side}">${t.action}</span>
+        <div class="co"><span class="ticker">${t.ticker}</span>${t.company}</div>
+        <div class="note">${t.note}</div>
+      </div>
+    </li>`;
+  }).join("");
+}
+
+function renderInsights(){
+  const inv = currentInvestor();
+
+  /* Signal 1: top 3 conviction holdings */
+  const top3 = [...inv.holdings].sort((a, b) => b.weight - a.weight).slice(0, 3);
+  $("#sig-conviction").innerHTML = top3.map(h => `
+    <div class="signal-item">
+      <span><span class="ticker">${h.ticker}</span> · ${h.company}</span>
+      <span class="why">${h.weight.toFixed(1)}% of book${h.since ? " · since " + h.since.slice(0, 4) : ""}</span>
+    </div>`).join("");
+
+  /* Signal 2: sectors where recent trades opened new positions */
+  const newTickers = inv.trades.filter(t => t.action === "New Position").map(t => t.ticker);
+  const newSectors = [...new Set(
+    newTickers.map(tk => (inv.holdings.find(h => h.ticker === tk) || {}).sector).filter(Boolean)
+  )];
+  $("#sig-sectors").innerHTML = newSectors.length
+    ? newSectors.map(s => {
+        const c = sectorColor(s);
+        const via = inv.trades.find(t => t.action === "New Position" &&
+          (inv.holdings.find(h => h.ticker === t.ticker) || {}).sector === s);
+        return `<div class="signal-item">
+          <span class="sector-badge" style="background:${c.bg};color:${c.fg}">${s}</span>
+          <span class="why">via new position in ${via.ticker} (${via.quarter})</span>
+        </div>`;
+      }).join("")
+    : `<p class="empty">No brand-new sectors in the recent quarters shown.</p>`;
+
+  renderNotes();
+  renderWatchlist();
+}
+
+function renderNotes(){
+  $("#notes-list").innerHTML = state.notes.length
+    ? state.notes.map((n, i) => `
+      <li class="note-item">
+        <span class="note-badge ${n.tag}">${n.tag}</span>
+        <span class="txt">${escapeHtml(n.text)}</span>
+        <button class="del" data-note="${i}" aria-label="Delete note">×</button>
+      </li>`).join("")
+    : `<li class="empty">No notes yet. Write your first take above.</li>`;
+}
+
+function renderWatchlist(){
+  $("#watch-list").innerHTML = state.watchlist.length
+    ? state.watchlist.map(tk => `
+      <li class="watch-chip">${tk}
+        <button class="del" data-watch="${tk}" aria-label="Remove ${tk} from watchlist">×</button>
+      </li>`).join("")
+    : `<li class="empty">Watchlist is empty. Add a ticker to research.</li>`;
+}
+
+/* ---------- Radar Picks ----------
+   Cross-investor consensus score per ticker:
+   holders x2 + buy-side actions x3 - sell-side actions x1.5 + avg weight / 6.
+   Tune the weights here if you want a different ranking logic. */
+const EXCLUDED_SECTORS = new Set(["ETFs / Broad Index", "Commodities"]);
+
+/* Hand-written one-liners for common consensus names; generic fallback otherwise */
+const THESES = {
+  GOOG: "Search and YouTube cash machine funding a top-2 AI stack, still valued below mega-cap peers.",
+  BABA: "China consumer platform at a single-digit forward P/E with cloud growth and heavy buybacks as free optionality.",
+  NVDA: "The toll booth of the AI capex cycle - accelerated compute pricing power plus CUDA ecosystem lock-in.",
+  META: "Ad engine compounding with AI-driven targeting gains, capex risk offset by buybacks.",
+  BAC:  "Cheap deposit franchise levered to rate normalization, backed by the two most patient holders on this list.",
+  PDD:  "Hyper-efficient China ecommerce plus Temu's international ramp, priced for pessimism.",
+  MSFT: "Azure + Copilot monetization on top of the stickiest enterprise install base in software."
+};
+
+function computePicks(){
+  const map = {};
+  investors.forEach(inv => {
+    inv.holdings.forEach(h => {
+      if (EXCLUDED_SECTORS.has(h.sector)) return;
+      const m = map[h.ticker] ??= { ticker: h.ticker, company: h.company, sector: h.sector, holders: [], buys: [], sells: [] };
+      m.holders.push({ name: inv.name, weight: h.weight });
+    });
+    inv.trades.forEach(t => {
+      const m = map[t.ticker];
+      if (!m) return;
+      (isBuy(t.action) ? m.buys : m.sells).push({ name: inv.name, quarter: t.quarter, action: t.action });
+    });
+  });
+  return Object.values(map).map(m => {
+    const avgW = m.holders.reduce((s, h) => s + h.weight, 0) / m.holders.length;
+    m.avgWeight = avgW;
+    m.score = m.holders.length * 2 + m.buys.length * 3 - m.sells.length * 1.5 + avgW / 6;
+    return m;
+  }).sort((a, b) => b.score - a.score).slice(0, 3);
+}
+
+function renderPicks(){
+  const picks = computePicks();
+  $("#picks-list").innerHTML = picks.map((p, i) => {
+    const c = sectorColor(p.sector);
+    const holders = [...p.holders].sort((a, b) => b.weight - a.weight);
+    return `
+    <div class="pick-card">
+      <div class="pick-rank">0${i + 1}</div>
+      <div>
+        <div class="pick-head">
+          <span class="ticker">${p.ticker}</span>
+          <span class="co">${p.company}</span>
+          <span class="sector-badge" style="background:${c.bg};color:${c.fg}">${p.sector}</span>
+        </div>
+        <p class="pick-thesis">${THESES[p.ticker] || "Broad consensus name across the tracked books with net buying in recent quarters."}</p>
+        <div class="pick-meta">
+          <div>
+            <h4>Who holds it (${holders.length}/${investors.length})</h4>
+            <ul>${holders.map(h => `<li>${h.name} <span class="num">· ${h.weight.toFixed(1)}% of book</span></li>`).join("")}</ul>
+          </div>
+          <div>
+            <h4>Recent buying (last 4 quarters)</h4>
+            <ul>${p.buys.length
+              ? p.buys.map(b => `<li>${b.name} <span class="num">· ${b.action}, ${b.quarter}</span></li>`).join("")
+              : "<li class='empty'>No buy-side actions in the window.</li>"}</ul>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+/* Full repaint on investor change */
+function renderAll(){
+  renderSidebar();
+  renderTabs();
+  renderOverview();
+  renderHoldings();
+  renderTrades();
+  renderInsights();
+  renderPicks();
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+/* investor via sidebar (event delegation) */
+$("#inv-list").addEventListener("click", e => {
+  const btn = e.target.closest(".inv-btn");
+  if (!btn) return;
+  selectEntry(btn.dataset.id);
+});
+
+/* investor via header dropdown */
+$("#inv-select").addEventListener("change", e => selectEntry(e.target.value));
+
+/* Shared selection logic: PICKS_ID switches to the picks view,
+   anything else selects that investor and returns to the tabs view */
+function selectEntry(id){
+  if (id === PICKS_ID) {
+    state.view = "picks";
+  } else {
+    state.view = "investor";
+    state.investorId = id;
+  }
+  renderAll();
+  loadQuotes();
+}
+
+/* tabs */
+$("#tabs").addEventListener("click", e => {
+  const tab = e.target.closest(".tab");
+  if (!tab) return;
+  state.tab = tab.dataset.tab;
+  renderTabs();
+});
+
+/* holdings sorting */
+$("#hold-head").addEventListener("click", e => {
+  const th = e.target.closest(".sortable");
+  if (!th) return;
+  const key = th.dataset.key;
+  if (state.sort.key === key) state.sort.dir *= -1;
+  else state.sort = { key, dir: key === "ticker" || key === "company" ? 1 : -1 };
+  renderHoldings();
+});
+
+/* notes */
+$("#note-add").addEventListener("click", () => {
+  const text = $("#note-input").value.trim();
+  if (!text) return;
+  const tag = document.querySelector('input[name="note-tag"]:checked').value;
+  state.notes.unshift({ text, tag });
+  $("#note-input").value = "";
+  renderNotes();
+});
+$("#notes-list").addEventListener("click", e => {
+  const del = e.target.closest("[data-note]");
+  if (!del) return;
+  state.notes.splice(Number(del.dataset.note), 1);
+  renderNotes();
+});
+
+/* watchlist */
+function addWatch(){
+  const inp = $("#watch-input");
+  const tk = inp.value.trim().toUpperCase();
+  if (tk && !state.watchlist.includes(tk)) {
+    state.watchlist.push(tk);
+    renderWatchlist();
+  }
+  inp.value = "";
+  inp.focus();
+}
+$("#watch-add").addEventListener("click", addWatch);
+$("#watch-input").addEventListener("keydown", e => { if (e.key === "Enter") addWatch(); });
+$("#watch-list").addEventListener("click", e => {
+  const del = e.target.closest("[data-watch]");
+  if (!del) return;
+  state.watchlist = state.watchlist.filter(t => t !== del.dataset.watch);
+  renderWatchlist();
+});
+
+/* theme toggle - defaults to OS preference */
+const root = document.documentElement;
+function setTheme(t){
+  root.dataset.theme = t;
+  $("#icon-moon").style.display = t === "dark" ? "none" : "block";
+  $("#icon-sun").style.display = t === "dark" ? "block" : "none";
+  /* sector badge foregrounds depend on theme */
+  renderHoldings();
+  renderInsights();
+  renderPicks();
+}
+$("#theme-toggle").addEventListener("click", () =>
+  setTheme(root.dataset.theme === "dark" ? "light" : "dark"));
+
+/* ============================================================
+   INIT
+   Tries to load data.json (written by the GitHub Action). If it
+   isn't there - e.g. opening the file locally - the embedded
+   sample data above is used and the badge says so.
+   ============================================================ */
+function buildSelect(){
+  $("#inv-select").innerHTML = `
+    <optgroup label="Radar">
+      <option value="${PICKS_ID}">★ Top 3 picks to buy</option>
+    </optgroup>
+    <optgroup label="Investors">
+      ${investors.map(i => `<option value="${i.id}">${i.name}</option>`).join("")}
+    </optgroup>`;
+}
+
+async function init(){
+  try {
+    const r = await fetch("data.json", { cache: "no-store" });
+    if (!r.ok) throw new Error("no data.json");
+    const d = await r.json();
+    if (Array.isArray(d.investors) && d.investors.length){
+      investors.length = 0;               // swap sample data for live data in place
+      investors.push(...d.investors);
+      $("#data-status").textContent = "Live 13F data · " + String(d.generated || "").slice(0, 10);
+    }
+  } catch (e){
+    $("#data-status").textContent = "Sample data";
+  }
+  state.investorId = investors[0].id;
+  buildSelect();
+  setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  renderAll();
+  loadQuotes();
+}
+init();
+</script>
+</body>
+</html>
