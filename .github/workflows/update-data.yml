@@ -1,0 +1,37 @@
+name: Update 13F data
+
+on:
+  schedule:
+    # Mondays 06:00 UTC. 13Fs cluster around the 45-day deadlines
+    # (mid-Feb / mid-May / mid-Aug / mid-Nov), weekly is plenty.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}   # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest 13F filings
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: python fetch_13f.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data.json cusip_map.json sector_map.json
+          git diff --cached --quiet && echo "No changes." && exit 0
+          git commit -m "chore: refresh 13F data ($(date -u +%F))"
+          git push
