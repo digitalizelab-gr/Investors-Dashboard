@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-27T00:23:42.533087+00:00",
+ "generated": "2026-07-27T00:36:04.758407+00:00",
  "investors": [
   {
    "id": "buffett",
@@ -88,14 +88,14 @@
      "price": 319.74
     },
     {
-     "ticker": "",
+     "ticker": "CB",
      "company": "Chubb Ltd Switz",
-     "sector": "\u2014",
+     "sector": "Insurance",
      "weight": 4.24,
      "value": 11162836215,
      "shares": 34249183,
      "since": "",
-     "price": null
+     "price": 359.75
     },
     {
      "ticker": "MCO",
@@ -363,7 +363,7 @@
     {
      "quarter": "2026 Q1",
      "action": "Exit",
-     "ticker": "",
+     "ticker": "AON",
      "company": "Aon Plc",
      "note": "Position fully closed."
     }
@@ -1286,8 +1286,8 @@
     "numHoldings": 22,
     "topSectors": [
      "Trading Companies & Distributors",
-     "Retail",
-     "Health Care"
+     "Hotels, Restaurants & Leisure",
+     "Retail"
     ],
     "avgDuration": "n/a",
     "last13F": "2026-05-14"
@@ -1364,24 +1364,24 @@
      "price": 230.67
     },
     {
-     "ticker": "",
+     "ticker": "WTW",
      "company": "Willis Towers Watson Plc Ltd",
-     "sector": "\u2014",
+     "sector": "Insurance",
      "weight": 5.08,
      "value": 259632,
      "shares": 893126,
      "since": "",
-     "price": null
+     "price": 295.11
     },
     {
-     "ticker": "",
+     "ticker": "AON",
      "company": "Aon Plc",
-     "sector": "\u2014",
+     "sector": "Insurance",
      "weight": 4.85,
      "value": 248218,
      "shares": 769000,
      "since": "",
-     "price": null
+     "price": 361.7
     },
     {
      "ticker": "V",
@@ -1424,24 +1424,24 @@
      "price": 124.21
     },
     {
-     "ticker": "",
+     "ticker": "LBTYK",
      "company": "Liberty Global Ltd",
-     "sector": "\u2014",
+     "sector": "Telecommunication",
      "weight": 3.07,
      "value": 157150,
      "shares": 13397247,
      "since": "",
-     "price": null
+     "price": 9.6
     },
     {
-     "ticker": "",
+     "ticker": "HLF",
      "company": "Herbalife Ltd",
-     "sector": "\u2014",
+     "sector": "Consumer products",
      "weight": 2.66,
      "value": 136305,
      "shares": 9259844,
      "since": "",
-     "price": null
+     "price": 11.89
     },
     {
      "ticker": "GDS",
@@ -1484,14 +1484,14 @@
      "price": 14.97
     },
     {
-     "ticker": "",
+     "ticker": "NCLH",
      "company": "Norwegian Cruise Line Hldgs",
-     "sector": "\u2014",
+     "sector": "Hotels, Restaurants & Leisure",
      "weight": 1.33,
      "value": 67881,
      "shares": 3630000,
      "since": "",
-     "price": null
+     "price": 19.37
     },
     {
      "ticker": "PCVX",
@@ -1539,14 +1539,14 @@
     {
      "quarter": "2026 Q1",
      "action": "Decrease",
-     "ticker": "",
+     "ticker": "WTW",
      "company": "Willis Towers Watson Plc Ltd",
      "note": "Reduced shares by -34%."
     },
     {
      "quarter": "2026 Q1",
      "action": "Decrease",
-     "ticker": "",
+     "ticker": "LBTYK",
      "company": "Liberty Global Ltd",
      "note": "Reduced shares by -36%."
     },
@@ -1595,7 +1595,7 @@
     {
      "quarter": "2026 Q1",
      "action": "New Position",
-     "ticker": "",
+     "ticker": "AON",
      "company": "Aon Plc",
      "note": "New stake worth $0M."
     },
@@ -1623,8 +1623,8 @@
    "stats": {
     "numHoldings": 31,
     "topSectors": [
-     "Retail",
      "Semiconductors",
+     "Retail",
      "Media"
     ],
     "avgDuration": "n/a",
@@ -1822,14 +1822,14 @@
      "price": 212.79
     },
     {
-     "ticker": "",
+     "ticker": "ASML",
      "company": "Asml Hldg Nv",
-     "sector": "\u2014",
+     "sector": "Semiconductors",
      "weight": 1.1,
      "value": 65381085,
      "shares": 49500,
      "since": "",
-     "price": null
+     "price": 1757.09
     },
     {
      "ticker": "QCOM",
@@ -1992,22 +1992,22 @@
     "numHoldings": 52,
     "topSectors": [
      "Energy",
-     "Auto Components",
-     "Pharmaceuticals"
+     "Metals & Mining",
+     "Telecommunication"
     ],
     "avgDuration": "n/a",
     "last13F": "2026-05-20"
    },
    "holdings": [
     {
-     "ticker": "",
+     "ticker": "TRMD",
      "company": "Torm Plc",
-     "sector": "\u2014",
+     "sector": "Energy",
      "weight": 15.67,
      "value": 675076008,
      "shares": 23839575,
      "since": "",
-     "price": null
+     "price": 30.28
     },
     {
      "ticker": "EXE",
@@ -2020,14 +2020,14 @@
      "price": 91.52
     },
     {
-     "ticker": "",
+     "ticker": "AU",
      "company": "Anglogold Ashanti Plc",
-     "sector": "\u2014",
+     "sector": "Metals & Mining",
      "weight": 7.29,
      "value": 313800237,
      "shares": 3223092,
      "since": "",
-     "price": null
+     "price": 79.67
     },
     {
      "ticker": "GTX",
@@ -2120,14 +2120,14 @@
      "price": 359.9
     },
     {
-     "ticker": "",
+     "ticker": "LBTYK",
      "company": "Liberty Global Ltd",
-     "sector": "\u2014",
+     "sector": "Telecommunication",
      "weight": 2.4,
      "value": 103383899,
      "shares": 8551191,
      "since": "",
-     "price": null
+     "price": 9.6
     },
     {
      "ticker": "ITUB",
@@ -2180,14 +2180,14 @@
      "price": 62.6
     },
     {
-     "ticker": "",
+     "ticker": "XP",
      "company": "Xp Inc",
-     "sector": "\u2014",
+     "sector": "Financial Services",
      "weight": 1.4,
      "value": 60395051,
      "shares": 3172009,
      "since": "",
-     "price": null
+     "price": 16.69
     },
     {
      "ticker": "AERO",
@@ -2220,24 +2220,24 @@
      "price": 39.42
     },
     {
-     "ticker": "",
+     "ticker": "LILAK",
      "company": "Liberty Latin America Ltd",
-     "sector": "\u2014",
+     "sector": "Telecommunication",
      "weight": 1.18,
      "value": 50704239,
      "shares": 5748780,
      "since": "",
-     "price": null
+     "price": 7.435
     },
     {
-     "ticker": "",
+     "ticker": "CRDO",
      "company": "Credo Technology Group Holding Ltd",
-     "sector": "\u2014",
+     "sector": "Semiconductors",
      "weight": 1.17,
      "value": 50595930,
      "shares": 539000,
      "since": "",
-     "price": null
+     "price": 213.15
     },
     {
      "ticker": "RWAY",
@@ -2261,14 +2261,14 @@
     {
      "quarter": "2026 Q1",
      "action": "Decrease",
-     "ticker": "",
+     "ticker": "TRMD",
      "company": "Torm Plc",
      "note": "Reduced shares by -10%."
     },
     {
      "quarter": "2026 Q1",
      "action": "Decrease",
-     "ticker": "",
+     "ticker": "AU",
      "company": "Anglogold Ashanti Plc",
      "note": "Reduced shares by -16%."
     },
