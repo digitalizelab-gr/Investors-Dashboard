@@ -181,6 +181,20 @@ def normalize_ticker(ticker):
     return t
 
 
+# OpenFIGI exchange codes for the US composite and the individual US venues.
+US_EXCH_CODES = {"US", "UN", "UQ", "UA", "UR", "UW", "UP", "UV", "UB", "UD"}
+
+
+def pick_us_ticker(records):
+    """Choose the US listing out of an unfiltered OpenFIGI response.
+    Falling back to records[0] is what previously turned Philip Morris into
+    its Frankfurt line, so anything non-US is ignored outright."""
+    for r in records:
+        if r.get("exchCode") in US_EXCH_CODES and normalize_ticker(r.get("ticker")):
+            return normalize_ticker(r["ticker"])
+    return ""
+
+
 def parse_infotable(cik, accession):
     """Download a filing's information table XML and aggregate holdings by CUSIP."""
     acc_nodash = accession.replace("-", "")
@@ -263,6 +277,27 @@ def resolve_tickers(cusips):
             for cusip in chunk:
                 CUSIP_MAP.setdefault(cusip, "")
         time.sleep(pause)
+
+    # Foreign-domiciled issuers with a US listing (Chubb, TORM, ASML) carry a
+    # CINS rather than a plain CUSIP, and the exchCode filter returns nothing
+    # for them. Ask again unfiltered and pick a US venue out of the results.
+    missed = [c for c in todo if not CUSIP_MAP.get(c)]
+    if missed:
+        print(f"  retrying {len(missed)} unmatched CUSIPs without the exchange filter")
+        for i in range(0, len(missed), batch):
+            chunk = missed[i:i + batch]
+            payload = json.dumps(
+                [{"idType": "ID_CUSIP", "idValue": c} for c in chunk]
+            ).encode()
+            try:
+                resp = json.loads(_get("https://api.openfigi.com/v3/mapping",
+                                       headers=headers, data=payload))
+                for cusip, result in zip(chunk, resp):
+                    CUSIP_MAP[cusip] = pick_us_ticker(result.get("data") or [])
+            except Exception as e:
+                print(f"  ! OpenFIGI retry batch failed ({e})")
+            time.sleep(pause)
+
     save_cache("cusip_map.json", CUSIP_MAP)
 
 
@@ -306,6 +341,19 @@ def fetch_prices(investors):
         for h in inv["holdings"]:
             h["price"] = prices.get(h["ticker"])
     print(f"  priced {sum(1 for v in prices.values() if v)}/{len(tickers)}")
+
+    # A symbol no quote API recognises is usually a stale mapping rather than an
+    # untraded stock, so drop it and let the next run resolve that CUSIP again.
+    # If OpenFIGI returns the same symbol the cache file is byte-identical and
+    # nothing churns, so this is safe to leave running every day.
+    unpriced = {t for t, v in prices.items() if not v}
+    if unpriced:
+        stale = [c for c, t in CUSIP_MAP.items() if t in unpriced]
+        for c in stale:
+            del CUSIP_MAP[c]
+        save_cache("cusip_map.json", CUSIP_MAP)
+        print(f"  dropped {len(stale)} unpriceable mappings for retry: "
+              f"{', '.join(sorted(unpriced))}")
 
 
 # ---------------------------------------------------------------------------
