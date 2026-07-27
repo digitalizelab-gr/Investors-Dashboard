@@ -195,6 +195,35 @@ def pick_us_ticker(records):
     return ""
 
 
+# Foreign-domiciled issuers identify themselves with a CINS rather than a plain
+# CUSIP, and OpenFIGI resolves none of them, filtered or not. Their US listings
+# are pinned here by issuer name. Extend this when a sizeable holding turns up
+# with no ticker. Where an issuer has several US share classes the most liquid
+# one is used, so the price is the class price rather than the exact line held.
+ISSUER_OVERRIDES = {
+    "anglogold ashanti": "AU",
+    "aon": "AON",
+    "asml": "ASML",
+    "chubb": "CB",
+    "credo technology": "CRDO",
+    "herbalife": "HLF",
+    "liberty global": "LBTYK",
+    "liberty latin america": "LILAK",
+    "norwegian cruise line": "NCLH",
+    "torm": "TRMD",
+    "willis towers watson": "WTW",
+    "xp inc": "XP",
+}
+
+
+def override_ticker(issuer):
+    name = (issuer or "").lower()
+    for prefix, ticker in ISSUER_OVERRIDES.items():
+        if name.startswith(prefix):
+            return ticker
+    return ""
+
+
 def parse_infotable(cik, accession):
     """Download a filing's information table XML and aggregate holdings by CUSIP."""
     acc_nodash = accession.replace("-", "")
@@ -384,7 +413,8 @@ def build_investor(meta):
     top = sorted(latest.values(), key=lambda h: h["value"], reverse=True)
     holdings = []
     for h in top[:MAX_HOLDINGS_PER_INVESTOR]:
-        ticker = normalize_ticker(CUSIP_MAP.get(h["cusip"], ""))
+        ticker = (normalize_ticker(CUSIP_MAP.get(h["cusip"], ""))
+                  or override_ticker(h["issuer"]))
         holdings.append({
             "ticker": ticker,
             "company": h["issuer"],
@@ -401,7 +431,8 @@ def build_investor(meta):
     trades = []
     for cusip, h in latest.items():
         p = prev.get(cusip)
-        ticker = normalize_ticker(CUSIP_MAP.get(cusip, ""))
+        ticker = (normalize_ticker(CUSIP_MAP.get(cusip, ""))
+                  or override_ticker(h["issuer"]))
         if p is None:
             trades.append({"quarter": q, "action": "New Position",
                            "ticker": ticker, "company": h["issuer"],
@@ -421,7 +452,8 @@ def build_investor(meta):
                                "_size": abs(chg) * h["value"]})
     for cusip, p in prev.items():
         if cusip not in latest:
-            ticker = normalize_ticker(CUSIP_MAP.get(cusip, ""))
+            ticker = (normalize_ticker(CUSIP_MAP.get(cusip, ""))
+                      or override_ticker(p["issuer"]))
             trades.append({"quarter": q, "action": "Exit",
                            "ticker": ticker, "company": p["issuer"],
                            "note": "Position fully closed.",
