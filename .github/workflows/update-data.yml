@@ -2,9 +2,10 @@ name: Update 13F data
 
 on:
   schedule:
-    # Mondays 06:00 UTC. 13Fs cluster around the 45-day deadlines
-    # (mid-Feb / mid-May / mid-Aug / mid-Nov), weekly is plenty.
-    - cron: "0 6 * * 1"
+    # Weekdays 22:00 UTC, comfortably after the US close in both EST and EDT.
+    # Positions only move four times a year, but prices are refetched every run
+    # so the dashboard tracks each holding against its filing price daily.
+    - cron: "0 22 * * 1-5"
   workflow_dispatch: {}   # manual "Run workflow" button
 
 permissions:

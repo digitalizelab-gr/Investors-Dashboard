@@ -245,6 +245,8 @@ tbody tr:last-child td{border-bottom:none}
 .wbar i{display:block;height:100%;background:var(--accent);border-radius:3px}
 .num{font-family:var(--font-mono);font-size:13px}
 .dim{color:var(--muted)}
+.chg.up{color:var(--buy)}
+.chg.down{color:var(--sell)}
 
 /* ---------- Trades ---------- */
 .qchart{display:flex;gap:var(--s3);align-items:flex-end;height:120px;padding:var(--s2) 0 0}
@@ -458,6 +460,7 @@ html[data-theme="dark"] .btn.primary{color:#0D1412}
                 <th class="sortable" data-key="value">Mkt value<span class="arrow"></span></th>
                 <th class="sortable" data-key="since">Holding since<span class="arrow"></span></th>
                 <th>Last price</th>
+                <th title="Last price against the average price implied by the 13F (market value divided by shares at quarter end)">Vs filing</th>
               </tr>
             </thead>
             <tbody id="hold-body"></tbody>
@@ -660,33 +663,6 @@ const investors = [
     ]
   },
   {
-    id: "burry",
-    name: "Michael Burry",
-    style: "Contrarian, deep value",
-    bio: "Founder of Scion Asset Management, of Big Short fame. Small, fast-turning, deeply contrarian book: buys what the market hates, sizes aggressively, exits without sentiment.",
-    stats: { numHoldings: 12, topSectors: ["Consumer Discretionary", "Healthcare", "Technology"], avgDuration: "0.9 years", last13F: "2026-05-15" },
-    holdings: [
-      { ticker: "BABA", company: "Alibaba Group ADR", sector: "Consumer Discretionary", weight: 14.8, value: 155_000_000, since: "2023-02-14" },
-      { ticker: "JD",   company: "JD.com ADR", sector: "Consumer Discretionary", weight: 12.3, value: 129_000_000, since: "2022-11-14" },
-      { ticker: "GOOG", company: "Alphabet Inc. Class C", sector: "Technology", weight: 10.5, value: 110_000_000, since: "2025-02-14" },
-      { ticker: "HCA",  company: "HCA Healthcare", sector: "Healthcare", weight: 9.7, value: 101_000_000, since: "2024-05-15" },
-      { ticker: "CI",   company: "The Cigna Group", sector: "Healthcare", weight: 8.9, value: 93_000_000, since: "2024-08-14" },
-      { ticker: "MOH",  company: "Molina Healthcare", sector: "Healthcare", weight: 7.6, value: 79_000_000, since: "2025-08-14" },
-      { ticker: "EL",   company: "Estee Lauder", sector: "Consumer Staples", weight: 6.8, value: 71_000_000, since: "2025-11-14" },
-      { ticker: "PDD",  company: "PDD Holdings ADR", sector: "Consumer Discretionary", weight: 6.1, value: 64_000_000, since: "2024-11-14" }
-    ],
-    trades: [
-      { quarter: "2026 Q1", action: "Increase", ticker: "GOOG", company: "Alphabet Inc. Class C", note: "Added +22%, now a top-3 position." },
-      { quarter: "2026 Q1", action: "Exit", ticker: "SB", company: "Safe Bulkers", note: "Closed shipping position entirely." },
-      { quarter: "2025 Q4", action: "New Position", ticker: "EL", company: "Estee Lauder", note: "Contrarian entry after -60% drawdown." },
-      { quarter: "2025 Q4", action: "Increase", ticker: "BABA", company: "Alibaba Group ADR", note: "China consumer basket up +15%." },
-      { quarter: "2025 Q3", action: "New Position", ticker: "MOH", company: "Molina Healthcare", note: "Managed care fear trade." },
-      { quarter: "2025 Q3", action: "Decrease", ticker: "JD", company: "JD.com ADR", note: "Trimmed -10%." },
-      { quarter: "2025 Q2", action: "Increase", ticker: "HCA", company: "HCA Healthcare", note: "Added +12%." },
-      { quarter: "2025 Q2", action: "Exit", ticker: "BKNG", company: "Booking Holdings", note: "Quick trade closed for a profit." }
-    ]
-  },
-  {
     id: "klarman",
     name: "Seth Klarman",
     style: "Deep value, special situations",
@@ -850,6 +826,7 @@ async function loadQuotes(){
   const inv = currentInvestor();
   if (!inv) return;
   for (const h of inv.holdings){
+    if (!h.ticker) continue;              // unmapped CUSIP, nothing to quote
     if (quoteCache[h.ticker] === undefined){
       try {
         const r = await fetch(`https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(h.ticker)}&token=${CONFIG.finnhubKey}`);
@@ -858,7 +835,9 @@ async function loadQuotes(){
       } catch (e){ quoteCache[h.ticker] = null; }
     }
     const cell = document.querySelector(`[data-price="${CSS.escape(h.ticker)}"]`);
-    if (cell && quoteCache[h.ticker]) cell.textContent = "$" + quoteCache[h.ticker].toFixed(2);
+    if (cell) cell.textContent = fmtPrice(priceOf(h));
+    const dcell = document.querySelector(`[data-delta="${CSS.escape(h.ticker)}"]`);
+    if (dcell){ dcell.textContent = fmtChg(h); dcell.className = "num " + chgClass(h); }
   }
 }
 
@@ -940,6 +919,25 @@ function renderOverview(){
     <div class="kpi"><div class="k">Last 13F filing</div><div class="v">${inv.stats.last13F}</div><div class="sub">dummy date</div></div>`;
 }
 
+/* Price helpers. h.price is written into data.json by the scheduled Action;
+   a live Finnhub quote overrides it when CONFIG.finnhubKey is set. "Vs filing"
+   compares that price to the average the 13F implies (value / shares). */
+function priceOf(h){ return quoteCache[h.ticker] ?? h.price ?? null; }
+function filingPrice(h){ return h.shares > 0 ? h.value / h.shares : null; }
+function changePct(h){
+  const px = priceOf(h), base = filingPrice(h);
+  return (px && base) ? (px / base - 1) * 100 : null;
+}
+function fmtPrice(p){ return p ? "$" + p.toFixed(2) : "—"; }
+function chgClass(h){
+  const d = changePct(h);
+  return d === null ? "dim" : d >= 0 ? "chg up" : "chg down";
+}
+function fmtChg(h){
+  const d = changePct(h);
+  return d === null ? "—" : (d >= 0 ? "+" : "") + d.toFixed(1) + "%";
+}
+
 function renderHoldings(){
   const inv = currentInvestor();
   $("#hold-title").textContent = `Current holdings - ${inv.name}`;
@@ -956,14 +954,15 @@ function renderHoldings(){
     const c = sectorColor(h.sector);
     return `
     <tr class="${top5.has(h.ticker) ? "top5" : ""}">
-      <td class="ticker">${h.ticker}</td>
+      <td class="ticker">${h.ticker || "—"}</td>
       <td>${h.company}</td>
       <td><span class="sector-badge" style="background:${c.bg};color:${c.fg}">${h.sector}</span></td>
       <td class="weight-cell"><span class="num">${h.weight.toFixed(1)}%</span>
         <div class="wbar"><i style="width:${(h.weight / maxW * 100).toFixed(0)}%"></i></div></td>
       <td class="num">${fmtMoney(h.value)}</td>
       <td class="num dim">${h.since || "—"}</td>
-      <td class="num" data-price="${h.ticker}">${quoteCache[h.ticker] ? "$" + quoteCache[h.ticker].toFixed(2) : "—"}</td>
+      <td class="num" data-price="${h.ticker}">${fmtPrice(priceOf(h))}</td>
+      <td class="num ${chgClass(h)}" data-delta="${h.ticker}">${fmtChg(h)}</td>
     </tr>`;
   }).join("");
 
@@ -1001,7 +1000,7 @@ function renderTrades(){
       <span class="q">${t.quarter}</span>
       <div class="body">
         <span class="action-badge ${side}">${t.action}</span>
-        <div class="co"><span class="ticker">${t.ticker}</span>${t.company}</div>
+        <div class="co">${t.ticker ? `<span class="ticker">${t.ticker}</span>` : ""}${t.company}</div>
         <div class="note">${t.note}</div>
       </div>
     </li>`;
@@ -1015,7 +1014,7 @@ function renderInsights(){
   const top3 = [...inv.holdings].sort((a, b) => b.weight - a.weight).slice(0, 3);
   $("#sig-conviction").innerHTML = top3.map(h => `
     <div class="signal-item">
-      <span><span class="ticker">${h.ticker}</span> · ${h.company}</span>
+      <span>${h.ticker ? `<span class="ticker">${h.ticker}</span> · ` : ""}${h.company}</span>
       <span class="why">${h.weight.toFixed(1)}% of book${h.since ? " · since " + h.since.slice(0, 4) : ""}</span>
     </div>`).join("");
 
@@ -1081,6 +1080,7 @@ function computePicks(){
   const map = {};
   investors.forEach(inv => {
     inv.holdings.forEach(h => {
+      if (!h.ticker) return;            // unmapped CUSIPs would all share one bucket
       if (EXCLUDED_SECTORS.has(h.sector)) return;
       const m = map[h.ticker] ??= { ticker: h.ticker, company: h.company, sector: h.sector, holders: [], buys: [], sells: [] };
       m.holders.push({ name: inv.name, weight: h.weight });

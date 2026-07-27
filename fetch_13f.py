@@ -15,8 +15,10 @@ Environment variables (all optional):
   OPENFIGI_API_KEY  Free key from openfigi.com -> much higher CUSIP-mapping
                     rate limits. Without it the script still works, just slower
                     on the first run (results are cached in cusip_map.json).
-  FINNHUB_API_KEY   Free key from finnhub.io -> adds sector per ticker
-                    (cached in sector_map.json). Without it sectors show "—".
+  FINNHUB_API_KEY   Free key from finnhub.io -> adds a sector per ticker
+                    (cached in sector_map.json) and the last trade price per
+                    holding (refetched every run, never cached). Without it
+                    sectors show "—" and prices are blank.
 
 Run modes:
   python fetch_13f.py           normal refresh, writes data.json
@@ -26,6 +28,7 @@ Run modes:
 import json
 import urllib.parse
 import os
+import re
 import sys
 import time
 import urllib.request
@@ -63,9 +66,8 @@ INVESTORS = [
     {"id": "smith", "name": "Terry Smith", "cik": "0001569205",
      "style": "Quality growth, buy & hold",
      "bio": "Founder of Fundsmith. Buy good companies, don't overpay, do nothing."},
-    {"id": "burry", "name": "Michael Burry", "cik": "0001649339",
-     "style": "Contrarian, deep value",
-     "bio": "Founder of Scion Asset Management. Small, fast-turning, deeply contrarian book."},
+    # Michael Burry (Scion, CIK 0001649339) was dropped: Scion deregistered in
+    # late 2025, so its last 13F covers 2025-09-30 and no newer one is coming.
     {"id": "klarman", "name": "Seth Klarman", "cik": "0001061768",
      "style": "Deep value, special situations",
      "bio": "CEO of Baupost Group. Mispriced, complex or unloved assets with a heavy cash cushion."},
@@ -157,6 +159,28 @@ def latest_13f_filings(cik, count=2):
     return entity_name, filings[:count]
 
 
+DEBT_MARKERS = ("NOTE", "BOND", "DBCV", "DEBENTURE")
+
+
+def is_debt(title_of_class):
+    """13F tables mix convertible notes and bonds in with the equities.
+    The dashboard charts stock positions only, so those rows are dropped."""
+    t = title_of_class.upper()
+    return any(m in t for m in DEBT_MARKERS)
+
+
+def normalize_ticker(ticker):
+    """Turn an OpenFIGI symbol into one a US quote API will accept.
+    Returns "" when there is no usable symbol, which is the signal to show
+    the company name instead and skip the price lookup."""
+    t = (ticker or "").strip().upper().replace("/", ".")
+    if not t or " " in t:
+        return ""                       # blank, or a bond line like "AWK 3.625 06/15/26"
+    if not re.fullmatch(r"[A-Z]{1,5}(\.[A-Z])?", t):
+        return ""                       # CUSIP fragments and foreign venue codes
+    return t
+
+
 def parse_infotable(cik, accession):
     """Download a filing's information table XML and aggregate holdings by CUSIP."""
     acc_nodash = accession.replace("-", "")
@@ -186,6 +210,8 @@ def parse_infotable(cik, accession):
             row[local(child.tag)] = (child.text or "").strip()
         if row.get("putCall"):
             continue  # skip options, keep common shares only
+        if is_debt(row.get("titleOfClass", "")):
+            continue  # convertible notes and bonds are not equity positions
         cusip = row.get("cusip", "").upper()
         if not cusip:
             continue
@@ -221,8 +247,10 @@ def resolve_tickers(cusips):
           f"({'with key' if OPENFIGI_KEY else 'keyless, slow first run'})")
     for i in range(0, len(todo), batch):
         chunk = todo[i:i + batch]
+        # exchCode US keeps OpenFIGI from handing back the Frankfurt or London
+        # line for a dual-listed name (Philip Morris came back as "4I1").
         payload = json.dumps(
-            [{"idType": "ID_CUSIP", "idValue": c} for c in chunk]
+            [{"idType": "ID_CUSIP", "idValue": c, "exchCode": "US"} for c in chunk]
         ).encode()
         try:
             resp = json.loads(_get("https://api.openfigi.com/v3/mapping",
@@ -250,8 +278,34 @@ def resolve_sector(ticker):
         SECTOR_MAP[ticker] = prof.get("finnhubIndustry") or "—"
     except Exception:
         SECTOR_MAP[ticker] = "—"
-    time.sleep(0.5)  # stay inside the free tier
+    time.sleep(1.1)  # free tier allows 60 calls/min
     return SECTOR_MAP[ticker]
+
+
+def fetch_prices(investors):
+    """Fill in the last trade price per holding. Prices are deliberately not
+    cached between runs, and each ticker is fetched once per run no matter how
+    many investors hold it."""
+    tickers = sorted({h["ticker"] for inv in investors
+                      for h in inv["holdings"] if h["ticker"]})
+    if not FINNHUB_KEY:
+        print(f"\nNo FINNHUB_API_KEY set - {len(tickers)} tickers left unpriced.")
+        return
+    print(f"\nPricing {len(tickers)} tickers via Finnhub")
+    prices = {}
+    for t in tickers:
+        try:
+            quote = json.loads(_get(
+                f"https://finnhub.io/api/v1/quote"
+                f"?symbol={urllib.parse.quote(t)}&token={FINNHUB_KEY}"))
+            prices[t] = quote.get("c") or None   # c is 0 for unknown symbols
+        except Exception:
+            prices[t] = None
+        time.sleep(1.1)  # free tier allows 60 calls/min
+    for inv in investors:
+        for h in inv["holdings"]:
+            h["price"] = prices.get(h["ticker"])
+    print(f"  priced {sum(1 for v in prices.values() if v)}/{len(tickers)}")
 
 
 # ---------------------------------------------------------------------------
@@ -282,15 +336,16 @@ def build_investor(meta):
     top = sorted(latest.values(), key=lambda h: h["value"], reverse=True)
     holdings = []
     for h in top[:MAX_HOLDINGS_PER_INVESTOR]:
-        ticker = CUSIP_MAP.get(h["cusip"]) or h["cusip"][:6]
+        ticker = normalize_ticker(CUSIP_MAP.get(h["cusip"], ""))
         holdings.append({
             "ticker": ticker,
             "company": h["issuer"],
-            "sector": resolve_sector(CUSIP_MAP.get(h["cusip"], "")),
+            "sector": resolve_sector(ticker),
             "weight": round(h["value"] / total_value * 100, 2),
             "value": round(h["value"]),
             "shares": round(h["shares"]),
             "since": "",  # 13Fs don't carry entry dates; fill by hand if you care
+            "price": None,  # filled in by fetch_prices once all investors are built
         })
 
     # Trades: diff latest vs previous quarter, biggest moves first
@@ -298,7 +353,7 @@ def build_investor(meta):
     trades = []
     for cusip, h in latest.items():
         p = prev.get(cusip)
-        ticker = CUSIP_MAP.get(cusip) or cusip[:6]
+        ticker = normalize_ticker(CUSIP_MAP.get(cusip, ""))
         if p is None:
             trades.append({"quarter": q, "action": "New Position",
                            "ticker": ticker, "company": h["issuer"],
@@ -318,7 +373,7 @@ def build_investor(meta):
                                "_size": abs(chg) * h["value"]})
     for cusip, p in prev.items():
         if cusip not in latest:
-            ticker = CUSIP_MAP.get(cusip) or cusip[:6]
+            ticker = normalize_ticker(CUSIP_MAP.get(cusip, ""))
             trades.append({"quarter": q, "action": "Exit",
                            "ticker": ticker, "company": p["issuer"],
                            "note": "Position fully closed.",
@@ -383,6 +438,7 @@ def main():
             failures.append(meta["name"])
 
     save_cache("sector_map.json", SECTOR_MAP)
+    fetch_prices(out["investors"])
 
     if not out["investors"]:
         print("No investors fetched successfully - data.json NOT written.")
