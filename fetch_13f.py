@@ -268,6 +268,20 @@ def parse_infotable(cik, accession):
         })
         h["value"] += value
         h["shares"] += shares
+    return rescale_thousands(holdings)
+
+
+def rescale_thousands(holdings):
+    """The SEC moved 13F value reporting to whole dollars in 2023, but some
+    filers still report thousands (Baupost does). Left uncorrected their market
+    values come out a thousand times too small. A portfolio whose median implied
+    share price is under a dollar is the giveaway, since no book of US equities
+    trades there."""
+    implied = sorted(h["value"] / h["shares"]
+                     for h in holdings.values() if h["shares"] > 0)
+    if implied and implied[len(implied) // 2] < 1.0:
+        for h in holdings.values():
+            h["value"] *= 1000
     return holdings
 
 
