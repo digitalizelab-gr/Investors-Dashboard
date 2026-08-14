@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T22:49:25.382072+00:00",
+ "generated": "2026-08-14T22:28:11.064842+00:00",
  "investors": [
   {
    "id": "buffett",
@@ -11,360 +11,360 @@
     "topSectors": [
      "Technology",
      "Financial Services",
-     "Energy"
+     "Media"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-15"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "AAPL",
      "company": "Apple Inc",
      "sector": "Technology",
-     "weight": 21.99,
-     "value": 57843260493,
+     "weight": 22.04,
+     "value": 65950296923,
      "shares": 227917808,
      "since": "",
-     "price": 305.26
+     "price": 305.93
     },
     {
      "ticker": "AXP",
      "company": "American Express Co",
      "sector": "Financial Services",
-     "weight": 17.43,
-     "value": 45859204536,
+     "weight": 17.14,
+     "value": 51282319275,
      "shares": 151610700,
      "since": "",
-     "price": 343.65
+     "price": 342.48
     },
     {
      "ticker": "KO",
      "company": "Coca Cola Co",
      "sector": "Beverages",
-     "weight": 11.56,
-     "value": 30420000000,
+     "weight": 10.86,
+     "value": 32508000000,
      "shares": 400000000,
      "since": "",
-     "price": 87.42
-    },
-    {
-     "ticker": "BAC",
-     "company": "Bank America Corp",
-     "sector": "Banking",
-     "weight": 9.52,
-     "value": 25039178044,
-     "shares": 513624165,
-     "since": "",
-     "price": 64.09
-    },
-    {
-     "ticker": "CVX",
-     "company": "Chevron Corporation",
-     "sector": "Energy",
-     "weight": 6.64,
-     "value": 17457364606,
-     "shares": 84375856,
-     "since": "",
-     "price": 197.7
-    },
-    {
-     "ticker": "OXY",
-     "company": "Occidental Pete Corp",
-     "sector": "Energy",
-     "weight": 6.55,
-     "value": 17221193015,
-     "shares": 264941431,
-     "since": "",
-     "price": 57.7
+     "price": 87.71
     },
     {
      "ticker": "GOOGL",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 5.93,
-     "value": 15600071913,
-     "shares": 54249798,
+     "weight": 9.41,
+     "value": 28157599351,
+     "shares": 78791167,
      "since": "",
-     "price": 346.36
+     "price": 345.9
+    },
+    {
+     "ticker": "BAC",
+     "company": "Bank Of Amer Corp",
+     "sector": "Banking",
+     "weight": 9.2,
+     "value": 27543790975,
+     "shares": 483394015,
+     "since": "",
+     "price": 64.49
+    },
+    {
+     "ticker": "CVX",
+     "company": "Chevron Corporation",
+     "sector": "Energy",
+     "weight": 4.67,
+     "value": 13986141890,
+     "shares": 84375856,
+     "since": "",
+     "price": 200
+    },
+    {
+     "ticker": "OXY",
+     "company": "Occidental Pete Corp",
+     "sector": "Energy",
+     "weight": 4.3,
+     "value": 12868205304,
+     "shares": 264941431,
+     "since": "",
+     "price": 58.36
     },
     {
      "ticker": "CB",
-     "company": "Chubb Ltd Switz",
+     "company": "Chubb Limited",
      "sector": "Insurance",
-     "weight": 4.24,
-     "value": 11162836215,
+     "weight": 3.9,
+     "value": 11670066615,
      "shares": 34249183,
      "since": "",
-     "price": 344.5
+     "price": 343.64
     },
     {
      "ticker": "MCO",
      "company": "Moodys Corp",
      "sector": "Financial Services",
-     "weight": 4.09,
-     "value": 10762190653,
+     "weight": 3.73,
+     "value": 11173435852,
      "shares": 24669778,
      "since": "",
-     "price": 488.42
-    },
-    {
-     "ticker": "KHC",
-     "company": "Kraft Heinz Co",
-     "sector": "Food Products",
-     "weight": 2.78,
-     "value": 7323527057,
-     "shares": 325634818,
-     "since": "",
-     "price": 25.38
-    },
-    {
-     "ticker": "DVA",
-     "company": "Davita Inc",
-     "sector": "Health Care",
-     "weight": 1.76,
-     "value": 4626158909,
-     "shares": 30100585,
-     "since": "",
-     "price": 179.17
-    },
-    {
-     "ticker": "KR",
-     "company": "Kroger Co",
-     "sector": "Retail",
-     "weight": 1.38,
-     "value": 3618000000,
-     "shares": 50000000,
-     "since": "",
-     "price": 57.23
-    },
-    {
-     "ticker": "SIRI",
-     "company": "Siriusxm Holdings Inc",
-     "sector": "Media",
-     "weight": 1.09,
-     "value": 2880548260,
-     "shares": 124807117,
-     "since": "",
-     "price": 27.99
-    },
-    {
-     "ticker": "DAL",
-     "company": "Delta Air Lines Inc",
-     "sector": "Airlines",
-     "weight": 1.01,
-     "value": 2646532635,
-     "shares": 39809456,
-     "since": "",
-     "price": 91.31
-    },
-    {
-     "ticker": "VRSN",
-     "company": "Verisign Inc",
-     "sector": "Technology",
-     "weight": 0.85,
-     "value": 2232726597,
-     "shares": 8989880,
-     "since": "",
-     "price": 287.15
-    },
-    {
-     "ticker": "COF",
-     "company": "Capital One Finl Corp",
-     "sector": "Financial Services",
-     "weight": 0.5,
-     "value": 1304374500,
-     "shares": 7150000,
-     "since": "",
-     "price": 223.83
-    },
-    {
-     "ticker": "NYT",
-     "company": "New York Times Co Mtn Be",
-     "sector": "Media",
-     "weight": 0.48,
-     "value": 1268219376,
-     "shares": 15146535,
-     "since": "",
-     "price": 64.13
-    },
-    {
-     "ticker": "ALLY",
-     "company": "Ally Finl Inc",
-     "sector": "Financial Services",
-     "weight": 0.43,
-     "value": 1137670000,
-     "shares": 29000000,
-     "since": "",
-     "price": 44.6
+     "price": 484.96
     },
     {
      "ticker": "GOOG",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 0.39,
-     "value": 1028454775,
-     "shares": 3585215,
+     "weight": 3.21,
+     "value": 9606489032,
+     "shares": 27188433,
      "since": "",
-     "price": 343.94
+     "price": 343.54
     },
     {
-     "ticker": "LLYVK",
-     "company": "Liberty Live Holdings Inc",
-     "sector": "Media",
-     "weight": 0.38,
-     "value": 996356028,
-     "shares": 10587143,
+     "ticker": "KHC",
+     "company": "Kraft Heinz Co",
+     "sector": "Food Products",
+     "weight": 2.57,
+     "value": 7691494401,
+     "shares": 325634818,
      "since": "",
-     "price": 107.87
+     "price": 25.51
+    },
+    {
+     "ticker": "DVA",
+     "company": "Davita Inc",
+     "sector": "Health Care",
+     "weight": 2.15,
+     "value": 6425268898,
+     "shares": 28880209,
+     "since": "",
+     "price": 180.06
+    },
+    {
+     "ticker": "DAL",
+     "company": "Delta Air Lines Inc",
+     "sector": "Airlines",
+     "weight": 1.79,
+     "value": 5368591200,
+     "shares": 57320000,
+     "since": "",
+     "price": 89.35
+    },
+    {
+     "ticker": "SIRI",
+     "company": "Siriusxm Holdings Inc",
+     "sector": "Media",
+     "weight": 1.23,
+     "value": 3686802237,
+     "shares": 124807117,
+     "since": "",
+     "price": 28.46
+    },
+    {
+     "ticker": "VRSN",
+     "company": "Verisign Inc",
+     "sector": "Technology",
+     "weight": 0.76,
+     "value": 2261494212,
+     "shares": 8989880,
+     "since": "",
+     "price": 284.24
+    },
+    {
+     "ticker": "KR",
+     "company": "Kroger Co",
+     "sector": "Retail",
+     "weight": 0.72,
+     "value": 2165670000,
+     "shares": 39000000,
+     "since": "",
+     "price": 56.69
+    },
+    {
+     "ticker": "ALLY",
+     "company": "Ally Finl Inc",
+     "sector": "Financial Services",
+     "weight": 0.41,
+     "value": 1240650000,
+     "shares": 27000000,
+     "since": "",
+     "price": 44.91
     },
     {
      "ticker": "LEN",
      "company": "Lennar Corp",
      "sector": "Consumer products",
-     "weight": 0.33,
-     "value": 877052911,
-     "shares": 10099642,
+     "weight": 0.4,
+     "value": 1186481443,
+     "shares": 13111741,
      "since": "",
-     "price": 87.54
+     "price": 86.83
     },
     {
-     "ticker": "NUE",
-     "company": "Nucor Corp",
-     "sector": "Metals & Mining",
-     "weight": 0.25,
-     "value": 660686383,
-     "shares": 3907075,
+     "ticker": "LLYVK",
+     "company": "Liberty Live Holdings Inc",
+     "sector": "Media",
+     "weight": 0.37,
+     "value": 1118425787,
+     "shares": 10587143,
      "since": "",
-     "price": 272.29
+     "price": 108.86
+    },
+    {
+     "ticker": "NYT",
+     "company": "New York Times Co Mtn Be",
+     "sector": "Media",
+     "weight": 0.37,
+     "value": 1098686000,
+     "shares": 15700000,
+     "since": "",
+     "price": 64.79
+    },
+    {
+     "ticker": "COF",
+     "company": "Capital One Finl Corp",
+     "sector": "Financial Services",
+     "weight": 0.2,
+     "value": 601860000,
+     "shares": 3000000,
+     "since": "",
+     "price": 227.34
     },
     {
      "ticker": "LLYVA",
      "company": "Liberty Live Holdings Inc",
      "sector": "Media",
      "weight": 0.17,
-     "value": 456970925,
+     "value": 504941901,
      "shares": 4986588,
      "since": "",
-     "price": 104.18
+     "price": 104.99
     },
     {
      "ticker": "LPX",
      "company": "Louisiana Pac Corp",
      "sector": "Paper & Forest",
-     "weight": 0.16,
-     "value": 412113691,
+     "weight": 0.15,
+     "value": 445592617,
      "shares": 5664793,
      "since": "",
-     "price": 74.14
+     "price": 73.89
     },
     {
-     "ticker": "STZ",
-     "company": "Constellation Brands Inc",
-     "sector": "Beverages",
-     "weight": 0.04,
-     "value": 94933500,
-     "shares": 632890,
+     "ticker": "NUE",
+     "company": "Nucor Corp",
+     "sector": "Metals & Mining",
+     "weight": 0.14,
+     "value": 413814258,
+     "shares": 1857752,
      "since": "",
-     "price": 136.35
+     "price": 268.91
+    },
+    {
+     "ticker": "M",
+     "company": "Macys Inc",
+     "sector": "Retail",
+     "weight": 0.06,
+     "value": 173031882,
+     "shares": 7347426,
+     "since": "",
+     "price": 23.41
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "GOOG",
+     "company": "Alphabet Inc",
+     "note": "Increased shares by +658%."
+    },
+    {
+     "quarter": "2026 Q2",
      "action": "Increase",
      "ticker": "GOOGL",
      "company": "Alphabet Inc",
-     "note": "Increased shares by +204%."
+     "note": "Increased shares by +45%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "CVX",
-     "company": "Chevron Corporation",
-     "note": "Reduced shares by -35%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "NYT",
-     "company": "New York Times Co Mtn Be",
-     "note": "Increased shares by +199%."
+     "ticker": "DAL",
+     "company": "Delta Air Lines Inc",
+     "note": "Increased shares by +44%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "BAC",
+     "company": "Bank Of Amer Corp",
+     "note": "Reduced shares by -6%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "KR",
+     "company": "Kroger Co",
+     "note": "Reduced shares by -22%."
+    },
+    {
+     "quarter": "2026 Q2",
      "action": "Increase",
      "ticker": "LEN",
      "company": "Lennar Corp",
-     "note": "Increased shares by +43%."
+     "note": "Increased shares by +30%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "NUE",
-     "company": "Nucor Corp",
-     "note": "Reduced shares by -39%."
+     "ticker": "COF",
+     "company": "Capital One Finl Corp",
+     "note": "Reduced shares by -58%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "DVA",
      "company": "Davita Inc",
-     "note": "Reduced shares by -5%."
+     "note": "Reduced shares by -4%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "M",
+     "company": "Macys Inc",
+     "note": "Increased shares by +142%."
+    },
+    {
+     "quarter": "2026 Q2",
      "action": "Decrease",
+     "ticker": "NUE",
+     "company": "Nucor Corp",
+     "note": "Reduced shares by -52%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "ALLY",
+     "company": "Ally Finl Inc",
+     "note": "Reduced shares by -7%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "NYT",
+     "company": "New York Times Co Mtn Be",
+     "note": "Increased shares by +4%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "LEN.B",
+     "company": "Lennar Corp",
+     "note": "Increased shares by +25%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Exit",
      "ticker": "STZ",
      "company": "Constellation Brands Inc",
-     "note": "Reduced shares by -95%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "LLYVK",
-     "company": "Liberty Live Holdings Inc",
-     "note": "Reduced shares by -3%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Exit",
-     "ticker": "V",
-     "company": "Visa Inc",
-     "note": "Position fully closed."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "New Position",
-     "ticker": "DAL",
-     "company": "Delta Air Lines Inc",
-     "note": "New stake worth $2,647M."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Exit",
-     "ticker": "MA",
-     "company": "Mastercard Incorporated",
-     "note": "Position fully closed."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Exit",
-     "ticker": "UNH",
-     "company": "Unitedhealth Group Inc",
-     "note": "Position fully closed."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Exit",
-     "ticker": "DPZ",
-     "company": "Dominos Pizza Inc",
-     "note": "Position fully closed."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Exit",
-     "ticker": "AON",
-     "company": "Aon Plc",
      "note": "Position fully closed."
     }
    ]
@@ -375,365 +375,365 @@
    "style": "Macro, diversified",
    "bio": "Founder of Bridgewater Associates. Diversification across assets, geographies and inflation regimes.",
    "stats": {
-    "numHoldings": 993,
+    "numHoldings": 997,
     "topSectors": [
      "Semiconductors",
      "Retail",
      "Technology"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-15"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "SPY",
      "company": "State Str Spdr S&P 500 Etf T",
      "sector": "\u2014",
-     "weight": 12.67,
-     "value": 2838644353,
-     "shares": 4364862,
+     "weight": 16.3,
+     "value": 3973046405,
+     "shares": 5320308,
      "since": "",
-     "price": 777.88
+     "price": 776.34
     },
     {
      "ticker": "IVV",
      "company": "Ishares Tr",
      "sector": "\u2014",
-     "weight": 7.81,
-     "value": 1750004460,
-     "shares": 2679084,
+     "weight": 9.22,
+     "value": 2248381963,
+     "shares": 3002286,
      "since": "",
-     "price": 781.47
-    },
-    {
-     "ticker": "AMZN",
-     "company": "Amazon Com Inc",
-     "sector": "Retail",
-     "weight": 4.08,
-     "value": 914036840,
-     "shares": 4388711,
-     "since": "",
-     "price": 265.13
+     "price": 780.04
     },
     {
      "ticker": "NVDA",
      "company": "Nvidia Corporation",
      "sector": "Semiconductors",
-     "weight": 3.65,
-     "value": 818459723,
-     "shares": 4693003,
+     "weight": 3.17,
+     "value": 773586958,
+     "shares": 3866195,
      "since": "",
-     "price": 225.3
+     "price": 225.16
+    },
+    {
+     "ticker": "AVGO",
+     "company": "Broadcom Inc",
+     "sector": "Semiconductors",
+     "weight": 2.04,
+     "value": 497845413,
+     "shares": 1317923,
+     "since": "",
+     "price": 392.99
+    },
+    {
+     "ticker": "AMZN",
+     "company": "Amazon Com Inc",
+     "sector": "Retail",
+     "weight": 1.98,
+     "value": 482753142,
+     "shares": 2025481,
+     "since": "",
+     "price": 262.65
     },
     {
      "ticker": "GOOGL",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 2.56,
-     "value": 574451135,
-     "shares": 1997674,
+     "weight": 1.94,
+     "value": 472506037,
+     "shares": 1322176,
      "since": "",
-     "price": 346.36
-    },
-    {
-     "ticker": "AVGO",
-     "company": "Broadcom Inc",
-     "sector": "Semiconductors",
-     "weight": 2.54,
-     "value": 568068464,
-     "shares": 1835380,
-     "since": "",
-     "price": 417.82
-    },
-    {
-     "ticker": "MU",
-     "company": "Micron Technology Inc",
-     "sector": "Semiconductors",
-     "weight": 2.23,
-     "value": 498551839,
-     "shares": 1475704,
-     "since": "",
-     "price": 949.83
-    },
-    {
-     "ticker": "MSFT",
-     "company": "Microsoft Corp",
-     "sector": "Technology",
-     "weight": 1.79,
-     "value": 401626676,
-     "shares": 1084979,
-     "since": "",
-     "price": 496.88
-    },
-    {
-     "ticker": "GEV",
-     "company": "Ge Vernova Inc",
-     "sector": "Electrical Equipment",
-     "weight": 1.69,
-     "value": 379621591,
-     "shares": 434897,
-     "since": "",
-     "price": 1049.42
-    },
-    {
-     "ticker": "TSM",
-     "company": "Taiwan Semiconductor Manufac",
-     "sector": "Semiconductors",
-     "weight": 1.62,
-     "value": 363998848,
-     "shares": 1077079,
-     "since": "",
-     "price": 430.49
+     "price": 345.9
     },
     {
      "ticker": "LRCX",
      "company": "Lam Research Corp",
      "sector": "Semiconductors",
-     "weight": 1.5,
-     "value": 335708788,
-     "shares": 1571229,
+     "weight": 1.67,
+     "value": 406560606,
+     "shares": 938224,
      "since": "",
-     "price": 337.01
+     "price": 332.36
+    },
+    {
+     "ticker": "VOO",
+     "company": "Vanguard Index Fds",
+     "sector": "\u2014",
+     "weight": 1.29,
+     "value": 314820655,
+     "shares": 458381,
+     "since": "",
+     "price": 713.61
     },
     {
      "ticker": "AMD",
      "company": "Advanced Micro Devices Inc",
      "sector": "Semiconductors",
-     "weight": 1.17,
-     "value": 262987591,
-     "shares": 1292767,
+     "weight": 1.28,
+     "value": 312896715,
+     "shares": 538632,
      "since": "",
-     "price": 483.01
-    },
-    {
-     "ticker": "NEM",
-     "company": "Newmont Corp",
-     "sector": "Metals & Mining",
-     "weight": 1.12,
-     "value": 250776388,
-     "shares": 2316641,
-     "since": "",
-     "price": 114.19
-    },
-    {
-     "ticker": "ORCL",
-     "company": "Oracle Corp",
-     "sector": "Technology",
-     "weight": 1.05,
-     "value": 234209271,
-     "shares": 1592069,
-     "since": "",
-     "price": 156.22
+     "price": 514.39
     },
     {
      "ticker": "EWY",
      "company": "Ishares Inc",
      "sector": "\u2014",
-     "weight": 0.97,
-     "value": 217268135,
-     "shares": 1766264,
+     "weight": 1.15,
+     "value": 279585467,
+     "shares": 1384772,
      "since": "",
-     "price": 178.62
+     "price": 179.74
     },
     {
-     "ticker": "MRVL",
-     "company": "Marvell Technology Inc",
-     "sector": "Semiconductors",
-     "weight": 0.86,
-     "value": 193043200,
-     "shares": 1948947,
+     "ticker": "MSFT",
+     "company": "Microsoft Corp",
+     "sector": "Technology",
+     "weight": 1.09,
+     "value": 265551446,
+     "shares": 711896,
      "since": "",
-     "price": 222.18
+     "price": 495.4
+    },
+    {
+     "ticker": "NEM",
+     "company": "Newmont Corp",
+     "sector": "Metals & Mining",
+     "weight": 1.03,
+     "value": 251728878,
+     "shares": 2695170,
+     "since": "",
+     "price": 117.76
     },
     {
      "ticker": "AMAT",
      "company": "Applied Matls Inc",
      "sector": "Semiconductors",
-     "weight": 0.85,
-     "value": 191374373,
-     "shares": 559918,
+     "weight": 0.86,
+     "value": 210700998,
+     "shares": 291426,
      "since": "",
-     "price": 534.54
+     "price": 507.18
+    },
+    {
+     "ticker": "ORCL",
+     "company": "Oracle Corp",
+     "sector": "Technology",
+     "weight": 0.86,
+     "value": 210001314,
+     "shares": 1432967,
+     "since": "",
+     "price": 150.52
+    },
+    {
+     "ticker": "",
+     "company": "Seagate Technology Hldngs Pl",
+     "sector": "\u2014",
+     "weight": 0.79,
+     "value": 192828230,
+     "shares": 199822,
+     "since": "",
+     "price": null
     },
     {
      "ticker": "JNJ",
      "company": "Johnson & Johnson",
      "sector": "Pharmaceuticals",
-     "weight": 0.76,
-     "value": 170346325,
-     "shares": 696884,
+     "weight": 0.7,
+     "value": 169940216,
+     "shares": 669135,
      "since": "",
-     "price": 262.08
-    },
-    {
-     "ticker": "META",
-     "company": "Meta Platforms Inc",
-     "sector": "Media",
-     "weight": 0.74,
-     "value": 166870296,
-     "shares": 291665,
-     "since": "",
-     "price": 594.97
-    },
-    {
-     "ticker": "ANET",
-     "company": "Arista Networks Inc",
-     "sector": "Communications",
-     "weight": 0.73,
-     "value": 163308573,
-     "shares": 1330091,
-     "since": "",
-     "price": 203.62
-    },
-    {
-     "ticker": "KLAC",
-     "company": "Kla Corp",
-     "sector": "Semiconductors",
-     "weight": 0.71,
-     "value": 160012684,
-     "shares": 108674,
-     "since": "",
-     "price": 209.37
-    },
-    {
-     "ticker": "CLS",
-     "company": "Celestica Inc",
-     "sector": "Electrical Equipment",
-     "weight": 0.66,
-     "value": 148056923,
-     "shares": 525621,
-     "since": "",
-     "price": 347.63
+     "price": 260.35
     },
     {
      "ticker": "VWO",
      "company": "Vanguard Intl Equity Index F",
      "sector": "\u2014",
-     "weight": 0.66,
-     "value": 147110047,
-     "shares": 2721740,
+     "weight": 0.67,
+     "value": 163957626,
+     "shares": 2746819,
      "since": "",
-     "price": 60.34
+     "price": 60.11
     },
     {
-     "ticker": "AAPL",
-     "company": "Apple Inc",
-     "sector": "Technology",
-     "weight": 0.64,
-     "value": 143008635,
-     "shares": 563492,
+     "ticker": "GEV",
+     "company": "Ge Vernova Inc",
+     "sector": "Electrical Equipment",
+     "weight": 0.59,
+     "value": 144235212,
+     "shares": 122768,
      "since": "",
-     "price": 305.26
+     "price": 1063.25
     },
     {
      "ticker": "UNP",
      "company": "Union Pac Corp",
      "sector": "Road & Rail",
-     "weight": 0.58,
-     "value": 129280067,
-     "shares": 532850,
+     "weight": 0.57,
+     "value": 139880352,
+     "shares": 514266,
      "since": "",
-     "price": 297.79
+     "price": 293.68
+    },
+    {
+     "ticker": "MU",
+     "company": "Micron Technology Inc",
+     "sector": "Semiconductors",
+     "weight": 0.55,
+     "value": 134666397,
+     "shares": 116666,
+     "since": "",
+     "price": 971.66
+    },
+    {
+     "ticker": "MBB",
+     "company": "Ishares Tr",
+     "sector": "\u2014",
+     "weight": 0.54,
+     "value": 131080336,
+     "shares": 1386800,
+     "since": "",
+     "price": 93.2
+    },
+    {
+     "ticker": "MO",
+     "company": "Altria Group Inc",
+     "sector": "Tobacco",
+     "weight": 0.51,
+     "value": 124273191,
+     "shares": 1727216,
+     "since": "",
+     "price": 65.7
+    },
+    {
+     "ticker": "APH",
+     "company": "Amphenol Corp",
+     "sector": "Electrical Equipment",
+     "weight": 0.5,
+     "value": 123002948,
+     "shares": 697612,
+     "since": "",
+     "price": 167.11
+    },
+    {
+     "ticker": "ASML",
+     "company": "Asml Hldg Nv",
+     "sector": "Semiconductors",
+     "weight": 0.5,
+     "value": 122698712,
+     "shares": 61675,
+     "since": "",
+     "price": 1844.08
+    },
+    {
+     "ticker": "B",
+     "company": "Barrick Mng Corp",
+     "sector": "Metals & Mining",
+     "weight": 0.5,
+     "value": 121387233,
+     "shares": 3304836,
+     "since": "",
+     "price": 41.6
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "AMKR",
-     "company": "Amkor Technology Inc",
-     "note": "Increased shares by +1,976%."
+     "ticker": "PCG",
+     "company": "Pg&E Corp",
+     "note": "Increased shares by +24,079%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "AMZN",
-     "company": "Amazon Com Inc",
-     "note": "Increased shares by +125%."
+     "ticker": "BKNG",
+     "company": "Booking Holdings Inc",
+     "note": "Increased shares by +77,824%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "UNP",
-     "company": "Union Pac Corp",
-     "note": "Increased shares by +878%."
+     "ticker": "HAL",
+     "company": "Halliburton Co",
+     "note": "Increased shares by +5,441%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "MDB",
-     "company": "Mongodb Inc",
-     "note": "Increased shares by +8,738%."
+     "ticker": "EOG",
+     "company": "Eog Res Inc",
+     "note": "Increased shares by +4,191%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "SBSW",
-     "company": "Sibanye Stillwater Ltd",
-     "note": "Increased shares by +1,566%."
+     "ticker": "LDOS",
+     "company": "Leidos Holdings Inc",
+     "note": "Increased shares by +11,966%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "ELF",
-     "company": "E L F Beauty Inc",
-     "note": "Increased shares by +5,370%."
+     "ticker": "CVX",
+     "company": "Chevron Corporation",
+     "note": "Increased shares by +5,374%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "IVV",
-     "company": "Ishares Tr",
-     "note": "Reduced shares by -36%."
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "ADBE",
+     "company": "Adobe Inc",
+     "note": "Increased shares by +6,665%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "AME",
-     "company": "Ametek Inc",
-     "note": "Increased shares by +2,428%."
+     "ticker": "FDX",
+     "company": "Fedex Corp",
+     "note": "Increased shares by +4,636%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "HWC",
-     "company": "Hancock Whitney Corporation",
-     "note": "Increased shares by +5,242%."
+     "ticker": "SPY",
+     "company": "State Str Spdr S&P 500 Etf T",
+     "note": "Increased shares by +22%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "ROK",
-     "company": "Rockwell Automation Inc",
-     "note": "Increased shares by +3,535%."
+     "ticker": "RRX",
+     "company": "Regal Rexnord Corporation",
+     "note": "Increased shares by +3,101%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "ADI",
-     "company": "Analog Devices Inc",
-     "note": "Increased shares by +1,964%."
+     "ticker": "EIX",
+     "company": "Edison Intl",
+     "note": "Increased shares by +777%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "MU",
-     "company": "Micron Technology Inc",
-     "note": "Increased shares by +66%."
+     "ticker": "SOLV",
+     "company": "Solventum Corp",
+     "note": "Increased shares by +5,167%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "AVGO",
-     "company": "Broadcom Inc",
-     "note": "Increased shares by +57%."
+     "ticker": "",
+     "company": "Transocean Ltd",
+     "note": "Increased shares by +1,803%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "VOO",
-     "company": "Vanguard Index Fds",
-     "note": "Increased shares by +334%."
+     "ticker": "WHD",
+     "company": "Cactus Inc",
+     "note": "Increased shares by +4,285%."
     }
    ]
   },
@@ -761,7 +761,7 @@
      "value": 2415946008,
      "shares": 59697208,
      "since": "",
-     "price": 45.11
+     "price": 43.85
     },
     {
      "ticker": "AMZN",
@@ -771,7 +771,7 @@
      "value": 2385104083,
      "shares": 11451981,
      "since": "",
-     "price": 265.13
+     "price": 262.65
     },
     {
      "ticker": "UBER",
@@ -781,7 +781,7 @@
      "value": 2154934398,
      "shares": 29958771,
      "since": "",
-     "price": 75.88
+     "price": 75.95
     },
     {
      "ticker": "MSFT",
@@ -791,7 +791,7 @@
      "value": 2092970053,
      "shares": 5654078,
      "since": "",
-     "price": 496.88
+     "price": 495.4
     },
     {
      "ticker": "QSR",
@@ -801,7 +801,7 @@
      "value": 1673501194,
      "shares": 22645483,
      "since": "",
-     "price": 76.59
+     "price": 77.64
     },
     {
      "ticker": "META",
@@ -811,7 +811,7 @@
      "value": 1522358404,
      "shares": 2660861,
      "since": "",
-     "price": 594.97
+     "price": 589.85
     },
     {
      "ticker": "HHH",
@@ -821,7 +821,7 @@
      "value": 1192581569,
      "shares": 18852064,
      "since": "",
-     "price": 67.71
+     "price": 66.6
     },
     {
      "ticker": "SEG",
@@ -831,7 +831,7 @@
      "value": 107910794,
      "shares": 5023780,
      "since": "",
-     "price": 28.6
+     "price": 27.71
     },
     {
      "ticker": "GOOG",
@@ -841,7 +841,7 @@
      "value": 89421720,
      "shares": 311726,
      "since": "",
-     "price": 343.94
+     "price": 343.54
     },
     {
      "ticker": "HTZ",
@@ -851,7 +851,7 @@
      "value": 70261595,
      "shares": 15241127,
      "since": "",
-     "price": 2.345
+     "price": 2.24
     },
     {
      "ticker": "GOOGL",
@@ -861,7 +861,7 @@
      "value": 9310043,
      "shares": 32376,
      "since": "",
-     "price": 346.36
+     "price": 345.9
     }
    ],
    "trades": [
@@ -915,365 +915,365 @@
    "style": "Quality growth, buy & hold",
    "bio": "Founder of Fundsmith. Buy good companies, don't overpay, do nothing.",
    "stats": {
-    "numHoldings": 34,
+    "numHoldings": 41,
     "topSectors": [
+     "Media",
      "Health Care",
-     "Life Sciences Tools & Services",
-     "Media"
+     "Technology"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-15"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "MAR",
      "company": "Marriott Intl Inc New",
      "sector": "Hotels, Restaurants & Leisure",
-     "weight": 8.59,
-     "value": 1102511105,
-     "shares": 3370872,
+     "weight": 7.02,
+     "value": 958255687,
+     "shares": 2585757,
      "since": "",
-     "price": 352.53
+     "price": 356.72
     },
     {
      "ticker": "SYK",
      "company": "Stryker Corporation",
      "sector": "Health Care",
-     "weight": 7.84,
-     "value": 1005950683,
-     "shares": 3061416,
+     "weight": 6.72,
+     "value": 917391182,
+     "shares": 2913833,
      "since": "",
-     "price": 341.09
+     "price": 339.21
     },
     {
      "ticker": "WAT",
      "company": "Waters Corp",
      "sector": "Life Sciences Tools & Services",
-     "weight": 7.46,
-     "value": 956555935,
-     "shares": 3212075,
+     "weight": 6.25,
+     "value": 852702945,
+     "shares": 2273632,
      "since": "",
-     "price": 413.51
+     "price": 412.17
     },
     {
      "ticker": "V",
      "company": "Visa Inc",
      "sector": "Financial Services",
-     "weight": 7.31,
-     "value": 938180162,
-     "shares": 3104090,
+     "weight": 5.08,
+     "value": 692976613,
+     "shares": 2019810,
      "since": "",
-     "price": 365.45
+     "price": 364.15
+    },
+    {
+     "ticker": "UBER",
+     "company": "Uber Technologies Inc",
+     "sector": "Road & Rail",
+     "weight": 4.73,
+     "value": 645337776,
+     "shares": 8943151,
+     "since": "",
+     "price": 75.95
+    },
+    {
+     "ticker": "MA",
+     "company": "Mastercard Incorporated",
+     "sector": "Financial Services",
+     "weight": 4.69,
+     "value": 639458194,
+     "shares": 1245051,
+     "since": "",
+     "price": 569.29
     },
     {
      "ticker": "GOOGL",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 6.63,
-     "value": 850084297,
-     "shares": 2956198,
+     "weight": 4.64,
+     "value": 633743519,
+     "shares": 1773354,
      "since": "",
-     "price": 346.36
-    },
-    {
-     "ticker": "PM",
-     "company": "Philip Morris Intl Inc",
-     "sector": "Tobacco",
-     "weight": 6.59,
-     "value": 845410370,
-     "shares": 5113163,
-     "since": "",
-     "price": 188.91
-    },
-    {
-     "ticker": "IDXX",
-     "company": "Idexx Labs Inc",
-     "sector": "Health Care",
-     "weight": 6.42,
-     "value": 823610496,
-     "shares": 1465786,
-     "since": "",
-     "price": 566.93
-    },
-    {
-     "ticker": "ADP",
-     "company": "Automatic Data Processing In",
-     "sector": "Professional Services",
-     "weight": 6.11,
-     "value": 783280234,
-     "shares": 3855105,
-     "since": "",
-     "price": 276.23
-    },
-    {
-     "ticker": "MSFT",
-     "company": "Microsoft Corp",
-     "sector": "Technology",
-     "weight": 6.0,
-     "value": 769856245,
-     "shares": 2079737,
-     "since": "",
-     "price": 496.88
-    },
-    {
-     "ticker": "META",
-     "company": "Meta Platforms Inc",
-     "sector": "Media",
-     "weight": 5.89,
-     "value": 755998279,
-     "shares": 1321375,
-     "since": "",
-     "price": 594.97
-    },
-    {
-     "ticker": "MTD",
-     "company": "Mettler Toledo International",
-     "sector": "Life Sciences Tools & Services",
-     "weight": 5.59,
-     "value": 717012379,
-     "shares": 568516,
-     "since": "",
-     "price": 1430.76
+     "price": 345.9
     },
     {
      "ticker": "CHD",
      "company": "Church & Dwight Co Inc",
      "sector": "Consumer products",
-     "weight": 4.83,
-     "value": 619785527,
-     "shares": 6641508,
+     "weight": 4.58,
+     "value": 625518702,
+     "shares": 6456634,
      "since": "",
-     "price": 101.32
+     "price": 101.3
     },
     {
      "ticker": "PG",
      "company": "Procter & Gamble Co",
      "sector": "Consumer products",
-     "weight": 4.73,
-     "value": 606635578,
-     "shares": 4199914,
+     "weight": 4.38,
+     "value": 598052323,
+     "shares": 4078371,
      "since": "",
-     "price": 144.26
+     "price": 144.55
+    },
+    {
+     "ticker": "MSFT",
+     "company": "Microsoft Corp",
+     "sector": "Technology",
+     "weight": 4.36,
+     "value": 595614836,
+     "shares": 1596737,
+     "since": "",
+     "price": 495.4
+    },
+    {
+     "ticker": "META",
+     "company": "Meta Platforms Inc",
+     "sector": "Media",
+     "weight": 4.34,
+     "value": 592511232,
+     "shares": 1051876,
+     "since": "",
+     "price": 589.85
+    },
+    {
+     "ticker": "ADP",
+     "company": "Automatic Data Processing In",
+     "sector": "Professional Services",
+     "weight": 4.27,
+     "value": 582620930,
+     "shares": 2601567,
+     "since": "",
+     "price": 272.96
+    },
+    {
+     "ticker": "FTNT",
+     "company": "Fortinet Inc",
+     "sector": "Technology",
+     "weight": 4.09,
+     "value": 557631076,
+     "shares": 3629938,
+     "since": "",
+     "price": 160.01
+    },
+    {
+     "ticker": "TSM",
+     "company": "Taiwan Semiconductor Manufac",
+     "sector": "Semiconductors",
+     "weight": 4.02,
+     "value": 548464789,
+     "shares": 1148449,
+     "since": "",
+     "price": 426.35
+    },
+    {
+     "ticker": "IDXX",
+     "company": "Idexx Labs Inc",
+     "sector": "Health Care",
+     "weight": 3.93,
+     "value": 536909312,
+     "shares": 1019887,
+     "since": "",
+     "price": 550.96
     },
     {
      "ticker": "TXN",
      "company": "Texas Instrs Inc",
      "sector": "Semiconductors",
-     "weight": 3.97,
-     "value": 509253293,
-     "shares": 2623124,
+     "weight": 3.93,
+     "value": 536282179,
+     "shares": 1799182,
      "since": "",
-     "price": 273.43
+     "price": 279.58
     },
     {
-     "ticker": "FTNT",
-     "company": "Fortinet Inc",
+     "ticker": "PM",
+     "company": "Philip Morris Intl Inc",
+     "sector": "Tobacco",
+     "weight": 3.86,
+     "value": 527116201,
+     "shares": 2913693,
+     "since": "",
+     "price": 190.39
+    },
+    {
+     "ticker": "NFLX",
+     "company": "Netflix Inc.",
+     "sector": "Media",
+     "weight": 3.66,
+     "value": 499110633,
+     "shares": 6990345,
+     "since": "",
+     "price": 78.16
+    },
+    {
+     "ticker": "GEV",
+     "company": "Ge Vernova Inc",
+     "sector": "Electrical Equipment",
+     "weight": 3.53,
+     "value": 481498748,
+     "shares": 409835,
+     "since": "",
+     "price": 1063.25
+    },
+    {
+     "ticker": "APP",
+     "company": "Applovin Corp",
      "sector": "Technology",
-     "weight": 3.92,
-     "value": 503123481,
-     "shares": 6156675,
+     "weight": 2.63,
+     "value": 358892731,
+     "shares": 696568,
      "since": "",
-     "price": 165.44
+     "price": 315.44
     },
     {
-     "ticker": "ZTS",
-     "company": "Zoetis Inc",
-     "sector": "Pharmaceuticals",
-     "weight": 3.57,
-     "value": 458366249,
-     "shares": 3877559,
+     "ticker": "TJX",
+     "company": "Tjx Cos Inc New",
+     "sector": "Retail",
+     "weight": 2.52,
+     "value": 344297688,
+     "shares": 2272592,
      "since": "",
-     "price": 75.84
+     "price": 152.11
     },
     {
-     "ticker": "OTIS",
-     "company": "Otis Worldwide Corp",
-     "sector": "Machinery",
-     "weight": 1.64,
-     "value": 210554426,
-     "shares": 2731635,
+     "ticker": "NXT",
+     "company": "Nextpower Inc",
+     "sector": "Electrical Equipment",
+     "weight": 2.49,
+     "value": 340274801,
+     "shares": 2856092,
      "since": "",
-     "price": 73.03
+     "price": 101.47
+    },
+    {
+     "ticker": "VEEV",
+     "company": "Veeva Sys Inc",
+     "sector": "Health Care",
+     "weight": 1.06,
+     "value": 144954834,
+     "shares": 816785,
+     "since": "",
+     "price": 243.75
+    },
+    {
+     "ticker": "YUM",
+     "company": "Yum Brands Inc",
+     "sector": "Hotels, Restaurants & Leisure",
+     "weight": 0.65,
+     "value": 88899265,
+     "shares": 556107,
+     "since": "",
+     "price": 148.11
     },
     {
      "ticker": "MSCI",
      "company": "Msci Inc",
      "sector": "Financial Services",
-     "weight": 0.27,
-     "value": 34921380,
-     "shares": 64788,
-     "since": "",
-     "price": 575.24
-    },
-    {
-     "ticker": "ROL",
-     "company": "Rollins Inc",
-     "sector": "Commercial Services & Supplies",
-     "weight": 0.26,
-     "value": 33110728,
-     "shares": 619935,
-     "since": "",
-     "price": 36.22
-    },
-    {
-     "ticker": "MEDP",
-     "company": "Medpace Hldgs Inc",
-     "sector": "Life Sciences Tools & Services",
-     "weight": 0.23,
-     "value": 30092547,
-     "shares": 62668,
-     "since": "",
-     "price": 581.95
-    },
-    {
-     "ticker": "VRSN",
-     "company": "Verisign Inc",
-     "sector": "Technology",
      "weight": 0.22,
-     "value": 28180664,
-     "shares": 113467,
+     "value": 30006943,
+     "shares": 53580,
      "since": "",
-     "price": 287.15
-    },
-    {
-     "ticker": "PAYC",
-     "company": "Paycom Software Inc",
-     "sector": "Professional Services",
-     "weight": 0.21,
-     "value": 26672804,
-     "shares": 219457,
-     "since": "",
-     "price": 223.63
-    },
-    {
-     "ticker": "CLX",
-     "company": "Clorox Co Del",
-     "sector": "Consumer products",
-     "weight": 0.21,
-     "value": 26655398,
-     "shares": 257217,
-     "since": "",
-     "price": 106.54
-    },
-    {
-     "ticker": "VRT",
-     "company": "Vertiv Holdings Co",
-     "sector": "Electrical Equipment",
-     "weight": 0.18,
-     "value": 22866427,
-     "shares": 91254,
-     "since": "",
-     "price": 287.07
-    },
-    {
-     "ticker": "NTNX",
-     "company": "Nutanix Inc",
-     "sector": "Technology",
-     "weight": 0.17,
-     "value": 21946670,
-     "shares": 577392,
-     "since": "",
-     "price": 67.95
+     "price": 569.13
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "IDXX",
-     "company": "Idexx Labs Inc",
-     "note": "Reduced shares by -22%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "SYK",
-     "company": "Stryker Corporation",
-     "note": "Reduced shares by -17%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "MAR",
-     "company": "Marriott Intl Inc New",
-     "note": "Reduced shares by -15%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "PM",
-     "company": "Philip Morris Intl Inc",
-     "note": "Reduced shares by -17%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "GOOGL",
      "company": "Alphabet Inc",
-     "note": "Reduced shares by -16%."
+     "note": "Reduced shares by -40%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "V",
-     "company": "Visa Inc",
-     "note": "Reduced shares by -12%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "WAT",
      "company": "Waters Corp",
-     "note": "Reduced shares by -10%."
+     "note": "Reduced shares by -29%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "ADP",
-     "company": "Automatic Data Processing In",
-     "note": "Reduced shares by -8%."
+     "ticker": "V",
+     "company": "Visa Inc",
+     "note": "Reduced shares by -35%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "FTNT",
      "company": "Fortinet Inc",
-     "note": "Reduced shares by -6%."
+     "note": "Reduced shares by -41%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "OTIS",
-     "company": "Otis Worldwide Corp",
-     "note": "Reduced shares by -12%."
+     "ticker": "PM",
+     "company": "Philip Morris Intl Inc",
+     "note": "Reduced shares by -43%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "MAR",
+     "company": "Marriott Intl Inc New",
+     "note": "Reduced shares by -23%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "ADP",
+     "company": "Automatic Data Processing In",
+     "note": "Reduced shares by -33%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "TXN",
+     "company": "Texas Instrs Inc",
+     "note": "Reduced shares by -31%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "IDXX",
+     "company": "Idexx Labs Inc",
+     "note": "Reduced shares by -30%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "MSFT",
+     "company": "Microsoft Corp",
+     "note": "Reduced shares by -23%."
+    },
+    {
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "META",
      "company": "Meta Platforms Inc",
+     "note": "Reduced shares by -20%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "SYK",
+     "company": "Stryker Corporation",
+     "note": "Reduced shares by -5%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "CHD",
+     "company": "Church & Dwight Co Inc",
      "note": "Reduced shares by -3%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "MSCI",
-     "company": "Msci Inc",
-     "note": "Reduced shares by -61%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "ROL",
-     "company": "Rollins Inc",
-     "note": "Reduced shares by -58%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "VRT",
-     "company": "Vertiv Holdings Co",
-     "note": "Reduced shares by -78%."
+     "ticker": "PG",
+     "company": "Procter & Gamble Co",
+     "note": "Reduced shares by -3%."
     }
    ]
   },
@@ -1301,7 +1301,7 @@
      "value": 892310000,
      "shares": 3743854,
      "since": "",
-     "price": 265.13
+     "price": 262.65
     },
     {
      "ticker": "ELV",
@@ -1311,7 +1311,7 @@
      "value": 493140000,
      "shares": 1275154,
      "since": "",
-     "price": 398.22
+     "price": 400.32
     },
     {
      "ticker": "QSR",
@@ -1321,7 +1321,7 @@
      "value": 489612000,
      "shares": 6753112,
      "since": "",
-     "price": 76.59
+     "price": 77.64
     },
     {
      "ticker": "GOOG",
@@ -1331,7 +1331,7 @@
      "value": 484744000,
      "shares": 1371931,
      "since": "",
-     "price": 343.94
+     "price": 343.54
     },
     {
      "ticker": "FERG",
@@ -1341,7 +1341,7 @@
      "value": 344269000,
      "shares": 1450594,
      "since": "",
-     "price": 248.12
+     "price": 244.94
     },
     {
      "ticker": "GPC",
@@ -1351,7 +1351,7 @@
      "value": 332253000,
      "shares": 2816178,
      "since": "",
-     "price": 135.35
+     "price": 135.03
     },
     {
      "ticker": "UNP",
@@ -1361,7 +1361,7 @@
      "value": 322427000,
      "shares": 1185395,
      "since": "",
-     "price": 297.79
+     "price": 293.68
     },
     {
      "ticker": "V",
@@ -1371,7 +1371,7 @@
      "value": 240628000,
      "shares": 701355,
      "since": "",
-     "price": 365.45
+     "price": 364.15
     },
     {
      "ticker": "WCC",
@@ -1381,7 +1381,7 @@
      "value": 228979000,
      "shares": 662881,
      "since": "",
-     "price": 359.41
+     "price": 361.55
     },
     {
      "ticker": "AON",
@@ -1391,7 +1391,7 @@
      "value": 227871000,
      "shares": 687000,
      "since": "",
-     "price": 357.08
+     "price": 355.83
     },
     {
      "ticker": "TFX",
@@ -1401,7 +1401,7 @@
      "value": 178605000,
      "shares": 1409000,
      "since": "",
-     "price": 137.37
+     "price": 137.17
     },
     {
      "ticker": "NCLH",
@@ -1411,7 +1411,7 @@
      "value": 163180000,
      "shares": 7730000,
      "since": "",
-     "price": 19.55
+     "price": 19.01
     },
     {
      "ticker": "MOH",
@@ -1421,7 +1421,7 @@
      "value": 144906000,
      "shares": 633609,
      "since": "",
-     "price": 205.71
+     "price": 212.43
     },
     {
      "ticker": "CME",
@@ -1431,7 +1431,7 @@
      "value": 136694000,
      "shares": 619000,
      "since": "",
-     "price": 267.21
+     "price": 269.8
     },
     {
      "ticker": "HLF",
@@ -1441,7 +1441,7 @@
      "value": 121767000,
      "shares": 9259844,
      "since": "",
-     "price": 12.17
+     "price": 12.33
     },
     {
      "ticker": "EXP",
@@ -1451,7 +1451,7 @@
      "value": 119422000,
      "shares": 530763,
      "since": "",
-     "price": 208.82
+     "price": 208.52
     },
     {
      "ticker": "GDS",
@@ -1461,7 +1461,7 @@
      "value": 113208000,
      "shares": 3769818,
      "since": "",
-     "price": 34.77
+     "price": 34.41
     },
     {
      "ticker": "COLD",
@@ -1471,7 +1471,7 @@
      "value": 107371000,
      "shares": 6830230,
      "since": "",
-     "price": 15.12
+     "price": 14.88
     },
     {
      "ticker": "LBTYK",
@@ -1481,7 +1481,7 @@
      "value": 93975000,
      "shares": 8543161,
      "since": "",
-     "price": 10.2
+     "price": 10.22
     },
     {
      "ticker": "AERO",
@@ -1491,7 +1491,7 @@
      "value": 87843000,
      "shares": 4880188,
      "since": "",
-     "price": 15.85
+     "price": 15.75
     },
     {
      "ticker": "",
@@ -1511,7 +1511,7 @@
      "value": 36160000,
      "shares": 2788000,
      "since": "",
-     "price": 16.31
+     "price": 16.43
     },
     {
      "ticker": "PS",
@@ -1521,7 +1521,7 @@
      "value": 12881000,
      "shares": 392000,
      "since": "",
-     "price": 41.4
+     "price": 40.83
     }
    ],
    "trades": [
@@ -1631,365 +1631,365 @@
    "style": "Opportunistic, macro equities",
    "bio": "Founder of Appaloosa Management. Concentrated equity bets on macro dislocations.",
    "stats": {
-    "numHoldings": 31,
+    "numHoldings": 25,
     "topSectors": [
      "Semiconductors",
      "Retail",
      "Media"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-15"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "AMZN",
      "company": "Amazon Com Inc",
      "sector": "Retail",
-     "weight": 15.16,
-     "value": 899726400,
-     "shares": 4320000,
+     "weight": 15.95,
+     "value": 1191700000,
+     "shares": 5000000,
      "since": "",
-     "price": 265.13
+     "price": 262.65
     },
     {
      "ticker": "MU",
      "company": "Micron Technology Inc",
      "sector": "Semiconductors",
-     "weight": 9.48,
-     "value": 562503600,
-     "shares": 1665000,
+     "weight": 15.06,
+     "value": 1125432750,
+     "shares": 975000,
      "since": "",
-     "price": 949.83
+     "price": 971.66
+    },
+    {
+     "ticker": "TSM",
+     "company": "Taiwan Semiconductor Manufac",
+     "sector": "Semiconductors",
+     "weight": 10.55,
+     "value": 787990500,
+     "shares": 1650000,
+     "since": "",
+     "price": 426.35
     },
     {
      "ticker": "GOOG",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 8.38,
-     "value": 497042322,
-     "shares": 1732700,
+     "weight": 8.75,
+     "value": 653660500,
+     "shares": 1850000,
      "since": "",
-     "price": 343.94
+     "price": 343.54
     },
     {
      "ticker": "UBER",
      "company": "Uber Technologies Inc",
      "sector": "Road & Rail",
-     "weight": 7.68,
-     "value": 455512550,
-     "shares": 6332720,
+     "weight": 7.43,
+     "value": 555204163,
+     "shares": 7694071,
      "since": "",
-     "price": 75.88
-    },
-    {
-     "ticker": "TSM",
-     "company": "Taiwan Semiconductor Manufac",
-     "sector": "Semiconductors",
-     "weight": 7.56,
-     "value": 448628625,
-     "shares": 1327500,
-     "since": "",
-     "price": 430.49
-    },
-    {
-     "ticker": "BABA",
-     "company": "Alibaba Group Hldg Ltd",
-     "sector": "Retail",
-     "weight": 7.33,
-     "value": 434718900,
-     "shares": 3465000,
-     "since": "",
-     "price": 122.16
-    },
-    {
-     "ticker": "VST",
-     "company": "Vistra Corp",
-     "sector": "Utilities",
-     "weight": 5.12,
-     "value": 304017170,
-     "shares": 2022332,
-     "since": "",
-     "price": 146.4
+     "price": 75.95
     },
     {
      "ticker": "EWY",
      "company": "Ishares Inc",
      "sector": "\u2014",
-     "weight": 4.98,
-     "value": 295224000,
-     "shares": 2400000,
+     "weight": 6.55,
+     "value": 489607500,
+     "shares": 2425000,
      "since": "",
-     "price": 178.62
+     "price": 179.74
+    },
+    {
+     "ticker": "META",
+     "company": "Meta Platforms Inc",
+     "sector": "Media",
+     "weight": 5.09,
+     "value": 380220750,
+     "shares": 675000,
+     "since": "",
+     "price": 589.85
+    },
+    {
+     "ticker": "VST",
+     "company": "Vistra Corp",
+     "sector": "Utilities",
+     "weight": 4.7,
+     "value": 351408597,
+     "shares": 2215272,
+     "since": "",
+     "price": 148.13
     },
     {
      "ticker": "NVDA",
      "company": "Nvidia Corporation",
      "sector": "Semiconductors",
-     "weight": 4.33,
-     "value": 256629600,
-     "shares": 1471500,
+     "weight": 4.08,
+     "value": 305137250,
+     "shares": 1525000,
      "since": "",
-     "price": 225.3
+     "price": 225.16
     },
     {
      "ticker": "NRG",
      "company": "Nrg Energy Inc",
      "sector": "Utilities",
-     "weight": 4.27,
-     "value": 253471354,
-     "shares": 1734442,
+     "weight": 3.44,
+     "value": 257065600,
+     "shares": 1760000,
      "since": "",
-     "price": 119.75
+     "price": 126.24
     },
     {
-     "ticker": "META",
-     "company": "Meta Platforms Inc",
-     "sector": "Media",
-     "weight": 4.21,
-     "value": 249734745,
-     "shares": 436500,
-     "since": "",
-     "price": 594.97
-    },
-    {
-     "ticker": "SNDK",
-     "company": "Sandisk Corp",
-     "sector": "Technology",
-     "weight": 3.01,
-     "value": 178689375,
-     "shares": 281250,
-     "since": "",
-     "price": 1528.11
-    },
-    {
-     "ticker": "GLW",
-     "company": "Corning Inc",
-     "sector": "Electrical Equipment",
-     "weight": 2.59,
-     "value": 153578115,
-     "shares": 1129500,
-     "since": "",
-     "price": 158.54
-    },
-    {
-     "ticker": "WHR",
-     "company": "Whirlpool Corp",
-     "sector": "Consumer products",
-     "weight": 1.77,
-     "value": 105144000,
-     "shares": 1950000,
-     "since": "",
-     "price": 42.85
-    },
-    {
-     "ticker": "PDD",
-     "company": "Pdd Holdings Inc",
+     "ticker": "BABA",
+     "company": "Alibaba Group Hldg Ltd",
      "sector": "Retail",
-     "weight": 1.55,
-     "value": 91962000,
-     "shares": 900000,
+     "weight": 2.57,
+     "value": 191960000,
+     "shares": 2000000,
      "since": "",
-     "price": 84.17
+     "price": 123.81
+    },
+    {
+     "ticker": "BA",
+     "company": "Boeing Co",
+     "sector": "Aerospace & Defense",
+     "weight": 2.32,
+     "value": 173176000,
+     "shares": 800000,
+     "since": "",
+     "price": 231.67
     },
     {
      "ticker": "LRCX",
      "company": "Lam Research Corp",
      "sector": "Semiconductors",
-     "weight": 1.38,
-     "value": 81724950,
+     "weight": 2.22,
+     "value": 165748725,
      "shares": 382500,
      "since": "",
-     "price": 337.01
+     "price": 332.36
     },
     {
      "ticker": "BIDU",
      "company": "Baidu Inc",
      "sector": "Media",
-     "weight": 1.3,
-     "value": 77113782,
-     "shares": 692100,
+     "weight": 1.98,
+     "value": 148005550,
+     "shares": 1295000,
      "since": "",
-     "price": 104.68
+     "price": 103.67
     },
     {
-     "ticker": "LHX",
-     "company": "L3Harris Technologies Inc",
-     "sector": "Aerospace & Defense",
-     "weight": 1.15,
-     "value": 68339700,
-     "shares": 198000,
+     "ticker": "AAL",
+     "company": "American Airlines Group Inc",
+     "sector": "Airlines",
+     "weight": 1.81,
+     "value": 135525000,
+     "shares": 7500000,
      "since": "",
-     "price": 288.46
-    },
-    {
-     "ticker": "RTX",
-     "company": "Rtx Corporation",
-     "sector": "Aerospace & Defense",
-     "weight": 1.11,
-     "value": 65971800,
-     "shares": 342000,
-     "since": "",
-     "price": 220.48
-    },
-    {
-     "ticker": "ASML",
-     "company": "Asml Hldg Nv",
-     "sector": "Semiconductors",
-     "weight": 1.1,
-     "value": 65381085,
-     "shares": 49500,
-     "since": "",
-     "price": 1847.9
-    },
-    {
-     "ticker": "QCOM",
-     "company": "Qualcomm Inc",
-     "sector": "Semiconductors",
-     "weight": 1.08,
-     "value": 64211382,
-     "shares": 498613,
-     "since": "",
-     "price": 164.79
-    },
-    {
-     "ticker": "BALL",
-     "company": "Ball Corp",
-     "sector": "Packaging",
-     "weight": 0.83,
-     "value": 49475070,
-     "shares": 837000,
-     "since": "",
-     "price": 61.93
+     "price": 14.83
     },
     {
      "ticker": "AMD",
      "company": "Advanced Micro Devices Inc",
      "sector": "Semiconductors",
+     "weight": 1.54,
+     "value": 114729725,
+     "shares": 197500,
+     "since": "",
+     "price": 514.39
+    },
+    {
+     "ticker": "CRWV",
+     "company": "Coreweave Inc",
+     "sector": "Technology",
+     "weight": 1.44,
+     "value": 107328806,
+     "shares": 1078248,
+     "since": "",
+     "price": 105.26
+    },
+    {
+     "ticker": "ASML",
+     "company": "Asml Hldg Nv",
+     "sector": "Semiconductors",
+     "weight": 1.33,
+     "value": 99472000,
+     "shares": 50000,
+     "since": "",
+     "price": 1844.08
+    },
+    {
+     "ticker": "AVGO",
+     "company": "Broadcom Inc",
+     "sector": "Semiconductors",
      "weight": 0.76,
-     "value": 45039402,
-     "shares": 221400,
+     "value": 56662500,
+     "shares": 150000,
      "since": "",
-     "price": 483.01
+     "price": 392.99
     },
     {
-     "ticker": "JD",
-     "company": "Jd.Com Inc",
-     "sector": "Retail",
-     "weight": 0.65,
-     "value": 38588850,
-     "shares": 1305000,
+     "ticker": "QCOM",
+     "company": "Qualcomm Inc",
+     "sector": "Semiconductors",
+     "weight": 0.62,
+     "value": 46197500,
+     "shares": 250000,
      "since": "",
-     "price": 29.3
+     "price": 165.79
     },
     {
-     "ticker": "LYFT",
-     "company": "Lyft Inc",
-     "sector": "Road & Rail",
-     "weight": 0.61,
-     "value": 35910000,
-     "shares": 2700000,
+     "ticker": "SPCX",
+     "company": "Space Exploration Techn Corp",
+     "sector": "Telecommunication",
+     "weight": 0.51,
+     "value": 38443500,
+     "shares": 225000,
      "since": "",
-     "price": 17.13
+     "price": 140
+    },
+    {
+     "ticker": "ET",
+     "company": "Energy Transfer L P",
+     "sector": "Energy",
+     "weight": 0.4,
+     "value": 30135510,
+     "shares": 1576125,
+     "since": "",
+     "price": 21.05
+    },
+    {
+     "ticker": "MPLX",
+     "company": "Mplx Lp",
+     "sector": "Energy",
+     "weight": 0.38,
+     "value": 28303572,
+     "shares": 502460,
+     "since": "",
+     "price": 59.48
+    },
+    {
+     "ticker": "WHR",
+     "company": "Whirlpool Corp",
+     "sector": "Consumer products",
+     "weight": 0.38,
+     "value": 28185300,
+     "shares": 715000,
+     "since": "",
+     "price": 41.37
+    },
+    {
+     "ticker": "GT",
+     "company": "Goodyear Tire & Rubr Co",
+     "sector": "Auto Components",
+     "weight": 0.13,
+     "value": 9956701,
+     "shares": 1508591,
+     "since": "",
+     "price": 6.11
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
-     "action": "Increase",
-     "ticker": "UBER",
-     "company": "Uber Technologies Inc",
-     "note": "Increased shares by +242%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Increase",
-     "ticker": "AMZN",
-     "company": "Amazon Com Inc",
-     "note": "Increased shares by +98%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Increase",
-     "ticker": "VST",
-     "company": "Vistra Corp",
-     "note": "Increased shares by +114%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "BABA",
-     "company": "Alibaba Group Hldg Ltd",
-     "note": "Reduced shares by -33%."
+     "ticker": "MU",
+     "company": "Micron Technology Inc",
+     "note": "Reduced shares by -41%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "EWY",
-     "company": "Ishares Inc",
-     "note": "Increased shares by +28%."
+     "ticker": "META",
+     "company": "Meta Platforms Inc",
+     "note": "Increased shares by +55%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
      "ticker": "TSM",
      "company": "Taiwan Semiconductor Manufac",
-     "note": "Increased shares by +17%."
+     "note": "Increased shares by +24%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "META",
-     "company": "Meta Platforms Inc",
-     "note": "Reduced shares by -27%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "MU",
-     "company": "Micron Technology Inc",
-     "note": "Increased shares by +11%."
+     "ticker": "AMZN",
+     "company": "Amazon Com Inc",
+     "note": "Increased shares by +16%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "BIDU",
+     "company": "Baidu Inc",
+     "note": "Increased shares by +87%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "UBER",
+     "company": "Uber Technologies Inc",
+     "note": "Increased shares by +21%."
+    },
+    {
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "WHR",
-     "company": "Whirlpool Corp",
-     "note": "Reduced shares by -50%."
+     "ticker": "BABA",
+     "company": "Alibaba Group Hldg Ltd",
+     "note": "Reduced shares by -42%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "PDD",
-     "company": "Pdd Holdings Inc",
-     "note": "Reduced shares by -49%."
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "GOOG",
+     "company": "Alphabet Inc",
+     "note": "Increased shares by +7%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "GLW",
-     "company": "Corning Inc",
-     "note": "Reduced shares by -28%."
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "VST",
+     "company": "Vistra Corp",
+     "note": "Increased shares by +10%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "QCOM",
      "company": "Qualcomm Inc",
-     "note": "Reduced shares by -56%."
+     "note": "Reduced shares by -50%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
+     "ticker": "WHR",
+     "company": "Whirlpool Corp",
+     "note": "Reduced shares by -63%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "AMD",
+     "company": "Advanced Micro Devices Inc",
+     "note": "Reduced shares by -11%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
      "ticker": "NVDA",
      "company": "Nvidia Corporation",
-     "note": "Reduced shares by -13%."
+     "note": "Increased shares by +4%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "MSFT",
-     "company": "Microsoft Corp",
-     "note": "Reduced shares by -82%."
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "EWY",
+     "company": "Ishares Inc",
+     "note": "Increased shares by +1%."
     }
    ]
   },
@@ -1999,365 +1999,365 @@
    "style": "Credit, distressed value",
    "bio": "Co-founder of Oaktree Capital. Cycle-aware distressed and credit investing.",
    "stats": {
-    "numHoldings": 52,
+    "numHoldings": 51,
     "topSectors": [
      "Energy",
      "Metals & Mining",
      "Telecommunication"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-20"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "TRMD",
      "company": "Torm Plc",
      "sector": "Energy",
-     "weight": 15.67,
-     "value": 675076008,
-     "shares": 23839575,
+     "weight": 13.87,
+     "value": 524260745,
+     "shares": 20329874,
      "since": "",
-     "price": 29.37
+     "price": 30.08
     },
     {
      "ticker": "EXE",
      "company": "Expand Energy Corp",
      "sector": "Energy",
-     "weight": 13.35,
-     "value": 574970225,
+     "weight": 12.64,
+     "value": 477605527,
      "shares": 5237477,
      "since": "",
-     "price": 94.68
-    },
-    {
-     "ticker": "AU",
-     "company": "Anglogold Ashanti Plc",
-     "sector": "Metals & Mining",
-     "weight": 7.29,
-     "value": 313800237,
-     "shares": 3223092,
-     "since": "",
-     "price": 95.07
+     "price": 94.78
     },
     {
      "ticker": "GTX",
      "company": "Garrett Motion Inc",
      "sector": "Auto Components",
-     "weight": 6.16,
-     "value": 265187806,
-     "shares": 14594816,
+     "weight": 7.28,
+     "value": 275160183,
+     "shares": 7594816,
      "since": "",
-     "price": 28.69
+     "price": 29
+    },
+    {
+     "ticker": "AU",
+     "company": "Anglogold Ashanti Plc",
+     "sector": "Metals & Mining",
+     "weight": 6.81,
+     "value": 257156751,
+     "shares": 3179092,
+     "since": "",
+     "price": 96.3
     },
     {
      "ticker": "INDV",
      "company": "Indivior Pharmaceuticals Inc",
      "sector": "Pharmaceuticals",
-     "weight": 4.94,
-     "value": 212875428,
-     "shares": 6984102,
+     "weight": 6.65,
+     "value": 251399508,
+     "shares": 6127212,
      "since": "",
-     "price": 38.22
+     "price": 39.01
     },
     {
      "ticker": "TDS",
      "company": "Telephone And Data Systems Inc",
      "sector": "Telecommunication",
-     "weight": 4.2,
-     "value": 180703430,
-     "shares": 4292243,
+     "weight": 5.17,
+     "value": 195520314,
+     "shares": 5282905,
      "since": "",
-     "price": 35.04
+     "price": 35.21
     },
     {
      "ticker": "VNOM",
      "company": "Viper Energy Inc",
      "sector": "Energy",
-     "weight": 4.14,
-     "value": 178159389,
+     "weight": 4.25,
+     "value": 160756716,
      "shares": 3791432,
      "since": "",
-     "price": 41.27
+     "price": 42.29
     },
     {
      "ticker": "CORZ",
      "company": "Core Scientific Inc",
      "sector": "Technology",
-     "weight": 3.25,
-     "value": 139886591,
-     "shares": 9350708,
+     "weight": 3.38,
+     "value": 127788987,
+     "shares": 4993708,
      "since": "",
-     "price": 19.78
-    },
-    {
-     "ticker": "STKL",
-     "company": "Sunopta Inc",
-     "sector": "Food Products",
-     "weight": 3.12,
-     "value": 134230239,
-     "shares": 20726126,
-     "since": "",
-     "price": null
-    },
-    {
-     "ticker": "PBR",
-     "company": "Petroleo Brasileiro Sa - Petrobras",
-     "sector": "Energy",
-     "weight": 2.93,
-     "value": 126355319,
-     "shares": 6089413,
-     "since": "",
-     "price": 17.89
-    },
-    {
-     "ticker": "B",
-     "company": "Barrick Mining Corp",
-     "sector": "Metals & Mining",
-     "weight": 2.49,
-     "value": 107067998,
-     "shares": 2624859,
-     "since": "",
-     "price": 40.91
+     "price": 20.18
     },
     {
      "ticker": "TLN",
      "company": "Talen Energy Corp",
      "sector": "Utilities",
-     "weight": 2.45,
-     "value": 105702479,
+     "weight": 3.37,
+     "value": 127235018,
      "shares": 331117,
      "since": "",
-     "price": 358.4
+     "price": 362.74
     },
     {
-     "ticker": "LBTYK",
-     "company": "Liberty Global Ltd",
-     "sector": "Telecommunication",
-     "weight": 2.4,
-     "value": 103383899,
-     "shares": 8551191,
+     "ticker": "B",
+     "company": "Barrick Mining Corp",
+     "sector": "Metals & Mining",
+     "weight": 3.12,
+     "value": 117759575,
+     "shares": 3206087,
      "since": "",
-     "price": 10.2
+     "price": 41.6
     },
     {
      "ticker": "ITUB",
      "company": "Itau Unibanco Holding Sa",
      "sector": "Banking",
-     "weight": 2.37,
-     "value": 102143786,
-     "shares": 12188995,
+     "weight": 2.59,
+     "value": 97857531,
+     "shares": 11977665,
      "since": "",
-     "price": 7.34
+     "price": 7.4
     },
     {
-     "ticker": "NOK",
-     "company": "Nokia Oyj",
-     "sector": "Communications",
-     "weight": 2.09,
-     "value": 90050476,
-     "shares": 11200308,
+     "ticker": "LBTYK",
+     "company": "Liberty Global Ltd",
+     "sector": "Telecommunication",
+     "weight": 2.57,
+     "value": 97227041,
+     "shares": 8551191,
      "since": "",
-     "price": 10.56
+     "price": 10.22
     },
     {
-     "ticker": "TAC",
-     "company": "Transalta Corp",
-     "sector": "Utilities",
-     "weight": 1.95,
-     "value": 84077945,
-     "shares": 6415253,
+     "ticker": "OCSL",
+     "company": "Oaktree Specialty Lending Corp",
+     "sector": "Financial Services",
+     "weight": 2.49,
+     "value": 93994056,
+     "shares": 7872199,
      "since": "",
-     "price": 12.61
-    },
-    {
-     "ticker": "CBL",
-     "company": "Cbl & Associates Properties Inc",
-     "sector": "Real Estate",
-     "weight": 1.92,
-     "value": 82767382,
-     "shares": 2153717,
-     "since": "",
-     "price": 57.57
+     "price": 12.98
     },
     {
      "ticker": "FCX",
      "company": "Freeport-Mcmoran Inc",
      "sector": "Metals & Mining",
-     "weight": 1.67,
-     "value": 71718771,
-     "shares": 1220122,
+     "weight": 2.0,
+     "value": 75538562,
+     "shares": 1201122,
      "since": "",
-     "price": 66.83
-    },
-    {
-     "ticker": "XP",
-     "company": "Xp Inc",
-     "sector": "Financial Services",
-     "weight": 1.4,
-     "value": 60395051,
-     "shares": 3172009,
-     "since": "",
-     "price": 15.84
+     "price": 66.49
     },
     {
      "ticker": "AERO",
      "company": "Grupo Aeromexico Sab De Cv",
      "sector": "Airlines",
-     "weight": 1.29,
-     "value": 55601290,
+     "weight": 1.89,
+     "value": 71436348,
      "shares": 3968686,
      "since": "",
-     "price": 15.85
-    },
-    {
-     "ticker": "BLCO",
-     "company": "Bausch Lomb Corp",
-     "sector": "Health Care",
-     "weight": 1.25,
-     "value": 53785550,
-     "shares": 3382739,
-     "since": "",
-     "price": 16.98
+     "price": 15.75
     },
     {
      "ticker": "KRC",
      "company": "Kilroy Realty Corp",
      "sector": "Real Estate",
-     "weight": 1.21,
-     "value": 52188810,
+     "weight": 1.83,
+     "value": 69319912,
      "shares": 1850011,
      "since": "",
-     "price": 37
+     "price": 36.31
+    },
+    {
+     "ticker": "SE",
+     "company": "Sea Ltd",
+     "sector": "Retail",
+     "weight": 1.61,
+     "value": 60894502,
+     "shares": 635443,
+     "since": "",
+     "price": 121.94
     },
     {
      "ticker": "LILAK",
      "company": "Liberty Latin America Ltd",
      "sector": "Telecommunication",
-     "weight": 1.18,
-     "value": 50704239,
-     "shares": 5748780,
+     "weight": 1.56,
+     "value": 58885256,
+     "shares": 7559083,
      "since": "",
-     "price": 8.425
+     "price": 8.49
     },
     {
-     "ticker": "CRDO",
-     "company": "Credo Technology Group Holding Ltd",
-     "sector": "Semiconductors",
-     "weight": 1.17,
-     "value": 50595930,
-     "shares": 539000,
+     "ticker": "BLCO",
+     "company": "Bausch Lomb Corp",
+     "sector": "Health Care",
+     "weight": 1.51,
+     "value": 56983655,
+     "shares": 3441042,
      "since": "",
-     "price": 265.99
+     "price": 17.05
     },
     {
-     "ticker": "RWAY",
-     "company": "Runway Growth Finance Corp",
+     "ticker": "VSAT",
+     "company": "Viasat Inc",
+     "sector": "Communications",
+     "weight": 1.5,
+     "value": 56605446,
+     "shares": 630280,
+     "since": "",
+     "price": 82.87
+    },
+    {
+     "ticker": "",
+     "company": "Makemytrip Ltd",
+     "sector": "\u2014",
+     "weight": 1.39,
+     "value": 52387693,
+     "shares": 983068,
+     "since": "",
+     "price": null
+    },
+    {
+     "ticker": "MATW",
+     "company": "Matthews International Corp",
+     "sector": "Diversified Consumer Services",
+     "weight": 1.37,
+     "value": 51847704,
+     "shares": 1925992,
+     "since": "",
+     "price": 23.25
+    },
+    {
+     "ticker": "XP",
+     "company": "Xp Inc",
      "sector": "Financial Services",
-     "weight": 1.12,
-     "value": 48293821,
-     "shares": 7029667,
+     "weight": 1.34,
+     "value": 50679314,
+     "shares": 3116809,
      "since": "",
-     "price": 6.97
+     "price": 15.82
+    },
+    {
+     "ticker": "YPF",
+     "company": "Ypf Sa",
+     "sector": "Energy",
+     "weight": 1.19,
+     "value": 45076502,
+     "shares": 991346,
+     "since": "",
+     "price": 50.05
+    },
+    {
+     "ticker": "TAC",
+     "company": "Transalta Corp",
+     "sector": "Utilities",
+     "weight": 1.1,
+     "value": 41487224,
+     "shares": 3000000,
+     "since": "",
+     "price": 12.79
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "VNOM",
-     "company": "Viper Energy Inc",
-     "note": "Reduced shares by -40%."
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "OCSL",
+     "company": "Oaktree Specialty Lending Corp",
+     "note": "Increased shares by +325%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "TRMD",
-     "company": "Torm Plc",
-     "note": "Reduced shares by -10%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "AU",
-     "company": "Anglogold Ashanti Plc",
-     "note": "Reduced shares by -16%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
      "ticker": "GTX",
      "company": "Garrett Motion Inc",
+     "note": "Reduced shares by -48%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "TRMD",
+     "company": "Torm Plc",
      "note": "Reduced shares by -15%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "NOK",
-     "company": "Nokia Oyj",
-     "note": "Reduced shares by -40%."
+     "ticker": "CORZ",
+     "company": "Core Scientific Inc",
+     "note": "Reduced shares by -47%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
      "ticker": "TDS",
      "company": "Telephone And Data Systems Inc",
-     "note": "Increased shares by +16%."
+     "note": "Increased shares by +23%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Increase",
-     "ticker": "EXE",
-     "company": "Expand Energy Corp",
-     "note": "Increased shares by +3%."
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "INDV",
+     "company": "Indivior Pharmaceuticals Inc",
+     "note": "Reduced shares by -12%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "CORZ",
-     "company": "Core Scientific Inc",
+     "ticker": "B",
+     "company": "Barrick Mining Corp",
+     "note": "Increased shares by +22%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "TAC",
+     "company": "Transalta Corp",
+     "note": "Reduced shares by -53%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "LILAK",
+     "company": "Liberty Latin America Ltd",
+     "note": "Increased shares by +31%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "SHAZ",
+     "company": "Sharonai Holdings Inc",
+     "note": "Reduced shares by -71%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "BTAI",
+     "company": "Bioxcel Therapeutics Inc",
+     "note": "Increased shares by +472%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "YPF",
+     "company": "Ypf Sa",
      "note": "Increased shares by +12%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "CX",
-     "company": "Cemex Sab De Cv",
-     "note": "Reduced shares by -52%."
+     "ticker": "AU",
+     "company": "Anglogold Ashanti Plc",
+     "note": "Reduced shares by -1%."
     },
     {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Decrease",
-     "ticker": "ECVT",
-     "company": "Ecovyst Inc",
-     "note": "Reduced shares by -44%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "B",
-     "company": "Barrick Mining Corp",
-     "note": "Reduced shares by -12%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "ITUB",
-     "company": "Itau Unibanco Holding Sa",
-     "note": "Reduced shares by -12%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "CBL",
-     "company": "Cbl & Associates Properties Inc",
-     "note": "Reduced shares by -14%."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "FCX",
-     "company": "Freeport-Mcmoran Inc",
-     "note": "Reduced shares by -12%."
+     "ticker": "MX",
+     "company": "Magnachip Semiconductor Corp",
+     "note": "Reduced shares by -47%."
     }
    ]
   },
@@ -2367,206 +2367,153 @@
    "style": "Focused value, Munger school",
    "bio": "Founder of Himalaya Capital. Ultra-concentrated, decade-long horizons.",
    "stats": {
-    "numHoldings": 14,
+    "numHoldings": 8,
     "topSectors": [
      "Media",
-     "Financial Services",
-     "Retail"
+     "Retail",
+     "Financial Services"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-15"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "GOOGL",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 22.85,
-     "value": 731351348,
+     "weight": 24.55,
+     "value": 908899121,
      "shares": 2543300,
      "since": "",
-     "price": 346.36
+     "price": 345.9
     },
     {
      "ticker": "GOOG",
      "company": "Alphabet Inc",
      "sector": "Media",
-     "weight": 21.97,
-     "value": 703179918,
+     "weight": 23.39,
+     "value": 866117829,
      "shares": 2451300,
      "since": "",
-     "price": 343.94
+     "price": 343.54
     },
     {
      "ticker": "PDD",
      "company": "Pdd Holdings Inc",
      "sector": "Retail",
-     "weight": 14.71,
-     "value": 470845440,
-     "shares": 4608000,
+     "weight": 22.17,
+     "value": 820858157,
+     "shares": 10761119,
      "since": "",
-     "price": 84.17
+     "price": 84.79
     },
     {
      "ticker": "BRK.B",
      "company": "Berkshire Hathaway Inc Del",
      "sector": "Financial Services",
-     "weight": 13.44,
-     "value": 430201321,
-     "shares": 897749,
+     "weight": 14.98,
+     "value": 554591244,
+     "shares": 1108318,
      "since": "",
-     "price": 506.93
+     "price": 504.03
     },
     {
      "ticker": "EWBC",
      "company": "East West Bancorp Inc",
      "sector": "Banking",
-     "weight": 9.26,
-     "value": 296403233,
+     "weight": 9.68,
+     "value": 358399151,
      "shares": 2776351,
      "since": "",
-     "price": 135.96
-    },
-    {
-     "ticker": "BAC",
-     "company": "Bk Of America Corp",
-     "sector": "Banking",
-     "weight": 4.57,
-     "value": 146151866,
-     "shares": 2997987,
-     "since": "",
-     "price": 64.09
-    },
-    {
-     "ticker": "OXY",
-     "company": "Occidental Pete Corp",
-     "sector": "Energy",
-     "weight": 2.98,
-     "value": 95322500,
-     "shares": 1466500,
-     "since": "",
-     "price": 57.7
+     "price": 136.6
     },
     {
      "ticker": "CROX",
      "company": "Crocs Inc",
      "sector": "Textiles, Apparel & Luxury Goods",
-     "weight": 2.3,
-     "value": 73646461,
+     "weight": 2.89,
+     "value": 107018900,
      "shares": 887093,
      "since": "",
-     "price": 132.56
+     "price": 131.72
     },
     {
      "ticker": "TME",
-     "company": "Tencent Music Entmt Group",
+     "company": "Tencent Music Entertainm",
      "sector": "Media",
-     "weight": 1.91,
-     "value": 61162958,
+     "weight": 1.49,
+     "value": 55033481,
      "shares": 6590836,
      "since": "",
-     "price": 8.66
-    },
-    {
-     "ticker": "SPGI",
-     "company": "S&P Global Inc",
-     "sector": "Financial Services",
-     "weight": 1.61,
-     "value": 51663072,
-     "shares": 121463,
-     "since": "",
-     "price": 422.67
-    },
-    {
-     "ticker": "HRB",
-     "company": "Block H & R Inc",
-     "sector": "Diversified Consumer Services",
-     "weight": 1.61,
-     "value": 51637996,
-     "shares": 1626906,
-     "since": "",
-     "price": 53.34
-    },
-    {
-     "ticker": "MCO",
-     "company": "Moodys Corp",
-     "sector": "Financial Services",
-     "weight": 1.61,
-     "value": 51383270,
-     "shares": 117784,
-     "since": "",
-     "price": 488.42
+     "price": 8.84
     },
     {
      "ticker": "AAPL",
      "company": "Apple Inc",
      "sector": "Technology",
-     "weight": 0.88,
-     "value": 28069174,
+     "weight": 0.86,
+     "value": 32003216,
      "shares": 110600,
      "since": "",
-     "price": 305.26
-    },
-    {
-     "ticker": "MSCI",
-     "company": "Msci Inc",
-     "sector": "Financial Services",
-     "weight": 0.32,
-     "value": 10208310,
-     "shares": 18939,
-     "since": "",
-     "price": 575.24
+     "price": 305.93
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "PDD",
+     "company": "Pdd Holdings Inc",
+     "note": "Increased shares by +134%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "BRK.B",
+     "company": "Berkshire Hathaway Inc Del",
+     "note": "Increased shares by +23%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Exit",
      "ticker": "BAC",
      "company": "Bk Of America Corp",
-     "note": "Reduced shares by -71%."
+     "note": "Position fully closed."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Increase",
-     "ticker": "CROX",
-     "company": "Crocs Inc",
-     "note": "Increased shares by +41%."
+     "quarter": "2026 Q2",
+     "action": "Exit",
+     "ticker": "OXY",
+     "company": "Occidental Pete Corp",
+     "note": "Position fully closed."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "New Position",
-     "ticker": "TME",
-     "company": "Tencent Music Entmt Group",
-     "note": "New stake worth $61M."
-    },
-    {
-     "quarter": "2026 Q1",
-     "action": "New Position",
+     "quarter": "2026 Q2",
+     "action": "Exit",
      "ticker": "SPGI",
      "company": "S&P Global Inc",
-     "note": "New stake worth $52M."
+     "note": "Position fully closed."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "New Position",
+     "quarter": "2026 Q2",
+     "action": "Exit",
      "ticker": "HRB",
      "company": "Block H & R Inc",
-     "note": "New stake worth $52M."
+     "note": "Position fully closed."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "New Position",
+     "quarter": "2026 Q2",
+     "action": "Exit",
      "ticker": "MCO",
      "company": "Moodys Corp",
-     "note": "New stake worth $51M."
+     "note": "Position fully closed."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "New Position",
+     "quarter": "2026 Q2",
+     "action": "Exit",
      "ticker": "MSCI",
      "company": "Msci Inc",
-     "note": "New stake worth $10M."
+     "note": "Position fully closed."
     }
    ]
   },
@@ -2583,151 +2530,158 @@
      "Chemicals"
     ],
     "avgDuration": "n/a",
-    "last13F": "2026-05-15"
+    "last13F": "2026-08-14"
    },
    "holdings": [
     {
      "ticker": "IEP",
      "company": "Icahn Enterprises Lp",
      "sector": "Industrial Conglomerates",
-     "weight": 48.49,
-     "value": 4147974070,
-     "shares": 549400539,
+     "weight": 53.95,
+     "value": 4458616003,
+     "shares": 618393343,
      "since": "",
-     "price": 7.5
+     "price": 7.42
     },
     {
      "ticker": "CVI",
      "company": "Cvr Energy Inc",
      "sector": "Energy",
-     "weight": 28.01,
-     "value": 2395943093,
+     "weight": 23.73,
+     "value": 1960899637,
      "shares": 71201875,
      "since": "",
-     "price": 35.6
+     "price": 35.26
     },
     {
      "ticker": "UAN",
      "company": "Cvr Partners, Lp",
      "sector": "Chemicals",
-     "weight": 6.17,
-     "value": 527488588,
+     "weight": 5.62,
+     "value": 464233266,
      "shares": 4164274,
      "since": "",
-     "price": 118.83
+     "price": 123.5
     },
     {
      "ticker": "CTRI",
      "company": "Centuri Holdings, Inc.",
      "sector": "Construction",
-     "weight": 4.9,
-     "value": 418755845,
+     "weight": 5.25,
+     "value": 433521971,
      "shares": 14336044,
      "since": "",
-     "price": 23.09
+     "price": 23.62
     },
     {
      "ticker": "IFF",
      "company": "International Flavors And Fragrances Inc.",
      "sector": "Chemicals",
-     "weight": 3.63,
-     "value": 310151250,
+     "weight": 4.1,
+     "value": 338665500,
      "shares": 4275000,
      "since": "",
-     "price": 84.06
+     "price": 84.18
     },
     {
      "ticker": "ECHO",
      "company": "Echostar Corporation",
      "sector": "Media",
-     "weight": 1.92,
-     "value": 164429732,
+     "weight": 1.73,
+     "value": 142561013,
      "shares": 1404542,
      "since": "",
-     "price": 91.68
-    },
-    {
-     "ticker": "AEP",
-     "company": "American Electric Power Company",
-     "sector": "Utilities",
-     "weight": 1.85,
-     "value": 157990724,
-     "shares": 1205300,
-     "since": "",
-     "price": 125.38
+     "price": 91.89
     },
     {
      "ticker": "JBLU",
      "company": "Jetblue Airways Corp.",
      "sector": "Airlines",
-     "weight": 1.74,
-     "value": 148608069,
-     "shares": 33621735,
+     "weight": 1.43,
+     "value": 118371366,
+     "shares": 20658179,
      "since": "",
-     "price": 5.8
+     "price": 5.65
     },
     {
      "ticker": "MNRO",
      "company": "Monro, Inc.",
      "sector": "Retail",
-     "weight": 0.95,
-     "value": 81460311,
+     "weight": 1.05,
+     "value": 86894384,
      "shares": 5078573,
      "since": "",
-     "price": 11.27
-    },
-    {
-     "ticker": "SD",
-     "company": "Sandridge Energy, Inc.",
-     "sector": "Energy",
-     "weight": 0.94,
-     "value": 80697003,
-     "shares": 4947701,
-     "since": "",
-     "price": 13.93
+     "price": 11.48
     },
     {
      "ticker": "CZR",
      "company": "Caesars Entertainment, Inc.",
      "sector": "Hotels, Restaurants & Leisure",
-     "weight": 0.75,
-     "value": 64492081,
+     "weight": 0.89,
+     "value": 73642490,
      "shares": 2440109,
      "since": "",
-     "price": 29.66
+     "price": 29.75
+    },
+    {
+     "ticker": "SD",
+     "company": "Sandridge Energy, Inc.",
+     "sector": "Energy",
+     "weight": 0.84,
+     "value": 69252220,
+     "shares": 5054907,
+     "since": "",
+     "price": 14.03
+    },
+    {
+     "ticker": "AEP",
+     "company": "American Electric Power Company",
+     "sector": "Utilities",
+     "weight": 0.72,
+     "value": 59472675,
+     "shares": 434710,
+     "since": "",
+     "price": 125.6
     },
     {
      "ticker": "BLCO",
      "company": "Bausch Plus Lomb Corp.",
      "sector": "Health Care",
-     "weight": 0.65,
-     "value": 55650000,
+     "weight": 0.7,
+     "value": 57960000,
      "shares": 3500000,
      "since": "",
-     "price": 16.98
+     "price": 17.05
     }
    ],
    "trades": [
     {
-     "quarter": "2026 Q1",
-     "action": "Decrease",
-     "ticker": "ECHO",
-     "company": "Echostar Corporation",
-     "note": "Reduced shares by -58%."
-    },
-    {
-     "quarter": "2026 Q1",
+     "quarter": "2026 Q2",
      "action": "Increase",
-     "ticker": "CVI",
-     "company": "Cvr Energy Inc",
-     "note": "Increased shares by +1%."
+     "ticker": "IEP",
+     "company": "Icahn Enterprises Lp",
+     "note": "Increased shares by +13%."
     },
     {
-     "quarter": "2026 Q1",
-     "action": "Exit",
-     "ticker": "SWX",
-     "company": "Southwest Gas Holdings Inc.",
-     "note": "Position fully closed."
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "JBLU",
+     "company": "Jetblue Airways Corp.",
+     "note": "Reduced shares by -39%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Decrease",
+     "ticker": "AEP",
+     "company": "American Electric Power Company",
+     "note": "Reduced shares by -64%."
+    },
+    {
+     "quarter": "2026 Q2",
+     "action": "Increase",
+     "ticker": "SD",
+     "company": "Sandridge Energy, Inc.",
+     "note": "Increased shares by +2%."
     }
    ]
   }
