@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T04:22:47.819556+00:00",
+ "generated": "2026-11-18T03:28:48.877004+00:00",
  "investors": [
   {
    "id": "buffett",
@@ -25,7 +25,7 @@
      "value": 75901188420,
      "shares": 227917808,
      "since": "",
-     "price": 352.78
+     "price": 351.91
     },
     {
      "ticker": "AXP",
@@ -35,7 +35,7 @@
      "value": 46104813870,
      "shares": 151610700,
      "since": "",
-     "price": 319.05
+     "price": 315.78
     },
     {
      "ticker": "KO",
@@ -45,7 +45,7 @@
      "value": 34432000000,
      "shares": 400000000,
      "since": "",
-     "price": 99.48
+     "price": 98.79
     },
     {
      "ticker": "GOOGL",
@@ -55,7 +55,7 @@
      "value": 27110464741,
      "shares": 78791167,
      "since": "",
-     "price": 283.72
+     "price": 280.2
     },
     {
      "ticker": "BAC",
@@ -65,7 +65,7 @@
      "value": 24812509222,
      "shares": 455860908,
      "since": "",
-     "price": 50.08
+     "price": 49.44
     },
     {
      "ticker": "CVX",
@@ -75,7 +75,7 @@
      "value": 17230393553,
      "shares": 84375856,
      "since": "",
-     "price": 217.14
+     "price": 216.13
     },
     {
      "ticker": "OXY",
@@ -85,7 +85,7 @@
      "value": 14656559963,
      "shares": 264941431,
      "since": "",
-     "price": 57.36
+     "price": 56.52
     },
     {
      "ticker": "MCO",
@@ -95,7 +95,7 @@
      "value": 11203286284,
      "shares": 24669778,
      "since": "",
-     "price": 506.28
+     "price": 484.41
     },
     {
      "ticker": "CB",
@@ -105,7 +105,7 @@
      "value": 11139546771,
      "shares": 34249183,
      "since": "",
-     "price": 381.28
+     "price": 375.64
     },
     {
      "ticker": "GOOG",
@@ -115,7 +115,7 @@
      "value": 9264186660,
      "shares": 27188433,
      "since": "",
-     "price": 281.26
+     "price": 277.6
     },
     {
      "ticker": "KHC",
@@ -125,7 +125,7 @@
      "value": 7398423065,
      "shares": 325634818,
      "since": "",
-     "price": 25.07
+     "price": 25.11
     },
     {
      "ticker": "DAL",
@@ -135,7 +135,7 @@
      "value": 5378997000,
      "shares": 64450000,
      "since": "",
-     "price": 86.6
+     "price": 84.3
     },
     {
      "ticker": "DVA",
@@ -145,7 +145,7 @@
      "value": 5019719296,
      "shares": 28697229,
      "since": "",
-     "price": 174.22
+     "price": 173
     },
     {
      "ticker": "SIRI",
@@ -155,7 +155,7 @@
      "value": 3230008188,
      "shares": 124807117,
      "since": "",
-     "price": 31.98
+     "price": 31.73
     },
     {
      "ticker": "LEN",
@@ -165,7 +165,7 @@
      "value": 2124149633,
      "shares": 26034436,
      "since": "",
-     "price": 83.79
+     "price": 82.34
     },
     {
      "ticker": "KR",
@@ -175,7 +175,7 @@
      "value": 2051700000,
      "shares": 35000000,
      "since": "",
-     "price": 70.67
+     "price": 70.88
     },
     {
      "ticker": "VRSN",
@@ -185,7 +185,7 @@
      "value": 1670101573,
      "shares": 5922136,
      "since": "",
-     "price": 308.43
+     "price": 305.7
     },
     {
      "ticker": "LLYVK",
@@ -195,7 +195,7 @@
      "value": 1029599657,
      "shares": 10587143,
      "since": "",
-     "price": 106.16
+     "price": 104.93
     },
     {
      "ticker": "ALLY",
@@ -205,7 +205,7 @@
      "value": 1015740001,
      "shares": 27000000,
      "since": "",
-     "price": 38.11
+     "price": 37.46
     },
     {
      "ticker": "NYT",
@@ -215,7 +215,7 @@
      "value": 1000090000,
      "shares": 15700000,
      "since": "",
-     "price": 73.5
+     "price": 73.82
     },
     {
      "ticker": "",
@@ -235,7 +235,7 @@
      "value": 471930689,
      "shares": 4986588,
      "since": "",
-     "price": 103.21
+     "price": 101.44
     },
     {
      "ticker": "NUE",
@@ -245,7 +245,7 @@
      "value": 369506390,
      "shares": 1580776,
      "since": "",
-     "price": 252.67
+     "price": 252.08
     },
     {
      "ticker": "LPX",
@@ -255,7 +255,7 @@
      "value": 365662388,
      "shares": 5664793,
      "since": "",
-     "price": 75.26
+     "price": 73.71
     },
     {
      "ticker": "COF",
@@ -265,7 +265,7 @@
      "value": 222030500,
      "shares": 1150000,
      "since": "",
-     "price": 193.22
+     "price": 186.78
     }
    ],
    "trades": [
@@ -365,7 +365,7 @@
      "value": 2595471644,
      "shares": 3403317,
      "since": "",
-     "price": 739.95
+     "price": 732.44
     },
     {
      "ticker": "IVV",
@@ -375,7 +375,7 @@
      "value": 1154942390,
      "shares": 1508053,
      "since": "",
-     "price": 743.33
+     "price": 735.7
     },
     {
      "ticker": "NVDA",
@@ -385,7 +385,7 @@
      "value": 613935912,
      "shares": 2688221,
      "since": "",
-     "price": 156.14
+     "price": 155.46
     },
     {
      "ticker": "AVGO",
@@ -395,7 +395,7 @@
      "value": 461725648,
      "shares": 1314746,
      "since": "",
-     "price": 333.4
+     "price": 341.6
     },
     {
      "ticker": "LRCX",
@@ -405,7 +405,7 @@
      "value": 348182821,
      "shares": 1059885,
      "since": "",
-     "price": 210.83
+     "price": 210.69
     },
     {
      "ticker": "AMD",
@@ -415,7 +415,7 @@
      "value": 300580323,
      "shares": 491337,
      "since": "",
-     "price": 504.28
+     "price": 503.41
     },
     {
      "ticker": "AMAT",
@@ -425,7 +425,7 @@
      "value": 288100753,
      "shares": 563379,
      "since": "",
-     "price": 350.25
+     "price": 349.23
     },
     {
      "ticker": "MU",
@@ -435,7 +435,7 @@
      "value": 252557818,
      "shares": 237119,
      "since": "",
-     "price": 719.02
+     "price": 712.42
     },
     {
      "ticker": "NEM",
@@ -445,7 +445,7 @@
      "value": 242638682,
      "shares": 2103682,
      "since": "",
-     "price": 110.31
+     "price": 111.26
     },
     {
      "ticker": "AMZN",
@@ -455,7 +455,7 @@
      "value": 241863857,
      "shares": 970756,
      "since": "",
-     "price": 257.75
+     "price": 257.89
     },
     {
      "ticker": "EWY",
@@ -465,7 +465,7 @@
      "value": 229577895,
      "shares": 1256034,
      "since": "",
-     "price": 136.55
+     "price": 135.32
     },
     {
      "ticker": "APP",
@@ -475,7 +475,7 @@
      "value": 198375307,
      "shares": 683040,
      "since": "",
-     "price": 415.22
+     "price": 398.94
     },
     {
      "ticker": "SHEL",
@@ -485,7 +485,7 @@
      "value": 195929321,
      "shares": 2061329,
      "since": "",
-     "price": 97.71
+     "price": 97.24
     },
     {
      "ticker": "VWO",
@@ -495,7 +495,7 @@
      "value": 188419448,
      "shares": 3176858,
      "since": "",
-     "price": 54.86
+     "price": 54.3
     },
     {
      "ticker": "",
@@ -515,7 +515,7 @@
      "value": 162205259,
      "shares": 1181393,
      "since": "",
-     "price": 119.09
+     "price": 115
     },
     {
      "ticker": "QCOM",
@@ -525,7 +525,7 @@
      "value": 161608285,
      "shares": 878115,
      "since": "",
-     "price": 168.52
+     "price": 166.67
     },
     {
      "ticker": "META",
@@ -535,7 +535,7 @@
      "value": 159542501,
      "shares": 220004,
      "since": "",
-     "price": 626.41
+     "price": 618.87
     },
     {
      "ticker": "PBR",
@@ -545,7 +545,7 @@
      "value": 158731418,
      "shares": 7605722,
      "since": "",
-     "price": 17.3
+     "price": 17.41
     },
     {
      "ticker": "GOOGL",
@@ -555,7 +555,7 @@
      "value": 158356971,
      "shares": 460233,
      "since": "",
-     "price": 283.72
+     "price": 280.2
     },
     {
      "ticker": "JNJ",
@@ -565,7 +565,7 @@
      "value": 144953357,
      "shares": 547531,
      "since": "",
-     "price": 282.55
+     "price": 278.7
     },
     {
      "ticker": "MO",
@@ -575,7 +575,7 @@
      "value": 141460936,
      "shares": 2100697,
      "since": "",
-     "price": 78.9
+     "price": 77.46
     },
     {
      "ticker": "IEMG",
@@ -585,7 +585,7 @@
      "value": 133886324,
      "shares": 1649659,
      "since": "",
-     "price": 71.77
+     "price": 71.08
     },
     {
      "ticker": "EOG",
@@ -595,7 +595,7 @@
      "value": 130643181,
      "shares": 948339,
      "since": "",
-     "price": 155.47
+     "price": 154.91
     },
     {
      "ticker": "V",
@@ -605,7 +605,7 @@
      "value": 128554260,
      "shares": 357761,
      "since": "",
-     "price": 426.46
+     "price": 416.77
     }
    ],
    "trades": [
@@ -733,7 +733,7 @@
      "value": 2415946008,
      "shares": 59697208,
      "since": "",
-     "price": 40.39
+     "price": 39.59
     },
     {
      "ticker": "AMZN",
@@ -743,7 +743,7 @@
      "value": 2385104083,
      "shares": 11451981,
      "since": "",
-     "price": 257.75
+     "price": 257.89
     },
     {
      "ticker": "UBER",
@@ -753,7 +753,7 @@
      "value": 2154934398,
      "shares": 29958771,
      "since": "",
-     "price": 69.99
+     "price": 68.81
     },
     {
      "ticker": "MSFT",
@@ -763,7 +763,7 @@
      "value": 2092970053,
      "shares": 5654078,
      "since": "",
-     "price": 517.99
+     "price": 506.24
     },
     {
      "ticker": "QSR",
@@ -773,7 +773,7 @@
      "value": 1673501194,
      "shares": 22645483,
      "since": "",
-     "price": 74.74
+     "price": 73.82
     },
     {
      "ticker": "META",
@@ -783,7 +783,7 @@
      "value": 1522358404,
      "shares": 2660861,
      "since": "",
-     "price": 626.41
+     "price": 618.87
     },
     {
      "ticker": "HHH",
@@ -793,7 +793,7 @@
      "value": 1192581569,
      "shares": 18852064,
      "since": "",
-     "price": 83.02
+     "price": 80.66
     },
     {
      "ticker": "SEG",
@@ -803,7 +803,7 @@
      "value": 107910794,
      "shares": 5023780,
      "since": "",
-     "price": 20.52
+     "price": 20.32
     },
     {
      "ticker": "GOOG",
@@ -813,7 +813,7 @@
      "value": 89421720,
      "shares": 311726,
      "since": "",
-     "price": 281.26
+     "price": 277.6
     },
     {
      "ticker": "HTZ",
@@ -823,7 +823,7 @@
      "value": 70261595,
      "shares": 15241127,
      "since": "",
-     "price": 1.4
+     "price": 1.35
     },
     {
      "ticker": "GOOGL",
@@ -833,7 +833,7 @@
      "value": 9310043,
      "shares": 32376,
      "since": "",
-     "price": 283.72
+     "price": 280.2
     }
    ],
    "trades": [
@@ -905,7 +905,7 @@
      "value": 995873920,
      "shares": 2266492,
      "since": "",
-     "price": 453.42
+     "price": 449.78
     },
     {
      "ticker": "V",
@@ -915,7 +915,7 @@
      "value": 809191397,
      "shares": 2251945,
      "since": "",
-     "price": 426.46
+     "price": 416.77
     },
     {
      "ticker": "MA",
@@ -925,7 +925,7 @@
      "value": 805835538,
      "shares": 1461250,
      "since": "",
-     "price": 661.71
+     "price": 645.73
     },
     {
      "ticker": "VEEV",
@@ -935,7 +935,7 @@
      "value": 772240730,
      "shares": 2705345,
      "since": "",
-     "price": 299.28
+     "price": 288.41
     },
     {
      "ticker": "SYK",
@@ -945,7 +945,7 @@
      "value": 735976470,
      "shares": 2672488,
      "since": "",
-     "price": 310.72
+     "price": 317.54
     },
     {
      "ticker": "UBER",
@@ -955,7 +955,7 @@
      "value": 611891721,
      "shares": 8931422,
      "since": "",
-     "price": 69.99
+     "price": 68.81
     },
     {
      "ticker": "CHD",
@@ -965,7 +965,7 @@
      "value": 607398369,
      "shares": 6446597,
      "since": "",
-     "price": 114.74
+     "price": 112.48
     },
     {
      "ticker": "FTNT",
@@ -975,7 +975,7 @@
      "value": 604335183,
      "shares": 3380707,
      "since": "",
-     "price": 123.27
+     "price": 124.5
     },
     {
      "ticker": "YUM",
@@ -985,7 +985,7 @@
      "value": 567458805,
      "shares": 4162086,
      "since": "",
-     "price": 162.22
+     "price": 161.35
     },
     {
      "ticker": "PM",
@@ -995,7 +995,7 @@
      "value": 526531725,
      "shares": 2759311,
      "since": "",
-     "price": 196.04
+     "price": 194.38
     },
     {
      "ticker": "TSM",
@@ -1005,7 +1005,7 @@
      "value": 523436968,
      "shares": 1147410,
      "since": "",
-     "price": 373.45
+     "price": 359.69
     },
     {
      "ticker": "TXN",
@@ -1015,7 +1015,7 @@
      "value": 503167681,
      "shares": 1796450,
      "since": "",
-     "price": 294.21
+     "price": 295.86
     },
     {
      "ticker": "MAR",
@@ -1025,7 +1025,7 @@
      "value": 482966427,
      "shares": 1357906,
      "since": "",
-     "price": 425.7
+     "price": 422.74
     },
     {
      "ticker": "ADP",
@@ -1035,7 +1035,7 @@
      "value": 479074713,
      "shares": 1856447,
      "since": "",
-     "price": 313.43
+     "price": 308.29
     },
     {
      "ticker": "NFLX",
@@ -1045,7 +1045,7 @@
      "value": 475828536,
      "shares": 6838582,
      "since": "",
-     "price": 60.75
+     "price": 59.68
     },
     {
      "ticker": "META",
@@ -1055,7 +1055,7 @@
      "value": 438401042,
      "shares": 604541,
      "since": "",
-     "price": 626.41
+     "price": 618.87
     },
     {
      "ticker": "TJX",
@@ -1065,7 +1065,7 @@
      "value": 432469260,
      "shares": 3268606,
      "since": "",
-     "price": 131.09
+     "price": 129.85
     },
     {
      "ticker": "MSFT",
@@ -1075,7 +1075,7 @@
      "value": 404985840,
      "shares": 789600,
      "since": "",
-     "price": 517.99
+     "price": 506.24
     },
     {
      "ticker": "PG",
@@ -1085,7 +1085,7 @@
      "value": 377443396,
      "shares": 2598041,
      "since": "",
-     "price": 173.02
+     "price": 171.72
     },
     {
      "ticker": "IDXX",
@@ -1095,7 +1095,7 @@
      "value": 373304754,
      "shares": 714883,
      "since": "",
-     "price": 700.65
+     "price": 690.24
     },
     {
      "ticker": "GOOGL",
@@ -1105,7 +1105,7 @@
      "value": 332974818,
      "shares": 967725,
      "since": "",
-     "price": 283.72
+     "price": 280.2
     },
     {
      "ticker": "NXT",
@@ -1115,7 +1115,7 @@
      "value": 326508776,
      "shares": 4189770,
      "since": "",
-     "price": 89.31
+     "price": 78.48
     },
     {
      "ticker": "APP",
@@ -1125,7 +1125,7 @@
      "value": 241495740,
      "shares": 831511,
      "since": "",
-     "price": 415.22
+     "price": 398.94
     },
     {
      "ticker": "GEV",
@@ -1135,7 +1135,7 @@
      "value": 169425793,
      "shares": 178251,
      "since": "",
-     "price": 763.57
+     "price": 779.91
     },
     {
      "ticker": "MSCI",
@@ -1145,7 +1145,7 @@
      "value": 27697359,
      "shares": 51419,
      "since": "",
-     "price": 664.49
+     "price": 636.58
     }
    ],
    "trades": [
@@ -1273,7 +1273,7 @@
      "value": 932781000,
      "shares": 3743854,
      "since": "",
-     "price": 257.75
+     "price": 257.89
     },
     {
      "ticker": "ELV",
@@ -1283,7 +1283,7 @@
      "value": 495805000,
      "shares": 1275154,
      "since": "",
-     "price": 446.28
+     "price": 433.93
     },
     {
      "ticker": "QSR",
@@ -1293,7 +1293,7 @@
      "value": 480104000,
      "shares": 6753112,
      "since": "",
-     "price": 74.74
+     "price": 73.82
     },
     {
      "ticker": "GPC",
@@ -1303,7 +1303,7 @@
      "value": 389540000,
      "shares": 3097978,
      "since": "",
-     "price": 122.18
+     "price": 120.6
     },
     {
      "ticker": "FERG",
@@ -1313,7 +1313,7 @@
      "value": 349868000,
      "shares": 1571594,
      "since": "",
-     "price": 253.2
+     "price": 249.08
     },
     {
      "ticker": "GOOG",
@@ -1323,7 +1323,7 @@
      "value": 323679000,
      "shares": 949931,
      "since": "",
-     "price": 281.26
+     "price": 277.6
     },
     {
      "ticker": "WCC",
@@ -1333,7 +1333,7 @@
      "value": 258374000,
      "shares": 718523,
      "since": "",
-     "price": 311.6
+     "price": 314.84
     },
     {
      "ticker": "V",
@@ -1343,7 +1343,7 @@
      "value": 252018000,
      "shares": 701355,
      "since": "",
-     "price": 426.46
+     "price": 416.77
     },
     {
      "ticker": "UNP",
@@ -1353,7 +1353,7 @@
      "value": 216451000,
      "shares": 795395,
      "since": "",
-     "price": 303.71
+     "price": 297.03
     },
     {
      "ticker": "AON",
@@ -1363,7 +1363,7 @@
      "value": 186759000,
      "shares": 674779,
      "since": "",
-     "price": 343.12
+     "price": 334.8
     },
     {
      "ticker": "CME",
@@ -1373,7 +1373,7 @@
      "value": 179570000,
      "shares": 685435,
      "since": "",
-     "price": 319.37
+     "price": 311.56
     },
     {
      "ticker": "HONA",
@@ -1383,7 +1383,7 @@
      "value": 175426000,
      "shares": 1132000,
      "since": "",
-     "price": 163.36
+     "price": 160.64
     },
     {
      "ticker": "HLF",
@@ -1393,7 +1393,7 @@
      "value": 124452000,
      "shares": 10259844,
      "since": "",
-     "price": 16.15
+     "price": 15.57
     },
     {
      "ticker": "GDS",
@@ -1403,7 +1403,7 @@
      "value": 117731000,
      "shares": 3769818,
      "since": "",
-     "price": 16.9
+     "price": 16.41
     },
     {
      "ticker": "SITE",
@@ -1413,7 +1413,7 @@
      "value": 112436000,
      "shares": 1245000,
      "since": "",
-     "price": 110.9
+     "price": 111.65
     },
     {
      "ticker": "COLD",
@@ -1423,7 +1423,7 @@
      "value": 95487000,
      "shares": 6830230,
      "since": "",
-     "price": 16.65
+     "price": 16.25
     },
     {
      "ticker": "EXP",
@@ -1433,7 +1433,7 @@
      "value": 90771000,
      "shares": 530763,
      "since": "",
-     "price": 178.99
+     "price": 174.81
     },
     {
      "ticker": "MOH",
@@ -1443,7 +1443,7 @@
      "value": 85021000,
      "shares": 449609,
      "since": "",
-     "price": 233.09
+     "price": 221.21
     },
     {
      "ticker": "",
@@ -1463,7 +1463,7 @@
      "value": 77058000,
      "shares": 4880188,
      "since": "",
-     "price": 16.33
+     "price": 16.61
     },
     {
      "ticker": "PS",
@@ -1473,7 +1473,7 @@
      "value": 21928000,
      "shares": 392000,
      "since": "",
-     "price": 45.68
+     "price": 43.38
     }
    ],
    "trades": [
@@ -1601,7 +1601,7 @@
      "value": 1331387500,
      "shares": 1250000,
      "since": "",
-     "price": 719.02
+     "price": 712.42
     },
     {
      "ticker": "AMZN",
@@ -1611,7 +1611,7 @@
      "value": 1114946250,
      "shares": 4475000,
      "since": "",
-     "price": 257.75
+     "price": 257.89
     },
     {
      "ticker": "TSM",
@@ -1621,7 +1621,7 @@
      "value": 718499250,
      "shares": 1575000,
      "since": "",
-     "price": 373.45
+     "price": 359.69
     },
     {
      "ticker": "SPCX",
@@ -1631,7 +1631,7 @@
      "value": 556547062,
      "shares": 3883329,
      "since": "",
-     "price": 137.36
+     "price": 141.7
     },
     {
      "ticker": "UBER",
@@ -1641,7 +1641,7 @@
      "value": 501150650,
      "shares": 7315000,
      "since": "",
-     "price": 69.99
+     "price": 68.81
     },
     {
      "ticker": "NVDA",
@@ -1651,7 +1651,7 @@
      "value": 456760000,
      "shares": 2000000,
      "since": "",
-     "price": 156.14
+     "price": 155.46
     },
     {
      "ticker": "EWY",
@@ -1661,7 +1661,7 @@
      "value": 384961914,
      "shares": 2106149,
      "since": "",
-     "price": 136.55
+     "price": 135.32
     },
     {
      "ticker": "META",
@@ -1671,7 +1671,7 @@
      "value": 380719500,
      "shares": 525000,
      "since": "",
-     "price": 626.41
+     "price": 618.87
     },
     {
      "ticker": "GOOG",
@@ -1681,7 +1681,7 @@
      "value": 340740000,
      "shares": 1000000,
      "since": "",
-     "price": 281.26
+     "price": 277.6
     },
     {
      "ticker": "VST",
@@ -1691,7 +1691,7 @@
      "value": 292647881,
      "shares": 2115272,
      "since": "",
-     "price": 130.16
+     "price": 127.15
     },
     {
      "ticker": "LRCX",
@@ -1701,7 +1701,7 @@
      "value": 205318750,
      "shares": 625000,
      "since": "",
-     "price": 210.83
+     "price": 210.69
     },
     {
      "ticker": "BABA",
@@ -1711,7 +1711,7 @@
      "value": 198949000,
      "shares": 1850000,
      "since": "",
-     "price": 90.62
+     "price": 86.65
     },
     {
      "ticker": "ORCL",
@@ -1721,7 +1721,7 @@
      "value": 172164864,
      "shares": 1253932,
      "since": "",
-     "price": 119.09
+     "price": 115
     },
     {
      "ticker": "BA",
@@ -1731,7 +1731,7 @@
      "value": 141398000,
      "shares": 760000,
      "since": "",
-     "price": 165.22
+     "price": 163.91
     },
     {
      "ticker": "NRG",
@@ -1741,7 +1741,7 @@
      "value": 136301250,
      "shares": 1425000,
      "since": "",
-     "price": 93.99
+     "price": 91.76
     },
     {
      "ticker": "ASML",
@@ -1751,7 +1751,7 @@
      "value": 117758550,
      "shares": 65000,
      "since": "",
-     "price": 1406.785
+     "price": 1383.11
     },
     {
      "ticker": "AMAT",
@@ -1761,7 +1761,7 @@
      "value": 115060500,
      "shares": 225000,
      "since": "",
-     "price": 350.25
+     "price": 349.23
     },
     {
      "ticker": "CRWV",
@@ -1771,7 +1771,7 @@
      "value": 105850800,
      "shares": 1215000,
      "since": "",
-     "price": 49.88
+     "price": 49.89
     },
     {
      "ticker": "BIDU",
@@ -1781,7 +1781,7 @@
      "value": 95557000,
      "shares": 1100000,
      "since": "",
-     "price": 73.94
+     "price": 71.15
     },
     {
      "ticker": "MOD",
@@ -1791,7 +1791,7 @@
      "value": 52969925,
      "shares": 282959,
      "since": "",
-     "price": 130.55
+     "price": 129.73
     },
     {
      "ticker": "AAL",
@@ -1801,7 +1801,7 @@
      "value": 52523176,
      "shares": 3928435,
      "since": "",
-     "price": 13.24
+     "price": 12.92
     },
     {
      "ticker": "PCG",
@@ -1811,7 +1811,7 @@
      "value": 30931250,
      "shares": 2525000,
      "since": "",
-     "price": 13.68
+     "price": 13.54
     },
     {
      "ticker": "ET",
@@ -1821,7 +1821,7 @@
      "value": 29601957,
      "shares": 1497317,
      "since": "",
-     "price": 19.14
+     "price": 19.16
     },
     {
      "ticker": "MPLX",
@@ -1831,7 +1831,7 @@
      "value": 26883564,
      "shares": 477336,
      "since": "",
-     "price": 57.29
+     "price": 57.42
     }
    ],
    "trades": [
@@ -1959,7 +1959,7 @@
      "value": 524260745,
      "shares": 20329874,
      "since": "",
-     "price": 36.04
+     "price": 33.725
     },
     {
      "ticker": "EXE",
@@ -1969,7 +1969,7 @@
      "value": 477605527,
      "shares": 5237477,
      "since": "",
-     "price": 86.34
+     "price": 84.71
     },
     {
      "ticker": "GTX",
@@ -1979,7 +1979,7 @@
      "value": 275160183,
      "shares": 7594816,
      "since": "",
-     "price": 20.54
+     "price": 20.38
     },
     {
      "ticker": "AU",
@@ -1989,7 +1989,7 @@
      "value": 257156751,
      "shares": 3179092,
      "since": "",
-     "price": 84.37
+     "price": 84.67
     },
     {
      "ticker": "INDV",
@@ -1999,7 +1999,7 @@
      "value": 251399508,
      "shares": 6127212,
      "since": "",
-     "price": 29.72
+     "price": 28.83
     },
     {
      "ticker": "TDS",
@@ -2009,7 +2009,7 @@
      "value": 195520314,
      "shares": 5282905,
      "since": "",
-     "price": 31.39
+     "price": 30.86
     },
     {
      "ticker": "VNOM",
@@ -2019,7 +2019,7 @@
      "value": 160756716,
      "shares": 3791432,
      "since": "",
-     "price": 41.55
+     "price": 40.99
     },
     {
      "ticker": "CORZ",
@@ -2029,7 +2029,7 @@
      "value": 127788987,
      "shares": 4993708,
      "since": "",
-     "price": 13.58
+     "price": 13.51
     },
     {
      "ticker": "TLN",
@@ -2039,7 +2039,7 @@
      "value": 127235018,
      "shares": 331117,
      "since": "",
-     "price": 359.74
+     "price": 354.71
     },
     {
      "ticker": "B",
@@ -2049,7 +2049,7 @@
      "value": 117759575,
      "shares": 3206087,
      "since": "",
-     "price": 36.49
+     "price": 36.63
     },
     {
      "ticker": "ITUB",
@@ -2059,7 +2059,7 @@
      "value": 97857531,
      "shares": 11977665,
      "since": "",
-     "price": 7.13
+     "price": 7.03
     },
     {
      "ticker": "LBTYK",
@@ -2069,7 +2069,7 @@
      "value": 97227041,
      "shares": 8551191,
      "since": "",
-     "price": 10.33
+     "price": 10.01
     },
     {
      "ticker": "OCSL",
@@ -2079,7 +2079,7 @@
      "value": 93994056,
      "shares": 7872199,
      "since": "",
-     "price": 12.03
+     "price": 11.77
     },
     {
      "ticker": "FCX",
@@ -2089,7 +2089,7 @@
      "value": 75538562,
      "shares": 1201122,
      "since": "",
-     "price": 55.19
+     "price": 55.3
     },
     {
      "ticker": "AERO",
@@ -2099,7 +2099,7 @@
      "value": 71436348,
      "shares": 3968686,
      "since": "",
-     "price": 16.33
+     "price": 16.61
     },
     {
      "ticker": "KRC",
@@ -2109,7 +2109,7 @@
      "value": 69319912,
      "shares": 1850011,
      "since": "",
-     "price": 36.22
+     "price": 35.78
     },
     {
      "ticker": "SE",
@@ -2119,7 +2119,7 @@
      "value": 60894502,
      "shares": 635443,
      "since": "",
-     "price": 71.63
+     "price": 69.44
     },
     {
      "ticker": "LILAK",
@@ -2129,7 +2129,7 @@
      "value": 58885256,
      "shares": 7559083,
      "since": "",
-     "price": 9.95
+     "price": 9.9
     },
     {
      "ticker": "BLCO",
@@ -2139,7 +2139,7 @@
      "value": 56983655,
      "shares": 3441042,
      "since": "",
-     "price": 20.88
+     "price": 20.83
     },
     {
      "ticker": "VSAT",
@@ -2149,7 +2149,7 @@
      "value": 56605446,
      "shares": 630280,
      "since": "",
-     "price": 63.9
+     "price": 63.94
     },
     {
      "ticker": "",
@@ -2169,7 +2169,7 @@
      "value": 51847704,
      "shares": 1925992,
      "since": "",
-     "price": 18.42
+     "price": 18.555
     },
     {
      "ticker": "XP",
@@ -2179,7 +2179,7 @@
      "value": 50679314,
      "shares": 3116809,
      "since": "",
-     "price": 14.83
+     "price": 14.58
     },
     {
      "ticker": "YPF",
@@ -2189,7 +2189,7 @@
      "value": 45076502,
      "shares": 991346,
      "since": "",
-     "price": 35.64
+     "price": 36.41
     },
     {
      "ticker": "TAC",
@@ -2199,7 +2199,7 @@
      "value": 41487224,
      "shares": 3000000,
      "since": "",
-     "price": 13.01
+     "price": 12.81
     }
    ],
    "trades": [
@@ -2327,7 +2327,7 @@
      "value": 916661615,
      "shares": 11761119,
      "since": "",
-     "price": 78.11
+     "price": 77.39
     },
     {
      "ticker": "GOOGL",
@@ -2337,7 +2337,7 @@
      "value": 875098664,
      "shares": 2543300,
      "since": "",
-     "price": 283.72
+     "price": 280.2
     },
     {
      "ticker": "GOOG",
@@ -2347,7 +2347,7 @@
      "value": 835255962,
      "shares": 2451300,
      "since": "",
-     "price": 281.26
+     "price": 277.6
     },
     {
      "ticker": "BRK.B",
@@ -2357,7 +2357,7 @@
      "value": 551886948,
      "shares": 1108318,
      "since": "",
-     "price": 592.85
+     "price": 586.76
     },
     {
      "ticker": "EWBC",
@@ -2367,7 +2367,7 @@
      "value": 344073179,
      "shares": 2776351,
      "since": "",
-     "price": 129.61
+     "price": 127.09
     },
     {
      "ticker": "TME",
@@ -2377,7 +2377,7 @@
      "value": 117558000,
      "shares": 14824464,
      "since": "",
-     "price": 8.88
+     "price": 9.47
     },
     {
      "ticker": "CROX",
@@ -2387,7 +2387,7 @@
      "value": 104064880,
      "shares": 887093,
      "since": "",
-     "price": 160.01
+     "price": 158.79
     },
     {
      "ticker": "AAPL",
@@ -2397,7 +2397,7 @@
      "value": 36832012,
      "shares": 110600,
      "since": "",
-     "price": 352.78
+     "price": 351.91
     }
    ],
    "trades": [
@@ -2441,7 +2441,7 @@
      "value": 4447740626,
      "shares": 658924537,
      "since": "",
-     "price": 3.6
+     "price": 3.19
     },
     {
      "ticker": "CVI",
@@ -2451,7 +2451,7 @@
      "value": 3630583606,
      "shares": 71201875,
      "since": "",
-     "price": 39.12
+     "price": 38.01
     },
     {
      "ticker": "UAN",
@@ -2461,7 +2461,7 @@
      "value": 515453836,
      "shares": 4164274,
      "since": "",
-     "price": 103.65
+     "price": 102.67
     },
     {
      "ticker": "CTRI",
@@ -2471,7 +2471,7 @@
      "value": 287294322,
      "shares": 14336044,
      "since": "",
-     "price": 21.39
+     "price": 21.42
     },
     {
      "ticker": "IFF",
@@ -2481,7 +2481,7 @@
      "value": 249916413,
      "shares": 2993728,
      "since": "",
-     "price": 79.99
+     "price": 79.43
     },
     {
      "ticker": "CZR",
@@ -2491,7 +2491,7 @@
      "value": 72349232,
      "shares": 2440109,
      "since": "",
-     "price": 29.37
+     "price": 29.2
     },
     {
      "ticker": "MNRO",
@@ -2501,7 +2501,7 @@
      "value": 71049236,
      "shares": 5078573,
      "since": "",
-     "price": 10.53
+     "price": 10.07
     },
     {
      "ticker": "SD",
@@ -2511,7 +2511,7 @@
      "value": 68561946,
      "shares": 5082427,
      "since": "",
-     "price": 12.82
+     "price": 12.56
     },
     {
      "ticker": "ECHO",
@@ -2521,7 +2521,7 @@
      "value": 44705000,
      "shares": 500000,
      "since": "",
-     "price": 99.47
+     "price": 99.16
     },
     {
      "ticker": "BLCO",
@@ -2531,7 +2531,7 @@
      "value": 40427700,
      "shares": 2378100,
      "since": "",
-     "price": 20.88
+     "price": 20.83
     }
    ],
    "trades": [
